@@ -4,12 +4,8 @@ Author: Thad Greiner
 
 ## Installation
 
-### Dependencies
-
-```cd``` into ```Third-Party/``` and run the following command:
-
 ```
-git clone --recurse-submodules https://github.com/devosoft/Empirical.git
+git clone --recurse-submodules https://github.com/ThaddaeusII/LGPSystem.git
 ```
 
 ## Using the System
