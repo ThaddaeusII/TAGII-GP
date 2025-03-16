@@ -5,29 +5,37 @@
 #include "TournamentSelection.h"
 #include "DefaultMutation.h"
 #include "DefaultCrossover.h"
-#include "emp/math/Random.hpp"
+#include "RandomGenerator.h"
 
 void GPSystem::initializePopulation()
 {
     for (size_t i = 0; i < populationSize; ++i)
     {
-        population.push_back(std::make_unique<Program>());
+        std::unique_ptr<Program> p = std::make_unique<Program>(environment);
+        p->initialize(numInstructions);
+        population.push_back(std::move(p));
     }
 }
 
 void GPSystem::evaluateFitness()
 {
-    /* for (auto &p : population)
+    for (auto &p : population)
     {
-        p->execute(environment);
-    } */
+        environment->reset();
+        p->maxSteps(steps);
+        while (p->getSteps() > 0)
+        {
+            p->executeControl(0);
+        }
+        p->evaluateFitness();
+    }
 }
 
 void GPSystem::evolve()
 {
     std::vector<std::unique_ptr<Program>> parents;
     std::vector<std::unique_ptr<Program>> children;
-    emp::Random random;
+    auto &random = RandomGenerator::get();
 
     // Evaluate initial generation's fitness
     evaluateFitness();
@@ -45,7 +53,7 @@ void GPSystem::evolve()
             // Crossover two parents @TAG: Allows for repeats, need no replacement
             int parent1 = random.GetInt(0, parents.size());
             int parent2 = random.GetInt(0, parents.size());
-            std::unique_ptr<Program> child = crossover->Cross(parents[parent1], parents[parent2]);
+            std::unique_ptr<Program> child = crossover->Cross(parents[parent1], parents[parent2], environment);
             
             // Mutate child with probability mutationRate
             if (random.P(mutationRate))
@@ -66,12 +74,23 @@ GPSystem::GPSystem()
 
 void GPSystem::run(size_t populationSize,
     size_t generations,
-    double mutationRate)
+    double mutationRate,
+    int numInstructions,
+    int steps,
+    std::string envPath
+)
 {
     // Save parameters
     this->populationSize = populationSize;
     this->generations = generations;
     this->mutationRate = mutationRate;
+    this->numInstructions = numInstructions;
+    this->steps = steps;
+
+    // Setup environment
+    environment = std::make_shared<Environment>();
+    environment->load(envPath);
+    displayEnvironment();
     
     // Setup genetic operators
     selector = std::make_unique<TournamentSelection>();
@@ -80,17 +99,29 @@ void GPSystem::run(size_t populationSize,
 
     // Initialize the population
     initializePopulation();
+    std::cout << "---------- Initial Programs ----------" << std::endl << std::endl;
+    displayPrograms();
 
     // Evolve the population
     evolve();
+    std::cout << "---------- Final Programs ----------" << std::endl << std::endl;
+    displayPrograms();
 }
 
-void GPSystem::display()
+void GPSystem::displayEnvironment()
+{
+    if (environment == nullptr)
+        return;
+    std::cout << "Environment:" << std::endl;
+    environment->display();
+}
+
+void GPSystem::displayPrograms()
 {
     int num = 1;
     for (auto &p : population)
     {
-        std::cout << "Program " << num << ":" << std::endl;
+        std::cout << "Program " << num << " -> Fitness: " << p->getFitness() << std::endl;
         p->display();
         std::cout << std::endl;
         num++;

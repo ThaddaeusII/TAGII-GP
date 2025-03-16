@@ -1,15 +1,20 @@
 #pragma once
 
 #include <vector>
+#include <string>
 
-class Environment
+struct Environment
 {
     std::vector<std::vector<char>> grid;
-    int agentX, agentY;
+    int agentX, agentY, agentDir, 
+        startX, startY, startDir,
+        sizeX, sizeY, food, maxFood;
 
-public:
     Environment();
+    void move();
+    bool forward(int &x, int &y);
+    void load(std::string filepath);
     void reset();
-    bool step(int action);
-    void printState() const;
+    bool look(int n);
+    void display();
 };

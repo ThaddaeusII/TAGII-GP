@@ -15,12 +15,14 @@ private:
     size_t populationSize;
     size_t generations;
     double mutationRate;
+    int numInstructions;
+    int steps;
 
     std::vector<std::unique_ptr<Program>> population;
-    std::unique_ptr<Environment> environment;
     std::unique_ptr<Selection> selector;
     std::unique_ptr<Mutation> mutator;
     std::unique_ptr<Crossover> crossover;
+    std::shared_ptr<Environment> environment;
 
     void initializePopulation();
     void evaluateFitness();
@@ -28,8 +30,14 @@ private:
 
 public:
     GPSystem();
-    void run(size_t populationSize,
+    void run(
+        size_t populationSize,
         size_t generations,
-        double mutationRate);
-    void display();
+        double mutationRate,
+        int numInstructions,
+        int steps,
+        std::string envPath
+    );
+    void displayPrograms();
+    void displayEnvironment();
 };

@@ -3,14 +3,14 @@ CXXFLAGS := -std=c++20 -Wall
 SRC := main.cpp \
 	System/*.cpp \
 	Program/*.cpp \
-	Instructions/*.cpp \
+	Operators/*.cpp \
 	GeneticOperators/*.cpp \
 	Environments/*.cpp
 INCLUDE := -ISystem \
 	-IProgram \
 	-IEnvironments \
 	-IGeneticOperators \
-	-IInstructions \
+	-IOperators \
 	-isystem Third-Party/Empirical/include/
 OUT := evolve
 
@@ -21,6 +21,9 @@ slow: build
 
 O3: CXXFLAGS += -O3
 O3: build
+
+debug: CXXFLAGS += -O0 -g
+debug: build
 
 parallel: CXXFLAGS += -O3 -fopenmp -pthread
 parallel: build
