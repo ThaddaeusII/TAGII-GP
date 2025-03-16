@@ -8,6 +8,6 @@ class DefaultMutation : public Mutation
 private:
 
 public:
-    virtual ~DefaultMutation() = default;
-    void Mutate(std::unique_ptr<Program> &program) override;
+    DefaultMutation(double mutationRate) : Mutation(mutationRate) {}
+    void mutate(std::unique_ptr<Program> &program) override;
 };

@@ -47,3 +47,7 @@ void PROG::randomize(std::vector<std::pair<int, int>> &params)
             params.push_back(std::make_pair<int, int>(0, random.GetInt(0, tSize)));
     }
 }
+
+void PROG::mutate(std::vector<std::pair<int, int>> &params)
+{
+}

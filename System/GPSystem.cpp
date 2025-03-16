@@ -9,7 +9,7 @@
 
 void GPSystem::initializePopulation()
 {
-    for (size_t i = 0; i < populationSize; ++i)
+    for (int i = 0; i < populationSize; ++i)
     {
         std::unique_ptr<Program> p = std::make_unique<Program>(environment);
         p->initialize(numInstructions);
@@ -33,38 +33,23 @@ void GPSystem::evaluateFitness()
 
 void GPSystem::evolve()
 {
-    std::vector<std::unique_ptr<Program>> parents;
     std::vector<std::unique_ptr<Program>> children;
-    auto &random = RandomGenerator::get();
 
     // Evaluate initial generation's fitness
     evaluateFitness();
 
-    for (size_t gen = 0; gen < generations; ++gen)
+    for (int gen = 0; gen < generations; ++gen)
     {
-        // Select a set of parents to procreate
-        parents.clear();
-        selector->Select(population, parents);
-
-        // Create next generation
-        children.clear();
-        while (children.size() < populationSize)
-        {
-            // Crossover two parents @TAG: Allows for repeats, need no replacement
-            int parent1 = random.GetInt(0, parents.size());
-            int parent2 = random.GetInt(0, parents.size());
-            std::unique_ptr<Program> child = crossover->Cross(parents[parent1], parents[parent2], environment);
-            
-            // Mutate child with probability mutationRate
-            if (random.P(mutationRate))
-                mutator->Mutate(child);
-
-            children.push_back(std::move(child));
-        }
+        // Select next generation using provided selector, mutator, and crossover objects
+        selector->select(population, children, mutator, crossover);
 
         // Set population to next generation and evaluate fitness
         std::swap(population, children); // @TAG: Efficiency?
         evaluateFitness();
+
+        std::cout << "Generation " << gen << ":" << std::endl;
+        displayStats();
+        std::cout << std::endl;
     }
 }
 
@@ -74,6 +59,7 @@ GPSystem::GPSystem()
 
 void GPSystem::run(size_t populationSize,
     size_t generations,
+    double crossoverRate,
     double mutationRate,
     int numInstructions,
     int steps,
@@ -93,19 +79,60 @@ void GPSystem::run(size_t populationSize,
     displayEnvironment();
     
     // Setup genetic operators
-    selector = std::make_unique<TournamentSelection>();
-    mutator = std::make_unique<DefaultMutation>();
-    crossover = std::make_unique<DefaultCrossover>();
+    selector = std::make_shared<TournamentSelection>();
+    crossover = std::make_shared<DefaultCrossover>(crossoverRate);
+    mutator = std::make_shared<DefaultMutation>(mutationRate);
 
     // Initialize the population
     initializePopulation();
     std::cout << "---------- Initial Programs ----------" << std::endl << std::endl;
     displayPrograms();
-
+    
     // Evolve the population
+    std::cout << "---------- Generations ----------" << std::endl << std::endl;
     evolve();
+
     std::cout << "---------- Final Programs ----------" << std::endl << std::endl;
     displayPrograms();
+    displayStats();
+}
+
+void GPSystem::displayStats()
+{
+    double avgFitness = 0;
+    int bestFitness = -1;
+    int bestProgram = -1;
+    double avgProgramSize = 0;
+    int smallestProgramSize = INT_MAX;
+    int largestProgramSize = -1;
+
+    for (int i = 0; i < populationSize; ++i)
+    {
+        int f = population[i]->getFitness();
+        avgFitness += f;
+        if (f > bestFitness)
+        {
+            bestFitness = f;
+            bestProgram = i;
+        }
+
+        int s = population[i]->getSize();
+        avgProgramSize += s;
+        if (s < smallestProgramSize)
+            smallestProgramSize = s;
+        if (s > largestProgramSize)
+            largestProgramSize = s;
+    }
+    avgFitness /= populationSize;
+    avgProgramSize /= populationSize;
+
+    std::cout << "Population size: " << population.size() << std::endl;
+    std::cout << "Best fitness:    " << bestFitness << std::endl;
+    std::cout << "Best program:    " << bestProgram << std::endl;
+    std::cout << "Avg fitness:     " << avgFitness << std::endl;
+    std::cout << "Minimum length:  " << smallestProgramSize << std::endl;
+    std::cout << "Maximum length:  " << largestProgramSize << std::endl;
+    std::cout << "Avg length:      " << avgProgramSize << std::endl;
 }
 
 void GPSystem::displayEnvironment()

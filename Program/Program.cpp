@@ -16,7 +16,7 @@ void Program::initialize(int numInstructions)
     int num = RandomGenerator::get().GetInt(0, numInstructions + 1);
     for (int i = 0; i < num; ++i)
     {
-        instructions.push_back(std::make_unique<Instruction>(i));
+        instructions.push_back(std::make_unique<Instruction>(num));
     }
 }
 
@@ -99,6 +99,11 @@ int Program::getFitness()
 int Program::getSteps()
 {
     return steps;
+}
+
+int Program::getSize()
+{
+    return instructions.size();
 }
 
 void Program::evaluateFitness()

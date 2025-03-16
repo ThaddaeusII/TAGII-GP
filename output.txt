@@ -1,0 +1,6436 @@
+Environment:
+Food: 0/24
+0100000v00
+0111000100
+0001001100
+0001111000
+0000010000
+0000011100
+0100110000
+0111100000
+0000100000
+          
+---------- Initial Programs ----------
+
+Program 1 -> Fitness: -1
+[1]: [3, PROG3, (I, 0), (T, turn_left), (I, 2)]
+[2]: [3, PROG3, (I, 1), (T, turn_right), (I, 1)]
+[3]: [2, LOOK, (I, 2), (T, turn_right)]
+
+Program 2 -> Fitness: -1
+[1]: [5, LOOK, (I, 2), (I, 0)]
+[2]: [1, LOOK, (T, turn_right), (T, turn_right)]
+[3]: [4, LOOK, (I, 2), (T, turn_left)]
+[4]: [2, LOOK, (T, turn_left), (I, 2)]
+[5]: [0, PROG3, (T, move), (I, 1), (I, 1)]
+
+Program 3 -> Fitness: -1
+[1]: [0, PROG3, (T, turn_right), (T, turn_right), (T, turn_left)]
+[2]: [2, LOOK, (T, turn_right), (T, turn_right)]
+
+Program 4 -> Fitness: -1
+[1]: [3, PROG2, (I, 0), (T, turn_right)]
+[2]: [1, PROG2, (T, turn_left), (I, 1)]
+[3]: [4, PROG3, (T, turn_right), (I, 2), (T, move)]
+[4]: [2, PROG2, (I, 2), (T, turn_left)]
+
+Program 5 -> Fitness: -1
+[1]: [1, PROG3, (T, turn_left), (I, 1), (I, 0)]
+
+Program 6 -> Fitness: -1
+[1]: [2, PROG3, (I, 1), (I, 1), (I, 0)]
+[2]: [1, LOOK, (I, 1), (T, move)]
+
+Program 7 -> Fitness: -1
+[1]: [3, LOOK, (I, 2), (I, 0)]
+[2]: [4, LOOK, (I, 0), (T, move)]
+[3]: [1, LOOK, (T, turn_right), (I, 1)]
+[4]: [2, PROG3, (T, turn_right), (T, turn_left), (T, turn_left)]
+
+Program 8 -> Fitness: -1
+[1]: [2, PROG2, (T, move), (T, turn_left)]
+[2]: [1, LOOK, (I, 0), (T, turn_left)]
+[3]: [3, LOOK, (I, 1), (I, 2)]
+
+Program 9 -> Fitness: -1
+[1]: [1, PROG3, (T, move), (T, turn_right), (T, turn_left)]
+[2]: [1, LOOK, (I, 0), (T, move)]
+
+Program 10 -> Fitness: -1
+[1]: [1, PROG3, (T, move), (T, turn_right), (I, 1)]
+[2]: [0, PROG3, (T, move), (I, 2), (T, turn_left)]
+[3]: [4, PROG2, (I, 0), (I, 1)]
+[4]: [3, PROG2, (I, 1), (T, move)]
+
+Program 11 -> Fitness: -1
+
+Program 12 -> Fitness: -1
+[1]: [2, PROG3, (T, move), (T, move), (T, turn_right)]
+[2]: [1, PROG2, (I, 2), (T, move)]
+[3]: [0, PROG3, (I, 2), (I, 0), (T, move)]
+[4]: [2, PROG2, (I, 0), (I, 2)]
+
+Program 13 -> Fitness: -1
+[1]: [1, LOOK, (T, turn_left), (I, 0)]
+[2]: [0, PROG2, (T, turn_right), (I, 2)]
+[3]: [1, LOOK, (I, 1), (I, 0)]
+
+Program 14 -> Fitness: -1
+
+Program 15 -> Fitness: -1
+[1]: [1, PROG3, (T, turn_right), (T, turn_right), (T, move)]
+
+Program 16 -> Fitness: -1
+[1]: [0, LOOK, (T, move), (I, 1)]
+[2]: [5, LOOK, (I, 1), (T, turn_right)]
+[3]: [3, PROG2, (T, turn_left), (T, turn_left)]
+[4]: [1, PROG3, (T, turn_right), (T, move), (I, 2)]
+[5]: [0, PROG2, (I, 0), (I, 1)]
+
+Program 17 -> Fitness: -1
+[1]: [1, PROG2, (I, 1), (I, 0)]
+
+Program 18 -> Fitness: -1
+[1]: [1, LOOK, (I, 0), (T, turn_right)]
+[2]: [4, PROG2, (I, 0), (I, 1)]
+[3]: [2, PROG3, (T, move), (T, move), (T, turn_right)]
+[4]: [4, PROG2, (T, move), (I, 0)]
+
+Program 19 -> Fitness: -1
+[1]: [1, LOOK, (T, turn_right), (I, 2)]
+[2]: [0, PROG2, (I, 1), (I, 1)]
+[3]: [2, PROG2, (I, 0), (I, 2)]
+[4]: [3, PROG3, (T, turn_left), (T, turn_right), (T, turn_right)]
+[5]: [2, PROG2, (T, turn_left), (T, turn_right)]
+
+Program 20 -> Fitness: -1
+[1]: [2, LOOK, (T, turn_right), (I, 2)]
+[2]: [3, PROG3, (T, move), (I, 0), (I, 2)]
+[3]: [3, PROG2, (I, 1), (I, 1)]
+[4]: [0, PROG2, (T, turn_left), (T, turn_right)]
+[5]: [1, PROG3, (I, 1), (I, 2), (T, turn_right)]
+
+Program 21 -> Fitness: -1
+[1]: [1, PROG2, (I, 2), (T, turn_left)]
+[2]: [1, PROG2, (I, 2), (I, 0)]
+
+Program 22 -> Fitness: -1
+[1]: [0, LOOK, (I, 0), (I, 0)]
+[2]: [1, PROG3, (T, turn_left), (I, 0), (T, turn_right)]
+[3]: [1, LOOK, (T, turn_left), (T, turn_left)]
+
+Program 23 -> Fitness: -1
+[1]: [1, PROG2, (I, 0), (I, 2)]
+[2]: [1, LOOK, (T, move), (I, 2)]
+[3]: [3, LOOK, (T, turn_left), (I, 0)]
+[4]: [1, LOOK, (I, 0), (T, move)]
+[5]: [4, LOOK, (I, 2), (T, move)]
+
+Program 24 -> Fitness: -1
+[1]: [3, PROG3, (T, turn_right), (T, turn_right), (I, 2)]
+[2]: [1, LOOK, (I, 0), (T, move)]
+[3]: [2, PROG3, (T, turn_right), (I, 2), (I, 1)]
+[4]: [1, PROG2, (I, 0), (I, 1)]
+
+Program 25 -> Fitness: -1
+[1]: [4, LOOK, (I, 0), (I, 0)]
+[2]: [3, PROG2, (T, turn_left), (I, 0)]
+[3]: [4, PROG2, (T, turn_left), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 1), (I, 1)]
+
+Program 26 -> Fitness: -1
+[1]: [2, PROG3, (I, 2), (I, 0), (I, 2)]
+[2]: [1, PROG2, (T, turn_left), (T, turn_left)]
+
+Program 27 -> Fitness: -1
+[1]: [1, LOOK, (T, turn_left), (I, 0)]
+[2]: [1, LOOK, (T, move), (I, 1)]
+[3]: [3, PROG2, (I, 2), (I, 2)]
+
+Program 28 -> Fitness: -1
+[1]: [2, PROG2, (I, 1), (I, 1)]
+[2]: [1, LOOK, (T, turn_left), (T, turn_right)]
+[3]: [3, LOOK, (I, 0), (I, 0)]
+
+Program 29 -> Fitness: -1
+[1]: [1, PROG2, (T, turn_right), (T, move)]
+
+Program 30 -> Fitness: -1
+[1]: [2, PROG2, (T, turn_left), (T, turn_left)]
+[2]: [0, PROG2, (T, move), (T, turn_right)]
+[3]: [3, PROG2, (T, turn_left), (I, 2)]
+
+Program 31 -> Fitness: -1
+[1]: [4, PROG2, (T, move), (I, 0)]
+[2]: [2, PROG3, (T, turn_left), (I, 2), (T, turn_left)]
+[3]: [3, PROG2, (I, 2), (T, turn_left)]
+[4]: [0, PROG3, (T, turn_right), (T, turn_left), (I, 1)]
+
+Program 32 -> Fitness: -1
+[1]: [4, PROG3, (T, move), (T, turn_left), (I, 0)]
+[2]: [4, LOOK, (T, turn_right), (I, 1)]
+[3]: [4, LOOK, (I, 1), (I, 1)]
+[4]: [2, PROG3, (T, turn_left), (T, move), (I, 2)]
+
+Program 33 -> Fitness: -1
+[1]: [3, PROG2, (I, 2), (T, turn_left)]
+[2]: [3, PROG2, (I, 0), (I, 1)]
+[3]: [2, PROG3, (I, 2), (T, turn_left), (I, 0)]
+
+Program 34 -> Fitness: -1
+[1]: [3, LOOK, (T, turn_left), (I, 0)]
+[2]: [1, LOOK, (I, 2), (I, 0)]
+[3]: [0, PROG2, (I, 0), (T, turn_left)]
+
+Program 35 -> Fitness: -1
+[1]: [2, PROG3, (T, turn_right), (I, 1), (T, move)]
+[2]: [2, PROG2, (I, 1), (I, 2)]
+[3]: [2, PROG3, (T, turn_left), (I, 0), (I, 1)]
+[4]: [0, PROG2, (I, 1), (T, turn_right)]
+[5]: [0, LOOK, (T, turn_right), (I, 0)]
+
+Program 36 -> Fitness: -1
+[1]: [4, PROG2, (T, turn_left), (I, 1)]
+[2]: [3, PROG3, (T, move), (I, 2), (I, 0)]
+[3]: [4, LOOK, (T, turn_right), (I, 2)]
+[4]: [5, PROG3, (I, 2), (I, 2), (T, move)]
+[5]: [0, PROG3, (T, turn_left), (T, move), (T, turn_right)]
+
+Program 37 -> Fitness: -1
+
+Program 38 -> Fitness: -1
+[1]: [2, LOOK, (T, turn_left), (T, turn_right)]
+[2]: [4, PROG2, (I, 0), (I, 2)]
+[3]: [1, PROG3, (I, 0), (T, turn_right), (T, move)]
+[4]: [0, LOOK, (I, 1), (T, turn_right)]
+
+Program 39 -> Fitness: -1
+[1]: [0, PROG2, (I, 2), (T, move)]
+[2]: [0, PROG2, (I, 0), (T, turn_right)]
+
+Program 40 -> Fitness: -1
+[1]: [3, LOOK, (T, turn_left), (T, move)]
+[2]: [0, PROG2, (I, 0), (I, 0)]
+[3]: [3, LOOK, (T, turn_right), (I, 0)]
+[4]: [4, LOOK, (I, 2), (T, move)]
+[5]: [0, PROG3, (I, 1), (T, move), (T, turn_left)]
+
+Program 41 -> Fitness: -1
+[1]: [0, PROG3, (I, 1), (I, 0), (I, 2)]
+[2]: [0, LOOK, (T, turn_right), (T, turn_left)]
+[3]: [3, LOOK, (I, 2), (T, move)]
+[4]: [4, PROG3, (I, 0), (I, 2), (T, turn_left)]
+
+Program 42 -> Fitness: -1
+[1]: [0, PROG2, (I, 2), (I, 2)]
+
+Program 43 -> Fitness: -1
+[1]: [2, PROG3, (T, move), (T, turn_right), (I, 0)]
+[2]: [0, LOOK, (T, turn_right), (I, 1)]
+[3]: [0, LOOK, (T, turn_left), (I, 0)]
+
+Program 44 -> Fitness: -1
+[1]: [4, LOOK, (I, 0), (T, turn_right)]
+[2]: [4, PROG2, (I, 2), (T, turn_left)]
+[3]: [2, PROG3, (I, 1), (I, 2), (I, 1)]
+[4]: [3, PROG3, (T, turn_left), (T, move), (T, move)]
+
+Program 45 -> Fitness: -1
+[1]: [2, LOOK, (T, turn_left), (T, move)]
+[2]: [2, PROG3, (T, turn_left), (T, move), (T, turn_left)]
+[3]: [3, PROG2, (T, move), (I, 2)]
+
+Program 46 -> Fitness: -1
+[1]: [5, PROG2, (T, turn_right), (T, turn_right)]
+[2]: [0, PROG3, (I, 0), (I, 2), (T, turn_right)]
+[3]: [4, LOOK, (T, turn_right), (I, 2)]
+[4]: [2, PROG2, (T, turn_right), (I, 0)]
+[5]: [4, LOOK, (I, 0), (T, turn_left)]
+
+Program 47 -> Fitness: -1
+
+Program 48 -> Fitness: -1
+[1]: [0, LOOK, (I, 2), (I, 2)]
+[2]: [3, PROG3, (I, 1), (I, 1), (T, turn_right)]
+[3]: [2, LOOK, (I, 0), (T, turn_right)]
+
+Program 49 -> Fitness: -1
+[1]: [1, LOOK, (I, 1), (I, 1)]
+[2]: [1, PROG3, (I, 2), (T, turn_right), (T, move)]
+[3]: [1, PROG2, (I, 0), (I, 2)]
+
+Program 50 -> Fitness: -1
+[1]: [0, PROG2, (I, 2), (T, turn_left)]
+[2]: [1, LOOK, (T, turn_right), (I, 0)]
+
+Program 51 -> Fitness: -1
+[1]: [2, LOOK, (I, 0), (I, 1)]
+[2]: [2, PROG2, (I, 2), (T, move)]
+[3]: [0, PROG2, (I, 0), (T, turn_left)]
+
+Program 52 -> Fitness: -1
+[1]: [1, PROG2, (T, move), (I, 1)]
+[2]: [2, PROG3, (I, 0), (T, turn_left), (T, move)]
+[3]: [4, PROG3, (I, 2), (I, 2), (T, turn_left)]
+[4]: [0, PROG3, (T, turn_left), (I, 2), (I, 2)]
+[5]: [2, PROG2, (I, 0), (T, move)]
+
+Program 53 -> Fitness: -1
+[1]: [1, LOOK, (I, 2), (I, 1)]
+
+Program 54 -> Fitness: -1
+[1]: [1, PROG2, (I, 2), (I, 0)]
+[2]: [1, PROG3, (T, turn_right), (I, 0), (T, turn_left)]
+[3]: [0, LOOK, (T, turn_right), (I, 0)]
+
+Program 55 -> Fitness: -1
+[1]: [1, LOOK, (I, 1), (I, 1)]
+[2]: [3, LOOK, (T, turn_left), (T, turn_right)]
+[3]: [2, PROG2, (T, turn_left), (I, 2)]
+[4]: [1, PROG3, (T, turn_left), (I, 0), (I, 2)]
+[5]: [4, PROG2, (I, 0), (T, turn_left)]
+
+Program 56 -> Fitness: -1
+[1]: [1, PROG3, (I, 0), (T, turn_right), (I, 2)]
+
+Program 57 -> Fitness: -1
+
+Program 58 -> Fitness: -1
+[1]: [2, PROG2, (T, move), (I, 1)]
+[2]: [1, LOOK, (T, turn_right), (I, 0)]
+
+Program 59 -> Fitness: -1
+[1]: [1, LOOK, (T, move), (I, 2)]
+
+Program 60 -> Fitness: -1
+[1]: [3, PROG2, (T, turn_right), (I, 2)]
+[2]: [1, LOOK, (T, turn_right), (I, 0)]
+[3]: [0, PROG3, (I, 1), (I, 0), (I, 2)]
+[4]: [2, PROG2, (T, move), (I, 0)]
+
+Program 61 -> Fitness: -1
+[1]: [0, PROG3, (T, turn_left), (T, move), (T, turn_left)]
+
+Program 62 -> Fitness: -1
+[1]: [3, PROG3, (T, turn_right), (I, 1), (T, move)]
+[2]: [4, PROG2, (I, 2), (I, 2)]
+[3]: [2, LOOK, (T, turn_left), (I, 1)]
+[4]: [4, LOOK, (I, 1), (T, turn_left)]
+
+Program 63 -> Fitness: -1
+[1]: [0, PROG2, (I, 0), (T, turn_right)]
+
+Program 64 -> Fitness: -1
+[1]: [0, PROG3, (I, 1), (I, 2), (T, turn_right)]
+[2]: [3, PROG3, (T, turn_left), (T, turn_left), (I, 2)]
+[3]: [3, PROG3, (T, turn_left), (T, turn_right), (I, 2)]
+[4]: [0, PROG2, (I, 2), (I, 1)]
+[5]: [3, LOOK, (T, turn_left), (I, 2)]
+
+Program 65 -> Fitness: -1
+[1]: [1, LOOK, (I, 1), (T, turn_left)]
+[2]: [1, LOOK, (I, 0), (I, 0)]
+
+Program 66 -> Fitness: -1
+[1]: [0, PROG3, (T, turn_right), (T, turn_left), (T, move)]
+[2]: [2, PROG2, (I, 1), (T, move)]
+[3]: [0, LOOK, (I, 0), (I, 1)]
+[4]: [4, LOOK, (I, 0), (T, turn_right)]
+[5]: [1, LOOK, (I, 0), (T, turn_left)]
+
+Program 67 -> Fitness: -1
+
+Program 68 -> Fitness: -1
+[1]: [0, PROG3, (T, turn_right), (I, 0), (T, move)]
+[2]: [3, PROG2, (T, turn_right), (I, 2)]
+[3]: [2, PROG3, (I, 0), (I, 1), (T, move)]
+
+Program 69 -> Fitness: -1
+[1]: [1, PROG2, (T, turn_right), (I, 1)]
+
+Program 70 -> Fitness: -1
+[1]: [4, PROG2, (I, 0), (I, 2)]
+[2]: [0, LOOK, (I, 0), (T, turn_right)]
+[3]: [3, PROG2, (I, 2), (T, turn_right)]
+[4]: [0, PROG3, (T, turn_left), (I, 0), (T, move)]
+
+Program 71 -> Fitness: -1
+[1]: [1, LOOK, (I, 0), (I, 2)]
+[2]: [2, LOOK, (I, 0), (I, 0)]
+
+Program 72 -> Fitness: -1
+[1]: [1, PROG3, (T, move), (T, turn_left), (T, move)]
+[2]: [1, PROG2, (T, move), (I, 0)]
+
+Program 73 -> Fitness: -1
+[1]: [1, PROG2, (T, turn_right), (I, 1)]
+
+Program 74 -> Fitness: -1
+
+Program 75 -> Fitness: -1
+[1]: [1, PROG3, (I, 2), (T, turn_right), (T, turn_left)]
+[2]: [5, PROG3, (I, 2), (I, 0), (I, 0)]
+[3]: [4, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [5, LOOK, (I, 1), (T, move)]
+[5]: [3, PROG3, (T, turn_right), (I, 2), (I, 1)]
+
+Program 76 -> Fitness: -1
+[1]: [0, LOOK, (T, move), (T, move)]
+[2]: [3, PROG3, (I, 1), (I, 1), (I, 1)]
+[3]: [2, PROG2, (I, 2), (I, 2)]
+[4]: [0, PROG2, (I, 1), (I, 1)]
+
+Program 77 -> Fitness: -1
+
+Program 78 -> Fitness: -1
+[1]: [0, LOOK, (I, 2), (I, 2)]
+[2]: [2, PROG3, (T, move), (T, move), (I, 1)]
+
+Program 79 -> Fitness: -1
+[1]: [3, LOOK, (I, 1), (T, move)]
+[2]: [2, PROG2, (I, 2), (I, 1)]
+[3]: [3, PROG3, (T, turn_left), (I, 0), (I, 0)]
+[4]: [2, LOOK, (T, turn_left), (T, turn_left)]
+
+Program 80 -> Fitness: -1
+[1]: [0, PROG3, (T, move), (T, move), (T, turn_right)]
+[2]: [4, LOOK, (I, 1), (T, move)]
+[3]: [1, LOOK, (I, 2), (T, move)]
+[4]: [0, PROG2, (T, turn_right), (T, turn_left)]
+
+Program 81 -> Fitness: -1
+[1]: [0, LOOK, (I, 2), (T, turn_right)]
+[2]: [2, PROG3, (I, 1), (I, 0), (T, turn_left)]
+
+Program 82 -> Fitness: -1
+[1]: [0, PROG2, (I, 1), (T, turn_right)]
+[2]: [2, PROG2, (T, turn_left), (T, move)]
+
+Program 83 -> Fitness: -1
+[1]: [0, LOOK, (T, turn_right), (T, move)]
+[2]: [3, LOOK, (T, move), (I, 1)]
+[3]: [1, PROG2, (T, turn_right), (T, turn_right)]
+[4]: [3, PROG2, (I, 2), (T, turn_right)]
+[5]: [1, PROG3, (I, 0), (T, move), (T, turn_right)]
+
+Program 84 -> Fitness: -1
+
+Program 85 -> Fitness: -1
+[1]: [1, PROG2, (T, move), (T, turn_right)]
+
+Program 86 -> Fitness: -1
+[1]: [2, LOOK, (T, move), (T, turn_left)]
+[2]: [0, PROG3, (T, turn_right), (I, 0), (T, turn_right)]
+
+Program 87 -> Fitness: -1
+
+Program 88 -> Fitness: -1
+
+Program 89 -> Fitness: -1
+
+Program 90 -> Fitness: -1
+[1]: [1, PROG2, (I, 1), (I, 2)]
+[2]: [2, PROG2, (T, turn_left), (T, turn_left)]
+
+Program 91 -> Fitness: -1
+[1]: [1, PROG3, (T, move), (I, 0), (T, turn_right)]
+[2]: [2, PROG3, (T, turn_right), (T, turn_right), (T, turn_left)]
+
+Program 92 -> Fitness: -1
+
+Program 93 -> Fitness: -1
+[1]: [0, PROG3, (T, turn_right), (I, 1), (I, 0)]
+
+Program 94 -> Fitness: -1
+[1]: [0, PROG3, (I, 0), (I, 0), (T, turn_left)]
+
+Program 95 -> Fitness: -1
+[1]: [1, PROG3, (I, 0), (I, 0), (T, move)]
+
+Program 96 -> Fitness: -1
+[1]: [1, PROG3, (I, 1), (T, turn_left), (I, 0)]
+[2]: [5, LOOK, (I, 0), (T, move)]
+[3]: [4, LOOK, (T, turn_right), (I, 1)]
+[4]: [5, PROG3, (I, 0), (I, 2), (I, 0)]
+[5]: [3, PROG2, (I, 2), (T, turn_left)]
+
+Program 97 -> Fitness: -1
+[1]: [3, PROG3, (I, 1), (T, turn_left), (T, move)]
+[2]: [0, LOOK, (T, turn_left), (I, 0)]
+[3]: [3, LOOK, (I, 0), (I, 1)]
+
+Program 98 -> Fitness: -1
+[1]: [1, LOOK, (T, turn_right), (T, turn_right)]
+[2]: [0, LOOK, (I, 2), (T, move)]
+
+Program 99 -> Fitness: -1
+[1]: [2, PROG3, (I, 2), (T, turn_left), (I, 1)]
+[2]: [0, LOOK, (T, turn_right), (T, move)]
+
+Program 100 -> Fitness: -1
+[1]: [1, PROG3, (T, turn_left), (I, 2), (T, move)]
+[2]: [4, LOOK, (T, move), (T, turn_right)]
+[3]: [0, PROG3, (I, 2), (I, 0), (T, turn_left)]
+[4]: [1, PROG2, (I, 0), (I, 1)]
+
+---------- Generations ----------
+
+Generation 0:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     2.51
+Minimum length:  1
+Maximum length:  8
+Avg length:      3.03
+
+Generation 1:
+Population size: 100
+Best fitness:    12
+Best program:    23
+Avg fitness:     4.46
+Minimum length:  1
+Maximum length:  8
+Avg length:      3.04
+
+Generation 2:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     8.41
+Minimum length:  1
+Maximum length:  8
+Avg length:      3.05
+
+Generation 3:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.3
+Minimum length:  1
+Maximum length:  6
+Avg length:      3.29
+
+Generation 4:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     9.9
+Minimum length:  1
+Maximum length:  8
+Avg length:      3.43
+
+Generation 5:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.36
+Minimum length:  0
+Maximum length:  9
+Avg length:      3.76
+
+Generation 6:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.4
+Minimum length:  1
+Maximum length:  11
+Avg length:      4.06
+
+Generation 7:
+Population size: 100
+Best fitness:    12
+Best program:    2
+Avg fitness:     10.34
+Minimum length:  0
+Maximum length:  10
+Avg length:      3.99
+
+Generation 8:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     9.89
+Minimum length:  0
+Maximum length:  10
+Avg length:      3.55
+
+Generation 9:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.46
+Minimum length:  1
+Maximum length:  10
+Avg length:      3.88
+
+Generation 10:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.71
+Minimum length:  1
+Maximum length:  10
+Avg length:      4.13
+
+Generation 11:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.11
+Minimum length:  1
+Maximum length:  11
+Avg length:      4.32
+
+Generation 12:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.82
+Minimum length:  1
+Maximum length:  12
+Avg length:      4.49
+
+Generation 13:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.75
+Minimum length:  0
+Maximum length:  12
+Avg length:      4.46
+
+Generation 14:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.71
+Minimum length:  1
+Maximum length:  14
+Avg length:      4.78
+
+Generation 15:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.86
+Minimum length:  1
+Maximum length:  13
+Avg length:      5.04
+
+Generation 16:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.73
+Minimum length:  1
+Maximum length:  14
+Avg length:      5.17
+
+Generation 17:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.32
+Minimum length:  1
+Maximum length:  14
+Avg length:      5.58
+
+Generation 18:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.85
+Minimum length:  1
+Maximum length:  16
+Avg length:      5.93
+
+Generation 19:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.75
+Minimum length:  1
+Maximum length:  15
+Avg length:      6.53
+
+Generation 20:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.87
+Minimum length:  1
+Maximum length:  16
+Avg length:      6.81
+
+Generation 21:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.41
+Minimum length:  1
+Maximum length:  18
+Avg length:      7.02
+
+Generation 22:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.75
+Minimum length:  2
+Maximum length:  17
+Avg length:      7.57
+
+Generation 23:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.53
+Minimum length:  1
+Maximum length:  18
+Avg length:      7.9
+
+Generation 24:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.64
+Minimum length:  1
+Maximum length:  18
+Avg length:      8.02
+
+Generation 25:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.95
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.11
+
+Generation 26:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.16
+Minimum length:  1
+Maximum length:  18
+Avg length:      7.85
+
+Generation 27:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.17
+Minimum length:  1
+Maximum length:  18
+Avg length:      8.24
+
+Generation 28:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.98
+Minimum length:  2
+Maximum length:  18
+Avg length:      8.01
+
+Generation 29:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.82
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.8
+
+Generation 30:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.99
+Minimum length:  1
+Maximum length:  17
+Avg length:      8.46
+
+Generation 31:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.25
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.94
+
+Generation 32:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.31
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.98
+
+Generation 33:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.58
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.39
+
+Generation 34:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.29
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.99
+
+Generation 35:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.81
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.95
+
+Generation 36:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.73
+Minimum length:  1
+Maximum length:  22
+Avg length:      8.8
+
+Generation 37:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.56
+Minimum length:  2
+Maximum length:  21
+Avg length:      9.56
+
+Generation 38:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.74
+Minimum length:  1
+Maximum length:  22
+Avg length:      8.98
+
+Generation 39:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.73
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.96
+
+Generation 40:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.36
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.09
+
+Generation 41:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.18
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.23
+
+Generation 42:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.38
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.79
+
+Generation 43:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.68
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.42
+
+Generation 44:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.28
+Minimum length:  2
+Maximum length:  19
+Avg length:      8.69
+
+Generation 45:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.45
+Minimum length:  2
+Maximum length:  22
+Avg length:      8.63
+
+Generation 46:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.12
+Minimum length:  0
+Maximum length:  19
+Avg length:      8.59
+
+Generation 47:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.92
+Minimum length:  1
+Maximum length:  23
+Avg length:      9.08
+
+Generation 48:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.49
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.23
+
+Generation 49:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.74
+Minimum length:  0
+Maximum length:  22
+Avg length:      9.24
+
+Generation 50:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.95
+Minimum length:  1
+Maximum length:  19
+Avg length:      9.03
+
+Generation 51:
+Population size: 100
+Best fitness:    12
+Best program:    2
+Avg fitness:     10.92
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.51
+
+Generation 52:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.77
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.44
+
+Generation 53:
+Population size: 100
+Best fitness:    12
+Best program:    2
+Avg fitness:     10.41
+Minimum length:  1
+Maximum length:  22
+Avg length:      10.38
+
+Generation 54:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.09
+Minimum length:  2
+Maximum length:  21
+Avg length:      10.59
+
+Generation 55:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.78
+Minimum length:  2
+Maximum length:  20
+Avg length:      9.64
+
+Generation 56:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.18
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.65
+
+Generation 57:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.53
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.31
+
+Generation 58:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.79
+Minimum length:  2
+Maximum length:  22
+Avg length:      10.58
+
+Generation 59:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.69
+Minimum length:  1
+Maximum length:  24
+Avg length:      10.95
+
+Generation 60:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.12
+Minimum length:  1
+Maximum length:  22
+Avg length:      10.39
+
+Generation 61:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.24
+Minimum length:  1
+Maximum length:  23
+Avg length:      9.8
+
+Generation 62:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.25
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.21
+
+Generation 63:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.43
+Minimum length:  0
+Maximum length:  22
+Avg length:      8.62
+
+Generation 64:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.91
+Minimum length:  1
+Maximum length:  19
+Avg length:      7.93
+
+Generation 65:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.31
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.86
+
+Generation 66:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.71
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.94
+
+Generation 67:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.96
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.14
+
+Generation 68:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.16
+Minimum length:  2
+Maximum length:  19
+Avg length:      8.71
+
+Generation 69:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     11
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.63
+
+Generation 70:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.89
+Minimum length:  2
+Maximum length:  20
+Avg length:      8.4
+
+Generation 71:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.43
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.32
+
+Generation 72:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.65
+Minimum length:  1
+Maximum length:  23
+Avg length:      8.26
+
+Generation 73:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.32
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.29
+
+Generation 74:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.48
+Minimum length:  1
+Maximum length:  19
+Avg length:      7.51
+
+Generation 75:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.01
+Minimum length:  1
+Maximum length:  22
+Avg length:      7.75
+
+Generation 76:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.8
+Minimum length:  1
+Maximum length:  22
+Avg length:      8.42
+
+Generation 77:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.64
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.61
+
+Generation 78:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.4
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.63
+
+Generation 79:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.84
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.22
+
+Generation 80:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.4
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.23
+
+Generation 81:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.82
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.37
+
+Generation 82:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.08
+Minimum length:  1
+Maximum length:  22
+Avg length:      8.8
+
+Generation 83:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.78
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.08
+
+Generation 84:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.49
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.12
+
+Generation 85:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.75
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.26
+
+Generation 86:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.66
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.27
+
+Generation 87:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.1
+Minimum length:  1
+Maximum length:  25
+Avg length:      8.19
+
+Generation 88:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.83
+Minimum length:  1
+Maximum length:  25
+Avg length:      8.2
+
+Generation 89:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.86
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.73
+
+Generation 90:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.3
+Minimum length:  1
+Maximum length:  22
+Avg length:      8.66
+
+Generation 91:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.42
+Minimum length:  2
+Maximum length:  23
+Avg length:      10.16
+
+Generation 92:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.45
+Minimum length:  2
+Maximum length:  20
+Avg length:      9.07
+
+Generation 93:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     9.71
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.1
+
+Generation 94:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     9.98
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.85
+
+Generation 95:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.77
+Minimum length:  2
+Maximum length:  21
+Avg length:      9.88
+
+Generation 96:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.17
+Minimum length:  2
+Maximum length:  20
+Avg length:      9.6
+
+Generation 97:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     9.58
+Minimum length:  2
+Maximum length:  20
+Avg length:      9.38
+
+Generation 98:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.87
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.43
+
+Generation 99:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.1
+Minimum length:  2
+Maximum length:  20
+Avg length:      9.58
+
+Generation 100:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.95
+Minimum length:  2
+Maximum length:  20
+Avg length:      9.36
+
+Generation 101:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.98
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.36
+
+Generation 102:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.85
+Minimum length:  1
+Maximum length:  18
+Avg length:      8.62
+
+Generation 103:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.79
+Minimum length:  1
+Maximum length:  19
+Avg length:      9.4
+
+Generation 104:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.71
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.91
+
+Generation 105:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.81
+Minimum length:  2
+Maximum length:  20
+Avg length:      9.06
+
+Generation 106:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.44
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.63
+
+Generation 107:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.28
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.35
+
+Generation 108:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.55
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.4
+
+Generation 109:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.19
+Minimum length:  1
+Maximum length:  22
+Avg length:      10.25
+
+Generation 110:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.21
+Minimum length:  1
+Maximum length:  23
+Avg length:      10.47
+
+Generation 111:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.63
+Minimum length:  1
+Maximum length:  22
+Avg length:      10.13
+
+Generation 112:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     11.4
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.03
+
+Generation 113:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.48
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.34
+
+Generation 114:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.95
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.95
+
+Generation 115:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.05
+Minimum length:  1
+Maximum length:  20
+Avg length:      9
+
+Generation 116:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.18
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.85
+
+Generation 117:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.12
+Minimum length:  0
+Maximum length:  20
+Avg length:      8.87
+
+Generation 118:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.53
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.34
+
+Generation 119:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.19
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.14
+
+Generation 120:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.69
+Minimum length:  1
+Maximum length:  22
+Avg length:      7.65
+
+Generation 121:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.09
+Minimum length:  1
+Maximum length:  16
+Avg length:      6.85
+
+Generation 122:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.96
+Minimum length:  1
+Maximum length:  18
+Avg length:      7.34
+
+Generation 123:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.04
+Minimum length:  2
+Maximum length:  18
+Avg length:      8.09
+
+Generation 124:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     11.15
+Minimum length:  1
+Maximum length:  16
+Avg length:      7.85
+
+Generation 125:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.51
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.32
+
+Generation 126:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.62
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.61
+
+Generation 127:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.99
+Minimum length:  1
+Maximum length:  22
+Avg length:      8.96
+
+Generation 128:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.27
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.91
+
+Generation 129:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.13
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.88
+
+Generation 130:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.68
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.33
+
+Generation 131:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.53
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.36
+
+Generation 132:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.08
+Minimum length:  2
+Maximum length:  20
+Avg length:      9.18
+
+Generation 133:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.9
+Minimum length:  1
+Maximum length:  19
+Avg length:      9.16
+
+Generation 134:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.55
+Minimum length:  2
+Maximum length:  18
+Avg length:      8.98
+
+Generation 135:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.84
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.08
+
+Generation 136:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.45
+Minimum length:  1
+Maximum length:  19
+Avg length:      9.34
+
+Generation 137:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.84
+Minimum length:  1
+Maximum length:  19
+Avg length:      9.49
+
+Generation 138:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.15
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.61
+
+Generation 139:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.47
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.58
+
+Generation 140:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.66
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.93
+
+Generation 141:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.27
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.57
+
+Generation 142:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     9.95
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.41
+
+Generation 143:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.31
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.04
+
+Generation 144:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.46
+Minimum length:  1
+Maximum length:  18
+Avg length:      7.73
+
+Generation 145:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.16
+Minimum length:  0
+Maximum length:  18
+Avg length:      7.78
+
+Generation 146:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     8.95
+Minimum length:  1
+Maximum length:  20
+Avg length:      7.49
+
+Generation 147:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.61
+Minimum length:  1
+Maximum length:  20
+Avg length:      7.94
+
+Generation 148:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.62
+Minimum length:  1
+Maximum length:  21
+Avg length:      6.99
+
+Generation 149:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.15
+Minimum length:  1
+Maximum length:  20
+Avg length:      6.75
+
+Generation 150:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.26
+Minimum length:  1
+Maximum length:  20
+Avg length:      7.42
+
+Generation 151:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.51
+Minimum length:  1
+Maximum length:  21
+Avg length:      6.84
+
+Generation 152:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     11.04
+Minimum length:  1
+Maximum length:  20
+Avg length:      6.89
+
+Generation 153:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.31
+Minimum length:  1
+Maximum length:  19
+Avg length:      6.43
+
+Generation 154:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.85
+Minimum length:  1
+Maximum length:  21
+Avg length:      7
+
+Generation 155:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.47
+Minimum length:  1
+Maximum length:  19
+Avg length:      7.51
+
+Generation 156:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.3
+Minimum length:  1
+Maximum length:  20
+Avg length:      6.63
+
+Generation 157:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.62
+Minimum length:  1
+Maximum length:  19
+Avg length:      6.55
+
+Generation 158:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.29
+Minimum length:  1
+Maximum length:  17
+Avg length:      6.42
+
+Generation 159:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     9.78
+Minimum length:  1
+Maximum length:  18
+Avg length:      6.4
+
+Generation 160:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.11
+Minimum length:  1
+Maximum length:  17
+Avg length:      6.81
+
+Generation 161:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     11.31
+Minimum length:  1
+Maximum length:  17
+Avg length:      5.8
+
+Generation 162:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.21
+Minimum length:  1
+Maximum length:  17
+Avg length:      5.33
+
+Generation 163:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.28
+Minimum length:  0
+Maximum length:  19
+Avg length:      5.81
+
+Generation 164:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.16
+Minimum length:  1
+Maximum length:  18
+Avg length:      5.91
+
+Generation 165:
+Population size: 100
+Best fitness:    12
+Best program:    3
+Avg fitness:     10.11
+Minimum length:  0
+Maximum length:  15
+Avg length:      5.75
+
+Generation 166:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.72
+Minimum length:  1
+Maximum length:  14
+Avg length:      5.91
+
+Generation 167:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.32
+Minimum length:  1
+Maximum length:  15
+Avg length:      6
+
+Generation 168:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.65
+Minimum length:  1
+Maximum length:  16
+Avg length:      5.83
+
+Generation 169:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.81
+Minimum length:  1
+Maximum length:  14
+Avg length:      5.57
+
+Generation 170:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.63
+Minimum length:  1
+Maximum length:  15
+Avg length:      5.59
+
+Generation 171:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.35
+Minimum length:  1
+Maximum length:  15
+Avg length:      5.64
+
+Generation 172:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.18
+Minimum length:  1
+Maximum length:  11
+Avg length:      5.38
+
+Generation 173:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.04
+Minimum length:  1
+Maximum length:  13
+Avg length:      6.05
+
+Generation 174:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.3
+Minimum length:  1
+Maximum length:  15
+Avg length:      6.42
+
+Generation 175:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.76
+Minimum length:  1
+Maximum length:  18
+Avg length:      6.28
+
+Generation 176:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.64
+Minimum length:  0
+Maximum length:  19
+Avg length:      6.15
+
+Generation 177:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.2
+Minimum length:  0
+Maximum length:  19
+Avg length:      6.85
+
+Generation 178:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.55
+Minimum length:  0
+Maximum length:  19
+Avg length:      6.83
+
+Generation 179:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.79
+Minimum length:  1
+Maximum length:  20
+Avg length:      6.48
+
+Generation 180:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.18
+Minimum length:  1
+Maximum length:  20
+Avg length:      6.71
+
+Generation 181:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.33
+Minimum length:  0
+Maximum length:  20
+Avg length:      6.7
+
+Generation 182:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.87
+Minimum length:  1
+Maximum length:  21
+Avg length:      7.45
+
+Generation 183:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.22
+Minimum length:  1
+Maximum length:  20
+Avg length:      7.41
+
+Generation 184:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.74
+Minimum length:  0
+Maximum length:  19
+Avg length:      7.67
+
+Generation 185:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.44
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.08
+
+Generation 186:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.6
+Minimum length:  1
+Maximum length:  22
+Avg length:      7.73
+
+Generation 187:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.25
+Minimum length:  1
+Maximum length:  22
+Avg length:      7.76
+
+Generation 188:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.78
+Minimum length:  1
+Maximum length:  18
+Avg length:      7.46
+
+Generation 189:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     11.28
+Minimum length:  1
+Maximum length:  19
+Avg length:      7.33
+
+Generation 190:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.7
+Minimum length:  1
+Maximum length:  18
+Avg length:      7.34
+
+Generation 191:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.76
+Minimum length:  1
+Maximum length:  17
+Avg length:      6.97
+
+Generation 192:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.18
+Minimum length:  1
+Maximum length:  19
+Avg length:      7.96
+
+Generation 193:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.33
+Minimum length:  1
+Maximum length:  17
+Avg length:      7.51
+
+Generation 194:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.66
+Minimum length:  1
+Maximum length:  20
+Avg length:      7.79
+
+Generation 195:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.11
+Minimum length:  1
+Maximum length:  18
+Avg length:      7.49
+
+Generation 196:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.77
+Minimum length:  1
+Maximum length:  15
+Avg length:      7.14
+
+Generation 197:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     9.77
+Minimum length:  1
+Maximum length:  18
+Avg length:      7.04
+
+Generation 198:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.27
+Minimum length:  1
+Maximum length:  22
+Avg length:      7.68
+
+Generation 199:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.4
+Minimum length:  1
+Maximum length:  23
+Avg length:      7.51
+
+Generation 200:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.23
+Minimum length:  1
+Maximum length:  16
+Avg length:      8.45
+
+Generation 201:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.67
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.44
+
+Generation 202:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.74
+Minimum length:  1
+Maximum length:  17
+Avg length:      7.67
+
+Generation 203:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.53
+Minimum length:  1
+Maximum length:  21
+Avg length:      7.84
+
+Generation 204:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.69
+Minimum length:  2
+Maximum length:  17
+Avg length:      8.54
+
+Generation 205:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.08
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.4
+
+Generation 206:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.46
+Minimum length:  1
+Maximum length:  22
+Avg length:      8.45
+
+Generation 207:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.08
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.8
+
+Generation 208:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.22
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.74
+
+Generation 209:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.58
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.03
+
+Generation 210:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.84
+Minimum length:  3
+Maximum length:  20
+Avg length:      8.24
+
+Generation 211:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     9.98
+Minimum length:  1
+Maximum length:  18
+Avg length:      7.84
+
+Generation 212:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.12
+Minimum length:  2
+Maximum length:  18
+Avg length:      7.78
+
+Generation 213:
+Population size: 100
+Best fitness:    12
+Best program:    2
+Avg fitness:     10.59
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.17
+
+Generation 214:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.93
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.62
+
+Generation 215:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.21
+Minimum length:  1
+Maximum length:  22
+Avg length:      8.98
+
+Generation 216:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.71
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.41
+
+Generation 217:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     11.07
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.52
+
+Generation 218:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.32
+Minimum length:  1
+Maximum length:  22
+Avg length:      10.4
+
+Generation 219:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.11
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.78
+
+Generation 220:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.52
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.24
+
+Generation 221:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.09
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.83
+
+Generation 222:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.19
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.4
+
+Generation 223:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.59
+Minimum length:  1
+Maximum length:  19
+Avg length:      9.48
+
+Generation 224:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.57
+Minimum length:  1
+Maximum length:  19
+Avg length:      9.36
+
+Generation 225:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.96
+Minimum length:  1
+Maximum length:  19
+Avg length:      9.28
+
+Generation 226:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.14
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.1
+
+Generation 227:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     11.03
+Minimum length:  2
+Maximum length:  21
+Avg length:      10.02
+
+Generation 228:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.53
+Minimum length:  1
+Maximum length:  23
+Avg length:      10.12
+
+Generation 229:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.21
+Minimum length:  2
+Maximum length:  22
+Avg length:      11
+
+Generation 230:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.52
+Minimum length:  3
+Maximum length:  25
+Avg length:      11.21
+
+Generation 231:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.73
+Minimum length:  1
+Maximum length:  27
+Avg length:      11.33
+
+Generation 232:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.06
+Minimum length:  2
+Maximum length:  27
+Avg length:      11.53
+
+Generation 233:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.72
+Minimum length:  2
+Maximum length:  27
+Avg length:      10.84
+
+Generation 234:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.66
+Minimum length:  2
+Maximum length:  24
+Avg length:      10.32
+
+Generation 235:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.09
+Minimum length:  2
+Maximum length:  21
+Avg length:      10.22
+
+Generation 236:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.7
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.9
+
+Generation 237:
+Population size: 100
+Best fitness:    12
+Best program:    2
+Avg fitness:     10.83
+Minimum length:  1
+Maximum length:  20
+Avg length:      10.12
+
+Generation 238:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.07
+Minimum length:  2
+Maximum length:  19
+Avg length:      10.19
+
+Generation 239:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.14
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.81
+
+Generation 240:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.84
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.37
+
+Generation 241:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.81
+Minimum length:  2
+Maximum length:  21
+Avg length:      10.87
+
+Generation 242:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.28
+Minimum length:  1
+Maximum length:  20
+Avg length:      10.75
+
+Generation 243:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.11
+Minimum length:  1
+Maximum length:  20
+Avg length:      11.39
+
+Generation 244:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.22
+Minimum length:  1
+Maximum length:  21
+Avg length:      11.02
+
+Generation 245:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.86
+Minimum length:  1
+Maximum length:  21
+Avg length:      11.01
+
+Generation 246:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.26
+Minimum length:  1
+Maximum length:  20
+Avg length:      10.24
+
+Generation 247:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.84
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.12
+
+Generation 248:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.98
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.13
+
+Generation 249:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.07
+
+Generation 250:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.06
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.3
+
+Generation 251:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.11
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.61
+
+Generation 252:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.95
+Minimum length:  2
+Maximum length:  22
+Avg length:      10.31
+
+Generation 253:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.7
+Minimum length:  0
+Maximum length:  21
+Avg length:      9.39
+
+Generation 254:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.74
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.3
+
+Generation 255:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.34
+Minimum length:  2
+Maximum length:  22
+Avg length:      9.53
+
+Generation 256:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.1
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.6
+
+Generation 257:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.75
+Minimum length:  2
+Maximum length:  22
+Avg length:      9.47
+
+Generation 258:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.66
+Minimum length:  2
+Maximum length:  22
+Avg length:      9.45
+
+Generation 259:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.53
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.44
+
+Generation 260:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.72
+Minimum length:  3
+Maximum length:  23
+Avg length:      10.42
+
+Generation 261:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.37
+Minimum length:  1
+Maximum length:  23
+Avg length:      10.38
+
+Generation 262:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.78
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.87
+
+Generation 263:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.87
+Minimum length:  1
+Maximum length:  20
+Avg length:      11.11
+
+Generation 264:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.72
+Minimum length:  2
+Maximum length:  19
+Avg length:      10.21
+
+Generation 265:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.06
+Minimum length:  3
+Maximum length:  20
+Avg length:      10.72
+
+Generation 266:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.95
+Minimum length:  2
+Maximum length:  22
+Avg length:      10.6
+
+Generation 267:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.53
+Minimum length:  2
+Maximum length:  21
+Avg length:      9.96
+
+Generation 268:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.65
+Minimum length:  2
+Maximum length:  22
+Avg length:      9.59
+
+Generation 269:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.89
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.65
+
+Generation 270:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.89
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.55
+
+Generation 271:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     9.87
+Minimum length:  1
+Maximum length:  22
+Avg length:      10.06
+
+Generation 272:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.34
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.72
+
+Generation 273:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.08
+Minimum length:  1
+Maximum length:  22
+Avg length:      10.35
+
+Generation 274:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.98
+Minimum length:  1
+Maximum length:  20
+Avg length:      10.5
+
+Generation 275:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.29
+Minimum length:  3
+Maximum length:  21
+Avg length:      10.7
+
+Generation 276:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.13
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.18
+
+Generation 277:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.63
+Minimum length:  3
+Maximum length:  22
+Avg length:      10.53
+
+Generation 278:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.1
+Minimum length:  2
+Maximum length:  23
+Avg length:      10.43
+
+Generation 279:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.07
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.71
+
+Generation 280:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.2
+Minimum length:  1
+Maximum length:  17
+Avg length:      8.65
+
+Generation 281:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.45
+Minimum length:  0
+Maximum length:  20
+Avg length:      9.18
+
+Generation 282:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.71
+Minimum length:  2
+Maximum length:  23
+Avg length:      9.41
+
+Generation 283:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.78
+Minimum length:  2
+Maximum length:  22
+Avg length:      9.54
+
+Generation 284:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.18
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.48
+
+Generation 285:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.33
+Minimum length:  3
+Maximum length:  21
+Avg length:      10.52
+
+Generation 286:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.9
+Minimum length:  0
+Maximum length:  22
+Avg length:      10.47
+
+Generation 287:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.84
+Minimum length:  1
+Maximum length:  22
+Avg length:      10.93
+
+Generation 288:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.39
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.52
+
+Generation 289:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.53
+Minimum length:  1
+Maximum length:  23
+Avg length:      10.22
+
+Generation 290:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.72
+Minimum length:  2
+Maximum length:  24
+Avg length:      11.26
+
+Generation 291:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.22
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.91
+
+Generation 292:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.72
+Minimum length:  2
+Maximum length:  20
+Avg length:      9.97
+
+Generation 293:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.86
+Minimum length:  2
+Maximum length:  22
+Avg length:      9.81
+
+Generation 294:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.27
+Minimum length:  1
+Maximum length:  23
+Avg length:      8.94
+
+Generation 295:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.56
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.09
+
+Generation 296:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.34
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.7
+
+Generation 297:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     11
+Minimum length:  2
+Maximum length:  20
+Avg length:      9.2
+
+Generation 298:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.75
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.42
+
+Generation 299:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.97
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.46
+
+Generation 300:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.72
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.32
+
+Generation 301:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.49
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.5
+
+Generation 302:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.36
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.27
+
+Generation 303:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.92
+Minimum length:  1
+Maximum length:  17
+Avg length:      7.97
+
+Generation 304:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.78
+Minimum length:  1
+Maximum length:  18
+Avg length:      8.12
+
+Generation 305:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.98
+Minimum length:  1
+Maximum length:  19
+Avg length:      7.76
+
+Generation 306:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.8
+Minimum length:  1
+Maximum length:  19
+Avg length:      7.47
+
+Generation 307:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.34
+Minimum length:  1
+Maximum length:  20
+Avg length:      7.56
+
+Generation 308:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.46
+Minimum length:  1
+Maximum length:  18
+Avg length:      7.57
+
+Generation 309:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.74
+Minimum length:  1
+Maximum length:  17
+Avg length:      7.11
+
+Generation 310:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.65
+Minimum length:  1
+Maximum length:  15
+Avg length:      7.66
+
+Generation 311:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.64
+Minimum length:  2
+Maximum length:  20
+Avg length:      7.07
+
+Generation 312:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.74
+Minimum length:  1
+Maximum length:  15
+Avg length:      6.74
+
+Generation 313:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.8
+Minimum length:  1
+Maximum length:  17
+Avg length:      7.44
+
+Generation 314:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.2
+Minimum length:  1
+Maximum length:  20
+Avg length:      7.21
+
+Generation 315:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.18
+Minimum length:  1
+Maximum length:  14
+Avg length:      6.35
+
+Generation 316:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.45
+Minimum length:  1
+Maximum length:  17
+Avg length:      6.22
+
+Generation 317:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     9.95
+Minimum length:  0
+Maximum length:  16
+Avg length:      6.15
+
+Generation 318:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.23
+Minimum length:  2
+Maximum length:  14
+Avg length:      6.68
+
+Generation 319:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.49
+Minimum length:  1
+Maximum length:  19
+Avg length:      6.63
+
+Generation 320:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     11.13
+Minimum length:  2
+Maximum length:  18
+Avg length:      7.12
+
+Generation 321:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.33
+Minimum length:  1
+Maximum length:  17
+Avg length:      6.59
+
+Generation 322:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.71
+Minimum length:  1
+Maximum length:  16
+Avg length:      6.61
+
+Generation 323:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.82
+Minimum length:  1
+Maximum length:  19
+Avg length:      6.07
+
+Generation 324:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.51
+Minimum length:  1
+Maximum length:  18
+Avg length:      6.22
+
+Generation 325:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.61
+Minimum length:  2
+Maximum length:  15
+Avg length:      6.74
+
+Generation 326:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.51
+Minimum length:  1
+Maximum length:  16
+Avg length:      7.1
+
+Generation 327:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.41
+Minimum length:  1
+Maximum length:  17
+Avg length:      7.31
+
+Generation 328:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.58
+Minimum length:  1
+Maximum length:  18
+Avg length:      7.71
+
+Generation 329:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.82
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.03
+
+Generation 330:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.86
+Minimum length:  1
+Maximum length:  19
+Avg length:      7.79
+
+Generation 331:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.55
+Minimum length:  2
+Maximum length:  20
+Avg length:      8.68
+
+Generation 332:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.49
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.19
+
+Generation 333:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.89
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.13
+
+Generation 334:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.84
+Minimum length:  2
+Maximum length:  20
+Avg length:      8.66
+
+Generation 335:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.04
+Minimum length:  0
+Maximum length:  21
+Avg length:      8.97
+
+Generation 336:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.89
+Minimum length:  1
+Maximum length:  22
+Avg length:      8.39
+
+Generation 337:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.54
+Minimum length:  1
+Maximum length:  22
+Avg length:      7.79
+
+Generation 338:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.22
+Minimum length:  2
+Maximum length:  18
+Avg length:      7.89
+
+Generation 339:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.59
+Minimum length:  2
+Maximum length:  20
+Avg length:      8.21
+
+Generation 340:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.37
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.07
+
+Generation 341:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.57
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.66
+
+Generation 342:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.43
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.02
+
+Generation 343:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.23
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.01
+
+Generation 344:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.88
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.78
+
+Generation 345:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.65
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.59
+
+Generation 346:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.86
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.4
+
+Generation 347:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.3
+Minimum length:  2
+Maximum length:  22
+Avg length:      9.57
+
+Generation 348:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.94
+Minimum length:  1
+Maximum length:  18
+Avg length:      9.26
+
+Generation 349:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.26
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.18
+
+Generation 350:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.78
+Minimum length:  1
+Maximum length:  18
+Avg length:      8.91
+
+Generation 351:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.76
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.6
+
+Generation 352:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.57
+Minimum length:  3
+Maximum length:  19
+Avg length:      9.53
+
+Generation 353:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.82
+Minimum length:  1
+Maximum length:  20
+Avg length:      10.21
+
+Generation 354:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.38
+Minimum length:  1
+Maximum length:  20
+Avg length:      10.08
+
+Generation 355:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.42
+Minimum length:  1
+Maximum length:  20
+Avg length:      10.14
+
+Generation 356:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.99
+Minimum length:  1
+Maximum length:  20
+Avg length:      10.64
+
+Generation 357:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.79
+Minimum length:  2
+Maximum length:  20
+Avg length:      10.56
+
+Generation 358:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.83
+Minimum length:  1
+Maximum length:  20
+Avg length:      10.57
+
+Generation 359:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.41
+Minimum length:  1
+Maximum length:  20
+Avg length:      10
+
+Generation 360:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.44
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.29
+
+Generation 361:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.02
+Minimum length:  2
+Maximum length:  21
+Avg length:      10.86
+
+Generation 362:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.88
+Minimum length:  1
+Maximum length:  22
+Avg length:      10.63
+
+Generation 363:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.47
+Minimum length:  1
+Maximum length:  22
+Avg length:      10
+
+Generation 364:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.43
+Minimum length:  3
+Maximum length:  22
+Avg length:      10.64
+
+Generation 365:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.19
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.51
+
+Generation 366:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.61
+Minimum length:  2
+Maximum length:  24
+Avg length:      9.28
+
+Generation 367:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.81
+Minimum length:  2
+Maximum length:  19
+Avg length:      8.5
+
+Generation 368:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.64
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.49
+
+Generation 369:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.96
+Minimum length:  1
+Maximum length:  19
+Avg length:      9.11
+
+Generation 370:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.11
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.44
+
+Generation 371:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     9.26
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.37
+
+Generation 372:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.12
+Minimum length:  1
+Maximum length:  18
+Avg length:      8.59
+
+Generation 373:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.19
+Minimum length:  1
+Maximum length:  18
+Avg length:      9.1
+
+Generation 374:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.73
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.66
+
+Generation 375:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.07
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.88
+
+Generation 376:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     9.97
+Minimum length:  2
+Maximum length:  19
+Avg length:      8.82
+
+Generation 377:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.49
+Minimum length:  1
+Maximum length:  18
+Avg length:      8.27
+
+Generation 378:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.95
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.01
+
+Generation 379:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.62
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.57
+
+Generation 380:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.02
+Minimum length:  2
+Maximum length:  22
+Avg length:      9.44
+
+Generation 381:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.3
+Minimum length:  2
+Maximum length:  20
+Avg length:      9.36
+
+Generation 382:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.97
+Minimum length:  2
+Maximum length:  21
+Avg length:      10
+
+Generation 383:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.03
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.6
+
+Generation 384:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.25
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.34
+
+Generation 385:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.48
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.09
+
+Generation 386:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.62
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.96
+
+Generation 387:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.13
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.61
+
+Generation 388:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.76
+Minimum length:  1
+Maximum length:  22
+Avg length:      8.02
+
+Generation 389:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.69
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.27
+
+Generation 390:
+Population size: 100
+Best fitness:    12
+Best program:    2
+Avg fitness:     10.27
+Minimum length:  1
+Maximum length:  19
+Avg length:      7.89
+
+Generation 391:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.89
+Minimum length:  2
+Maximum length:  19
+Avg length:      8.61
+
+Generation 392:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.78
+Minimum length:  2
+Maximum length:  20
+Avg length:      8.84
+
+Generation 393:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.62
+Minimum length:  2
+Maximum length:  19
+Avg length:      8.59
+
+Generation 394:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.44
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.75
+
+Generation 395:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     9.76
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.28
+
+Generation 396:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.48
+Minimum length:  1
+Maximum length:  18
+Avg length:      8.51
+
+Generation 397:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.01
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.7
+
+Generation 398:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.62
+Minimum length:  1
+Maximum length:  19
+Avg length:      9.1
+
+Generation 399:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.23
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.35
+
+Generation 400:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.51
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.23
+
+Generation 401:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.52
+
+Generation 402:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.17
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.41
+
+Generation 403:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     9.85
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.23
+
+Generation 404:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.18
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.99
+
+Generation 405:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.99
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.73
+
+Generation 406:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.53
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.67
+
+Generation 407:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.64
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.49
+
+Generation 408:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.88
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.2
+
+Generation 409:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.62
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.01
+
+Generation 410:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.23
+Minimum length:  1
+Maximum length:  21
+Avg length:      7.54
+
+Generation 411:
+Population size: 100
+Best fitness:    12
+Best program:    2
+Avg fitness:     10.5
+Minimum length:  2
+Maximum length:  18
+Avg length:      7.95
+
+Generation 412:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.07
+Minimum length:  2
+Maximum length:  18
+Avg length:      7.39
+
+Generation 413:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     9.76
+Minimum length:  1
+Maximum length:  19
+Avg length:      6.88
+
+Generation 414:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.48
+Minimum length:  1
+Maximum length:  17
+Avg length:      7.41
+
+Generation 415:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.31
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.09
+
+Generation 416:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.53
+Minimum length:  1
+Maximum length:  19
+Avg length:      7.98
+
+Generation 417:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.82
+Minimum length:  1
+Maximum length:  20
+Avg length:      7.47
+
+Generation 418:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.24
+Minimum length:  1
+Maximum length:  19
+Avg length:      7.91
+
+Generation 419:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.71
+Minimum length:  1
+Maximum length:  18
+Avg length:      8.62
+
+Generation 420:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.29
+Minimum length:  2
+Maximum length:  19
+Avg length:      8.95
+
+Generation 421:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.38
+Minimum length:  0
+Maximum length:  19
+Avg length:      8.82
+
+Generation 422:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.59
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.15
+
+Generation 423:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.7
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.31
+
+Generation 424:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.58
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.7
+
+Generation 425:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.18
+Minimum length:  1
+Maximum length:  22
+Avg length:      8.63
+
+Generation 426:
+Population size: 100
+Best fitness:    12
+Best program:    2
+Avg fitness:     11.21
+Minimum length:  1
+Maximum length:  20
+Avg length:      8.49
+
+Generation 427:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.11
+Minimum length:  1
+Maximum length:  19
+Avg length:      8.86
+
+Generation 428:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.74
+Minimum length:  1
+Maximum length:  21
+Avg length:      8.69
+
+Generation 429:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.34
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.09
+
+Generation 430:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.25
+Minimum length:  2
+Maximum length:  20
+Avg length:      9.74
+
+Generation 431:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.94
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.75
+
+Generation 432:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.25
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.7
+
+Generation 433:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.28
+Minimum length:  1
+Maximum length:  22
+Avg length:      10.44
+
+Generation 434:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.13
+Minimum length:  1
+Maximum length:  22
+Avg length:      10.48
+
+Generation 435:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.47
+Minimum length:  1
+Maximum length:  22
+Avg length:      10.96
+
+Generation 436:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.4
+Minimum length:  2
+Maximum length:  20
+Avg length:      10.42
+
+Generation 437:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     11.05
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.11
+
+Generation 438:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.98
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.75
+
+Generation 439:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.35
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.85
+
+Generation 440:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.03
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.33
+
+Generation 441:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.77
+Minimum length:  1
+Maximum length:  18
+Avg length:      10.18
+
+Generation 442:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.76
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.84
+
+Generation 443:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.26
+Minimum length:  1
+Maximum length:  20
+Avg length:      10.13
+
+Generation 444:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.24
+Minimum length:  2
+Maximum length:  21
+Avg length:      10.37
+
+Generation 445:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     11.22
+Minimum length:  2
+Maximum length:  21
+Avg length:      9.63
+
+Generation 446:
+Population size: 100
+Best fitness:    12
+Best program:    1
+Avg fitness:     10.78
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.8
+
+Generation 447:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.86
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.19
+
+Generation 448:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.8
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.83
+
+Generation 449:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.55
+Minimum length:  1
+Maximum length:  22
+Avg length:      9.41
+
+Generation 450:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.89
+Minimum length:  1
+Maximum length:  20
+Avg length:      9.73
+
+Generation 451:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     9.51
+Minimum length:  0
+Maximum length:  19
+Avg length:      9.97
+
+Generation 452:
+Population size: 100
+Best fitness:    12
+Best program:    0
+Avg fitness:     10.42
+Minimum length:  1
+Maximum length:  19
+Avg length:      9
+
+Generation 453:
+Population size: 100
+Best fitness:    14
+Best program:    66
+Avg fitness:     10.6
+Minimum length:  1
+Maximum length:  19
+Avg length:      9.2
+
+Generation 454:
+Population size: 100
+Best fitness:    14
+Best program:    40
+Avg fitness:     10.91
+Minimum length:  1
+Maximum length:  18
+Avg length:      9.54
+
+Generation 455:
+Population size: 100
+Best fitness:    14
+Best program:    3
+Avg fitness:     10.32
+Minimum length:  1
+Maximum length:  19
+Avg length:      9.33
+
+Generation 456:
+Population size: 100
+Best fitness:    14
+Best program:    2
+Avg fitness:     9.77
+Minimum length:  1
+Maximum length:  17
+Avg length:      8.88
+
+Generation 457:
+Population size: 100
+Best fitness:    14
+Best program:    2
+Avg fitness:     10.77
+Minimum length:  2
+Maximum length:  18
+Avg length:      9.98
+
+Generation 458:
+Population size: 100
+Best fitness:    17
+Best program:    56
+Avg fitness:     11.01
+Minimum length:  1
+Maximum length:  20
+Avg length:      10.77
+
+Generation 459:
+Population size: 100
+Best fitness:    17
+Best program:    7
+Avg fitness:     11.27
+Minimum length:  2
+Maximum length:  21
+Avg length:      11.08
+
+Generation 460:
+Population size: 100
+Best fitness:    18
+Best program:    18
+Avg fitness:     10.55
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.47
+
+Generation 461:
+Population size: 100
+Best fitness:    18
+Best program:    16
+Avg fitness:     10.75
+Minimum length:  1
+Maximum length:  14
+Avg length:      6.67
+
+Generation 462:
+Population size: 100
+Best fitness:    18
+Best program:    6
+Avg fitness:     12.47
+Minimum length:  1
+Maximum length:  9
+Avg length:      5.83
+
+Generation 463:
+Population size: 100
+Best fitness:    18
+Best program:    1
+Avg fitness:     13.89
+Minimum length:  2
+Maximum length:  11
+Avg length:      6.08
+
+Generation 464:
+Population size: 100
+Best fitness:    18
+Best program:    0
+Avg fitness:     13.1
+Minimum length:  0
+Maximum length:  13
+Avg length:      6.14
+
+Generation 465:
+Population size: 100
+Best fitness:    18
+Best program:    0
+Avg fitness:     13.59
+Minimum length:  2
+Maximum length:  14
+Avg length:      6.71
+
+Generation 466:
+Population size: 100
+Best fitness:    18
+Best program:    2
+Avg fitness:     14.18
+Minimum length:  1
+Maximum length:  17
+Avg length:      7.53
+
+Generation 467:
+Population size: 100
+Best fitness:    18
+Best program:    1
+Avg fitness:     13.57
+Minimum length:  1
+Maximum length:  17
+Avg length:      7.39
+
+Generation 468:
+Population size: 100
+Best fitness:    18
+Best program:    0
+Avg fitness:     13.38
+Minimum length:  1
+Maximum length:  15
+Avg length:      7.52
+
+Generation 469:
+Population size: 100
+Best fitness:    18
+Best program:    1
+Avg fitness:     14.09
+Minimum length:  4
+Maximum length:  19
+Avg length:      8.21
+
+Generation 470:
+Population size: 100
+Best fitness:    18
+Best program:    1
+Avg fitness:     13
+Minimum length:  1
+Maximum length:  17
+Avg length:      7.44
+
+Generation 471:
+Population size: 100
+Best fitness:    18
+Best program:    0
+Avg fitness:     14.44
+Minimum length:  2
+Maximum length:  20
+Avg length:      8.28
+
+Generation 472:
+Population size: 100
+Best fitness:    18
+Best program:    0
+Avg fitness:     13.6
+Minimum length:  2
+Maximum length:  20
+Avg length:      8.55
+
+Generation 473:
+Population size: 100
+Best fitness:    18
+Best program:    0
+Avg fitness:     14.29
+Minimum length:  2
+Maximum length:  20
+Avg length:      8.97
+
+Generation 474:
+Population size: 100
+Best fitness:    18
+Best program:    0
+Avg fitness:     12.7
+Minimum length:  1
+Maximum length:  21
+Avg length:      9.34
+
+Generation 475:
+Population size: 100
+Best fitness:    18
+Best program:    0
+Avg fitness:     14.68
+Minimum length:  1
+Maximum length:  22
+Avg length:      10.48
+
+Generation 476:
+Population size: 100
+Best fitness:    18
+Best program:    0
+Avg fitness:     12.86
+Minimum length:  1
+Maximum length:  22
+Avg length:      10.84
+
+Generation 477:
+Population size: 100
+Best fitness:    18
+Best program:    0
+Avg fitness:     14.97
+Minimum length:  1
+Maximum length:  23
+Avg length:      10.98
+
+Generation 478:
+Population size: 100
+Best fitness:    18
+Best program:    1
+Avg fitness:     13.41
+Minimum length:  1
+Maximum length:  23
+Avg length:      10.8
+
+Generation 479:
+Population size: 100
+Best fitness:    18
+Best program:    0
+Avg fitness:     13.38
+Minimum length:  2
+Maximum length:  24
+Avg length:      11.8
+
+Generation 480:
+Population size: 100
+Best fitness:    18
+Best program:    0
+Avg fitness:     13.75
+Minimum length:  2
+Maximum length:  23
+Avg length:      11.46
+
+Generation 481:
+Population size: 100
+Best fitness:    18
+Best program:    0
+Avg fitness:     13.84
+Minimum length:  2
+Maximum length:  20
+Avg length:      10.5
+
+Generation 482:
+Population size: 100
+Best fitness:    18
+Best program:    1
+Avg fitness:     12.68
+Minimum length:  1
+Maximum length:  21
+Avg length:      10.42
+
+Generation 483:
+Population size: 100
+Best fitness:    18
+Best program:    5
+Avg fitness:     12.64
+Minimum length:  2
+Maximum length:  20
+Avg length:      10.6
+
+Generation 484:
+Population size: 100
+Best fitness:    18
+Best program:    1
+Avg fitness:     13.22
+Minimum length:  1
+Maximum length:  21
+Avg length:      11.02
+
+Generation 485:
+Population size: 100
+Best fitness:    18
+Best program:    1
+Avg fitness:     14.11
+Minimum length:  3
+Maximum length:  21
+Avg length:      11.76
+
+Generation 486:
+Population size: 100
+Best fitness:    18
+Best program:    0
+Avg fitness:     13.57
+Minimum length:  1
+Maximum length:  21
+Avg length:      11.45
+
+Generation 487:
+Population size: 100
+Best fitness:    19
+Best program:    45
+Avg fitness:     14.04
+Minimum length:  2
+Maximum length:  20
+Avg length:      12.6
+
+Generation 488:
+Population size: 100
+Best fitness:    19
+Best program:    3
+Avg fitness:     13.19
+Minimum length:  3
+Maximum length:  22
+Avg length:      12.46
+
+Generation 489:
+Population size: 100
+Best fitness:    19
+Best program:    0
+Avg fitness:     14.01
+Minimum length:  2
+Maximum length:  21
+Avg length:      12.97
+
+Generation 490:
+Population size: 100
+Best fitness:    19
+Best program:    0
+Avg fitness:     15.26
+Minimum length:  1
+Maximum length:  20
+Avg length:      12.58
+
+Generation 491:
+Population size: 100
+Best fitness:    19
+Best program:    1
+Avg fitness:     14.6
+Minimum length:  2
+Maximum length:  22
+Avg length:      12.38
+
+Generation 492:
+Population size: 100
+Best fitness:    19
+Best program:    3
+Avg fitness:     15.24
+Minimum length:  2
+Maximum length:  22
+Avg length:      13.67
+
+Generation 493:
+Population size: 100
+Best fitness:    19
+Best program:    0
+Avg fitness:     15.09
+Minimum length:  2
+Maximum length:  24
+Avg length:      13.5
+
+Generation 494:
+Population size: 100
+Best fitness:    19
+Best program:    0
+Avg fitness:     14.96
+Minimum length:  1
+Maximum length:  23
+Avg length:      13.23
+
+Generation 495:
+Population size: 100
+Best fitness:    19
+Best program:    1
+Avg fitness:     14.95
+Minimum length:  1
+Maximum length:  22
+Avg length:      13.23
+
+Generation 496:
+Population size: 100
+Best fitness:    19
+Best program:    1
+Avg fitness:     14.89
+Minimum length:  3
+Maximum length:  24
+Avg length:      11.87
+
+Generation 497:
+Population size: 100
+Best fitness:    19
+Best program:    1
+Avg fitness:     15.15
+Minimum length:  2
+Maximum length:  23
+Avg length:      12.46
+
+Generation 498:
+Population size: 100
+Best fitness:    19
+Best program:    0
+Avg fitness:     14.08
+Minimum length:  2
+Maximum length:  23
+Avg length:      12.42
+
+Generation 499:
+Population size: 100
+Best fitness:    19
+Best program:    0
+Avg fitness:     15.04
+Minimum length:  3
+Maximum length:  23
+Avg length:      12.5
+
+---------- Final Programs ----------
+
+Program 1 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, LOOK, (T, move), (T, turn_left)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [2, LOOK, (I, 2), (I, 2)]
+[7]: [4, LOOK, (I, 0), (I, 2)]
+[8]: [17, PROG3, (T, turn_left), (T, move), (T, turn_right)]
+[9]: [3, PROG2, (T, turn_right), (I, 2)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+[11]: [0, LOOK, (T, move), (T, turn_left)]
+[12]: [2, PROG2, (I, 0), (I, 0)]
+[13]: [0, LOOK, (T, move), (T, turn_left)]
+[14]: [19, PROG3, (I, 0), (I, 2), (I, 0)]
+[15]: [0, LOOK, (T, move), (T, turn_right)]
+[16]: [2, LOOK, (I, 0), (I, 1)]
+[17]: [0, PROG3, (T, turn_right), (I, 0), (I, 2)]
+[18]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[19]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[20]: [0, PROG2, (T, turn_right), (T, turn_right)]
+
+Program 2 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [11, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [11, PROG2, (T, turn_right), (I, 1)]
+[8]: [4, LOOK, (I, 2), (I, 2)]
+[9]: [3, PROG2, (T, move), (T, move)]
+[10]: [19, PROG2, (I, 1), (I, 0)]
+
+Program 3 -> Fitness: 2
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG2, (T, move), (T, turn_left)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [0, PROG3, (T, turn_left), (I, 1), (T, turn_right)]
+[8]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+[11]: [0, LOOK, (T, move), (I, 1)]
+[12]: [0, LOOK, (T, move), (T, turn_left)]
+
+Program 4 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, LOOK, (T, move), (T, turn_left)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [2, LOOK, (I, 2), (I, 2)]
+[7]: [4, LOOK, (I, 0), (I, 2)]
+[8]: [17, PROG3, (T, turn_left), (T, move), (T, turn_right)]
+[9]: [3, PROG2, (T, turn_right), (I, 2)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+[11]: [0, LOOK, (T, move), (T, turn_left)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [11, PROG2, (T, turn_right), (I, 1)]
+[14]: [3, PROG2, (T, move), (T, move)]
+[15]: [19, PROG2, (I, 1), (I, 0)]
+[16]: [0, LOOK, (I, 0), (I, 1)]
+[17]: [0, LOOK, (T, move), (T, turn_left)]
+[18]: [7, PROG2, (I, 0), (I, 1)]
+[19]: [10, LOOK, (T, move), (I, 0)]
+[20]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+
+Program 5 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, LOOK, (T, move), (T, turn_left)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [2, LOOK, (I, 2), (I, 2)]
+[7]: [2, LOOK, (T, turn_right), (I, 1)]
+[8]: [12, PROG2, (I, 0), (T, move)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[11]: [6, PROG3, (I, 1), (I, 1), (T, move)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [0, LOOK, (T, move), (T, turn_left)]
+[14]: [2, LOOK, (I, 0), (I, 1)]
+[15]: [14, PROG2, (T, move), (I, 1)]
+[16]: [5, LOOK, (T, turn_left), (I, 0)]
+[17]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+
+Program 6 -> Fitness: 1
+[1]: [4, PROG3, (T, turn_left), (T, move), (I, 2)]
+[2]: [19, PROG2, (I, 1), (I, 0)]
+[3]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+
+Program 7 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, turn_right), (T, move), (I, 1)]
+[7]: [0, PROG3, (T, turn_left), (I, 1), (T, turn_right)]
+[8]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[9]: [0, LOOK, (T, move), (T, turn_left)]
+[10]: [0, LOOK, (T, move), (I, 1)]
+[11]: [0, LOOK, (T, move), (T, turn_left)]
+
+Program 8 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG2, (T, turn_right), (T, turn_left)]
+[7]: [4, PROG3, (T, turn_left), (T, move), (I, 2)]
+[8]: [19, PROG2, (I, 1), (I, 0)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[11]: [11, LOOK, (T, turn_right), (I, 2)]
+[12]: [7, PROG2, (I, 0), (T, turn_right)]
+
+Program 9 -> Fitness: 10
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, LOOK, (T, move), (T, turn_left)]
+[4]: [4, PROG3, (T, turn_left), (T, move), (I, 2)]
+[5]: [19, PROG2, (I, 1), (I, 0)]
+[6]: [0, PROG3, (I, 0), (I, 0), (T, turn_left)]
+
+Program 10 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [11, LOOK, (I, 0), (I, 0)]
+[4]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [0, LOOK, (T, move), (I, 1)]
+[8]: [4, PROG2, (T, move), (T, turn_left)]
+[9]: [19, PROG2, (I, 1), (I, 0)]
+[10]: [14, LOOK, (T, move), (T, move)]
+[11]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[14]: [2, PROG2, (I, 1), (T, move)]
+[15]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[16]: [0, LOOK, (T, move), (T, turn_left)]
+[17]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[18]: [11, PROG2, (T, turn_right), (I, 1)]
+[19]: [4, LOOK, (T, turn_left), (I, 2)]
+[20]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+[21]: [5, LOOK, (T, turn_right), (T, move)]
+
+Program 11 -> Fitness: 3
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [21, PROG2, (I, 2), (I, 1)]
+[5]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+
+Program 12 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [10, PROG3, (I, 1), (T, move), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [2, LOOK, (I, 0), (I, 1)]
+[8]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[9]: [11, PROG2, (I, 0), (I, 0)]
+[10]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[11]: [3, PROG2, (T, move), (T, move)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [11, LOOK, (I, 0), (T, turn_right)]
+[14]: [5, PROG2, (I, 1), (T, turn_right)]
+[15]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[16]: [0, LOOK, (T, move), (T, turn_left)]
+[17]: [7, PROG2, (I, 0), (T, turn_right)]
+
+Program 13 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [11, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [11, PROG2, (T, turn_right), (I, 1)]
+[8]: [4, LOOK, (I, 2), (I, 2)]
+[9]: [3, PROG2, (T, move), (T, move)]
+[10]: [19, PROG2, (I, 1), (I, 0)]
+[11]: [0, LOOK, (I, 2), (T, move)]
+
+Program 14 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [6, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [4, PROG2, (I, 2), (T, move)]
+[8]: [15, PROG3, (T, move), (I, 0), (I, 0)]
+[9]: [11, LOOK, (T, turn_right), (T, turn_right)]
+[10]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[11]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[12]: [11, PROG2, (T, turn_right), (I, 1)]
+[13]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[14]: [3, PROG2, (T, move), (T, move)]
+[15]: [16, PROG3, (I, 1), (I, 1), (I, 2)]
+[16]: [0, LOOK, (I, 2), (T, move)]
+
+Program 15 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (I, 0), (I, 1), (T, move)]
+[7]: [0, LOOK, (I, 2), (T, move)]
+
+Program 16 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [6, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [2, LOOK, (I, 2), (I, 2)]
+[8]: [4, LOOK, (I, 0), (I, 2)]
+[9]: [17, PROG3, (T, turn_left), (T, move), (T, turn_right)]
+[10]: [3, PROG2, (T, turn_right), (I, 2)]
+[11]: [0, LOOK, (T, move), (T, turn_left)]
+[12]: [0, LOOK, (T, move), (T, turn_left)]
+[13]: [2, PROG2, (I, 0), (I, 0)]
+
+Program 17 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG2, (T, move), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [10, PROG3, (T, turn_right), (T, turn_left), (I, 0)]
+[9]: [0, LOOK, (T, move), (T, turn_left)]
+[10]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[11]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [11, LOOK, (T, turn_right), (I, 2)]
+[14]: [7, PROG2, (I, 0), (T, turn_right)]
+
+Program 18 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [9, PROG3, (I, 1), (T, turn_left), (T, turn_right)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [15, LOOK, (T, move), (T, turn_left)]
+[9]: [19, PROG2, (I, 1), (I, 0)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+[11]: [4, LOOK, (I, 1), (I, 1)]
+[12]: [0, LOOK, (T, move), (T, turn_left)]
+[13]: [2, PROG3, (I, 0), (I, 0), (T, turn_right)]
+[14]: [11, LOOK, (I, 0), (I, 1)]
+[15]: [6, PROG3, (I, 1), (I, 1), (I, 1)]
+[16]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[17]: [0, PROG2, (I, 2), (I, 1)]
+
+Program 19 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [11, PROG2, (T, turn_right), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [11, PROG2, (T, turn_right), (I, 1)]
+[8]: [4, LOOK, (I, 2), (I, 2)]
+[9]: [3, PROG3, (T, move), (T, move), (T, move)]
+[10]: [19, PROG2, (I, 1), (I, 0)]
+[11]: [0, LOOK, (I, 0), (I, 1)]
+[12]: [0, LOOK, (I, 2), (T, move)]
+
+Program 20 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [11, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [2, PROG2, (I, 1), (T, move)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[9]: [5, LOOK, (I, 1), (T, move)]
+[10]: [0, PROG3, (I, 0), (I, 2), (T, turn_left)]
+[11]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[12]: [0, LOOK, (T, move), (T, turn_left)]
+
+Program 21 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [4, PROG3, (I, 1), (I, 2), (T, move)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [2, PROG2, (I, 0), (T, turn_left)]
+[7]: [11, LOOK, (I, 0), (I, 1)]
+[8]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[9]: [0, PROG2, (I, 2), (I, 1)]
+
+Program 22 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [2, LOOK, (I, 0), (I, 1)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [0, PROG3, (T, turn_left), (I, 1), (T, turn_right)]
+[9]: [2, LOOK, (I, 0), (I, 1)]
+[10]: [0, PROG2, (T, move), (I, 0)]
+[11]: [0, LOOK, (T, move), (T, turn_left)]
+[12]: [0, PROG3, (T, turn_left), (T, turn_left), (I, 1)]
+[13]: [2, PROG2, (T, turn_left), (I, 1)]
+[14]: [1, LOOK, (T, move), (T, turn_right)]
+[15]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[16]: [0, LOOK, (T, move), (T, turn_left)]
+[17]: [0, LOOK, (T, move), (T, turn_left)]
+[18]: [19, PROG2, (I, 1), (I, 0)]
+[19]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+
+Program 23 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [6, LOOK, (I, 1), (I, 0)]
+[4]: [5, PROG3, (T, move), (T, move), (I, 0)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [2, PROG2, (T, turn_left), (T, turn_right)]
+[7]: [0, LOOK, (T, move), (T, turn_left)]
+[8]: [2, LOOK, (I, 2), (T, turn_left)]
+[9]: [4, PROG3, (I, 1), (T, turn_right), (I, 1)]
+[10]: [7, PROG2, (T, turn_right), (I, 0)]
+[11]: [14, PROG2, (T, move), (I, 1)]
+[12]: [5, LOOK, (T, turn_left), (I, 0)]
+[13]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[14]: [14, PROG3, (I, 2), (I, 0), (T, move)]
+[15]: [0, LOOK, (T, move), (T, turn_left)]
+[16]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+
+Program 24 -> Fitness: 3
+[1]: [12, PROG2, (T, move), (I, 2)]
+[2]: [13, PROG3, (I, 2), (I, 0), (I, 0)]
+[3]: [14, PROG3, (T, move), (T, move), (T, move)]
+[4]: [0, LOOK, (T, move), (T, turn_left)]
+[5]: [6, PROG3, (T, move), (T, turn_left), (T, turn_left)]
+[6]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[7]: [0, LOOK, (T, move), (T, turn_left)]
+[8]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[9]: [0, PROG3, (T, move), (T, turn_left), (T, move)]
+[10]: [10, PROG2, (I, 1), (T, move)]
+[11]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[12]: [19, PROG3, (I, 0), (T, move), (T, move)]
+
+Program 25 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [6, LOOK, (I, 1), (T, turn_right)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [19, PROG2, (I, 1), (I, 0)]
+[7]: [0, PROG3, (I, 0), (I, 1), (T, move)]
+[8]: [0, LOOK, (I, 2), (T, move)]
+
+Program 26 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [2, LOOK, (I, 0), (I, 1)]
+[7]: [7, PROG2, (T, turn_right), (I, 0)]
+[8]: [0, PROG2, (I, 1), (I, 1)]
+
+Program 27 -> Fitness: 3
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [19, PROG2, (I, 1), (I, 0)]
+[6]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+[7]: [0, LOOK, (I, 2), (T, move)]
+
+Program 28 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG2, (T, move), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [6, LOOK, (T, turn_left), (I, 0)]
+[6]: [4, PROG3, (I, 1), (I, 2), (T, move)]
+[7]: [0, LOOK, (T, move), (T, turn_left)]
+[8]: [2, PROG3, (I, 0), (I, 0), (T, turn_right)]
+[9]: [11, LOOK, (I, 0), (I, 1)]
+[10]: [6, PROG3, (I, 1), (I, 1), (I, 1)]
+[11]: [0, PROG3, (I, 0), (I, 0), (I, 2)]
+[12]: [0, PROG2, (I, 2), (I, 1)]
+
+Program 29 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [11, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [2, PROG2, (I, 1), (T, move)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [11, PROG2, (T, turn_right), (I, 1)]
+[9]: [4, LOOK, (T, turn_left), (I, 2)]
+[10]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+[11]: [5, LOOK, (T, turn_right), (I, 2)]
+
+Program 30 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [6, PROG2, (I, 2), (T, move)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [6, LOOK, (I, 0), (T, move)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[9]: [0, LOOK, (T, move), (T, turn_left)]
+[10]: [9, PROG3, (T, turn_right), (I, 2), (T, turn_right)]
+[11]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[12]: [4, PROG2, (I, 2), (T, move)]
+[13]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[14]: [5, PROG3, (I, 0), (T, move), (I, 2)]
+[15]: [13, PROG2, (T, turn_left), (I, 2)]
+
+Program 31 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [2, PROG2, (I, 0), (I, 2)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[8]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[9]: [14, PROG3, (T, move), (T, move), (T, move)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+[11]: [6, PROG3, (T, move), (T, turn_left), (T, turn_left)]
+[12]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[13]: [0, LOOK, (T, move), (T, turn_left)]
+[14]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[15]: [0, PROG3, (T, move), (T, turn_left), (T, move)]
+[16]: [10, PROG2, (I, 1), (T, move)]
+[17]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[18]: [19, PROG3, (I, 0), (T, move), (T, move)]
+
+Program 32 -> Fitness: 3
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [6, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [11, PROG2, (T, turn_right), (I, 1)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [3, PROG2, (T, move), (T, move)]
+[7]: [0, PROG3, (I, 0), (I, 0), (T, move)]
+[8]: [16, PROG3, (I, 1), (I, 1), (I, 2)]
+[9]: [0, LOOK, (I, 2), (T, move)]
+
+Program 33 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [12, PROG2, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [19, PROG2, (I, 1), (I, 0)]
+[7]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+[8]: [0, LOOK, (I, 2), (T, move)]
+
+Program 34 -> Fitness: 18
+[1]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[2]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, LOOK, (T, move), (T, turn_left)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [0, PROG3, (T, turn_left), (I, 1), (T, turn_right)]
+[7]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[8]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[9]: [0, LOOK, (T, move), (T, turn_left)]
+[10]: [0, LOOK, (T, move), (I, 1)]
+
+Program 35 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [3, PROG2, (T, turn_right), (I, 2)]
+[4]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [15, PROG3, (T, move), (I, 0), (T, move)]
+[8]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+[11]: [0, PROG3, (I, 1), (I, 1), (I, 1)]
+[12]: [4, PROG2, (T, move), (I, 2)]
+[13]: [7, PROG3, (I, 0), (T, turn_left), (I, 1)]
+[14]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[15]: [1, PROG3, (I, 1), (I, 2), (T, turn_right)]
+[16]: [0, LOOK, (T, move), (T, turn_left)]
+[17]: [19, PROG2, (I, 1), (I, 0)]
+[18]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[19]: [7, PROG2, (I, 0), (T, turn_right)]
+
+Program 36 -> Fitness: 8
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, LOOK, (T, turn_right), (I, 2)]
+[4]: [11, LOOK, (I, 0), (I, 0)]
+[5]: [11, LOOK, (T, turn_right), (T, turn_right)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [14, PROG3, (T, move), (T, move), (T, move)]
+[9]: [0, LOOK, (T, move), (T, turn_left)]
+[10]: [6, PROG3, (T, move), (T, turn_left), (T, turn_left)]
+[11]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[12]: [0, LOOK, (T, move), (T, turn_left)]
+[13]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[14]: [0, PROG3, (T, move), (T, turn_left), (T, move)]
+[15]: [10, PROG2, (I, 1), (T, move)]
+[16]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+
+Program 37 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, LOOK, (T, move), (T, turn_left)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [2, LOOK, (I, 2), (I, 2)]
+[7]: [2, LOOK, (T, turn_right), (I, 1)]
+[8]: [17, PROG3, (T, turn_left), (T, move), (T, turn_right)]
+[9]: [3, PROG2, (T, turn_right), (I, 2)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+[11]: [0, LOOK, (T, move), (T, turn_left)]
+[12]: [2, PROG2, (I, 0), (I, 0)]
+[13]: [0, LOOK, (T, move), (T, turn_left)]
+[14]: [19, PROG3, (I, 0), (I, 2), (I, 0)]
+[15]: [0, LOOK, (T, move), (T, turn_right)]
+[16]: [2, PROG2, (I, 1), (T, turn_right)]
+[17]: [2, LOOK, (I, 0), (I, 1)]
+[18]: [0, PROG3, (T, turn_right), (I, 0), (I, 2)]
+[19]: [21, PROG2, (I, 2), (I, 1)]
+[20]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[21]: [17, PROG3, (T, move), (I, 1), (T, turn_right)]
+[22]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+
+Program 38 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [6, PROG3, (I, 2), (T, move), (T, turn_left)]
+[7]: [19, PROG2, (I, 1), (I, 0)]
+[8]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+[9]: [0, LOOK, (I, 2), (T, move)]
+
+Program 39 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [17, PROG3, (I, 0), (T, turn_right), (T, turn_left)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [6, LOOK, (I, 1), (I, 0)]
+[5]: [5, PROG3, (T, move), (T, move), (I, 0)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [0, LOOK, (T, move), (T, turn_left)]
+[8]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[9]: [2, LOOK, (I, 2), (T, turn_left)]
+[10]: [12, PROG2, (I, 0), (T, move)]
+[11]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [4, PROG3, (I, 1), (I, 2), (T, move)]
+[14]: [0, LOOK, (T, move), (T, turn_left)]
+[15]: [2, PROG2, (I, 0), (T, turn_left)]
+[16]: [11, LOOK, (I, 0), (I, 1)]
+[17]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[18]: [0, PROG2, (I, 2), (I, 1)]
+
+Program 40 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, LOOK, (T, move), (T, turn_left)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [2, LOOK, (I, 2), (I, 2)]
+[7]: [2, LOOK, (T, turn_right), (I, 1)]
+[8]: [4, LOOK, (I, 0), (I, 2)]
+[9]: [17, PROG3, (T, turn_left), (T, move), (T, turn_right)]
+[10]: [3, PROG2, (T, turn_right), (I, 2)]
+[11]: [0, LOOK, (T, move), (T, turn_left)]
+[12]: [0, LOOK, (T, move), (T, turn_left)]
+[13]: [2, PROG2, (I, 0), (I, 0)]
+[14]: [0, LOOK, (T, move), (T, turn_left)]
+[15]: [19, PROG3, (I, 0), (I, 2), (I, 0)]
+[16]: [0, LOOK, (T, move), (T, turn_right)]
+[17]: [2, PROG2, (I, 1), (T, turn_right)]
+[18]: [2, LOOK, (I, 0), (I, 1)]
+[19]: [0, PROG3, (T, turn_right), (I, 0), (I, 2)]
+[20]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[21]: [21, PROG2, (I, 2), (I, 1)]
+[22]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[23]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+
+Program 41 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [19, PROG2, (I, 1), (I, 0)]
+[7]: [7, PROG2, (T, turn_left), (I, 1)]
+[8]: [0, LOOK, (T, move), (T, turn_left)]
+[9]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[10]: [0, PROG3, (T, move), (T, turn_left), (T, move)]
+
+Program 42 -> Fitness: 10
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [6, LOOK, (I, 1), (I, 0)]
+[3]: [5, PROG3, (T, move), (T, move), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [6, PROG2, (T, turn_left), (T, turn_right)]
+[7]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[8]: [2, LOOK, (I, 2), (T, turn_left)]
+[9]: [4, PROG3, (I, 1), (T, turn_right), (I, 1)]
+[10]: [7, PROG2, (T, turn_right), (I, 0)]
+[11]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[12]: [0, PROG3, (T, move), (T, turn_left), (T, move)]
+[13]: [10, PROG2, (I, 1), (T, move)]
+[14]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[15]: [19, PROG3, (I, 0), (T, move), (T, move)]
+
+Program 43 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [10, PROG2, (T, turn_left), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[8]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[9]: [0, LOOK, (T, move), (T, turn_left)]
+[10]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[11]: [6, PROG2, (T, turn_right), (T, move)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[14]: [0, LOOK, (T, move), (T, turn_left)]
+[15]: [0, PROG2, (T, turn_right), (T, turn_left)]
+[16]: [19, PROG2, (I, 1), (I, 0)]
+[17]: [9, PROG3, (I, 0), (I, 0), (T, move)]
+[18]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+
+Program 44 -> Fitness: 2
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (I, 1), (I, 0), (I, 2)]
+[3]: [0, LOOK, (T, move), (T, turn_left)]
+[4]: [4, LOOK, (T, turn_left), (I, 2)]
+[5]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+[6]: [5, LOOK, (T, turn_right), (I, 2)]
+
+Program 45 -> Fitness: 18
+[1]: [2, PROG2, (I, 0), (I, 2)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, LOOK, (I, 2), (T, move)]
+
+Program 46 -> Fitness: 4
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [12, PROG2, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [0, PROG2, (T, move), (T, turn_right)]
+[7]: [5, LOOK, (T, turn_right), (I, 1)]
+[8]: [0, LOOK, (T, move), (T, turn_left)]
+[9]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[10]: [0, PROG3, (I, 2), (I, 1), (I, 1)]
+[11]: [4, PROG3, (I, 1), (I, 2), (T, move)]
+[12]: [0, LOOK, (T, move), (T, turn_left)]
+
+Program 47 -> Fitness: 10
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, LOOK, (T, move), (T, turn_left)]
+[5]: [6, PROG3, (T, move), (T, turn_left), (T, turn_left)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+
+Program 48 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [9, PROG3, (I, 1), (T, turn_left), (T, turn_right)]
+[9]: [0, LOOK, (T, move), (T, turn_left)]
+[10]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[11]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[12]: [15, LOOK, (T, move), (T, turn_left)]
+[13]: [19, PROG2, (T, turn_left), (T, move)]
+[14]: [0, LOOK, (T, move), (T, turn_left)]
+[15]: [4, LOOK, (T, turn_left), (T, turn_right)]
+
+Program 49 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [9, PROG3, (I, 1), (T, turn_left), (T, turn_right)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [15, LOOK, (T, move), (T, turn_left)]
+[8]: [19, PROG2, (I, 1), (I, 0)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [7, PROG2, (T, turn_left), (I, 2)]
+[11]: [0, LOOK, (T, move), (T, turn_left)]
+[12]: [0, LOOK, (T, move), (T, turn_left)]
+[13]: [19, PROG2, (I, 1), (I, 0)]
+[14]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+[15]: [0, LOOK, (I, 2), (T, move)]
+
+Program 50 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [11, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [11, PROG2, (T, turn_right), (I, 1)]
+[8]: [4, LOOK, (I, 2), (I, 2)]
+[9]: [3, PROG2, (T, move), (T, move)]
+[10]: [19, PROG2, (I, 1), (I, 0)]
+[11]: [0, LOOK, (I, 0), (I, 1)]
+[12]: [0, LOOK, (I, 2), (T, move)]
+
+Program 51 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [3, PROG2, (T, turn_right), (I, 2)]
+[4]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[8]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[9]: [0, LOOK, (T, move), (T, turn_left)]
+[10]: [0, PROG3, (I, 1), (I, 1), (I, 1)]
+[11]: [7, PROG3, (I, 0), (T, turn_left), (I, 1)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [1, PROG3, (I, 1), (I, 2), (T, turn_right)]
+[14]: [0, LOOK, (T, move), (T, turn_left)]
+[15]: [19, PROG2, (I, 1), (I, 0)]
+[16]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[17]: [7, PROG2, (I, 0), (T, turn_right)]
+
+Program 52 -> Fitness: 3
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+[5]: [5, LOOK, (T, turn_right), (I, 2)]
+
+Program 53 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [10, PROG2, (T, turn_left), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[8]: [0, LOOK, (T, move), (T, turn_left)]
+[9]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[10]: [6, PROG2, (T, turn_right), (T, move)]
+[11]: [15, LOOK, (T, turn_right), (T, turn_right)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [15, PROG2, (I, 1), (T, turn_right)]
+[14]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[15]: [0, LOOK, (T, move), (T, turn_left)]
+[16]: [0, PROG2, (T, turn_right), (T, turn_left)]
+[17]: [4, PROG3, (T, turn_left), (T, move), (I, 2)]
+[18]: [19, PROG2, (I, 1), (I, 0)]
+[19]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+
+Program 54 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [5, PROG3, (I, 2), (I, 2), (T, turn_left)]
+[7]: [0, LOOK, (T, move), (T, turn_left)]
+[8]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[9]: [0, PROG3, (I, 0), (I, 1), (T, move)]
+[10]: [0, LOOK, (I, 2), (T, move)]
+
+Program 55 -> Fitness: 8
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [4, LOOK, (T, turn_left), (T, turn_right)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [4, PROG2, (I, 2), (T, move)]
+[7]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[8]: [5, PROG3, (I, 2), (I, 2), (I, 1)]
+[9]: [0, LOOK, (T, move), (T, turn_left)]
+
+Program 56 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [6, LOOK, (I, 1), (I, 0)]
+[4]: [5, PROG3, (T, move), (T, move), (I, 0)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [2, PROG3, (T, turn_right), (I, 2), (I, 0)]
+[11]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[12]: [0, PROG3, (T, turn_left), (I, 1), (T, turn_right)]
+[13]: [2, LOOK, (I, 0), (I, 1)]
+[14]: [13, PROG3, (T, turn_right), (I, 1), (T, move)]
+[15]: [0, LOOK, (I, 1), (I, 2)]
+
+Program 57 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, LOOK, (T, move), (T, turn_left)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [4, PROG3, (T, move), (T, move), (T, move)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [5, PROG2, (T, move), (I, 2)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+[11]: [19, PROG2, (I, 1), (I, 0)]
+[12]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+[13]: [0, LOOK, (I, 2), (T, move)]
+
+Program 58 -> Fitness: 8
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [2, PROG2, (I, 0), (I, 2)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[5]: [11, PROG3, (T, turn_left), (I, 1), (T, turn_right)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[8]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[9]: [14, PROG3, (T, move), (T, move), (T, move)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+[11]: [6, PROG3, (T, move), (T, turn_left), (T, turn_left)]
+[12]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[13]: [0, LOOK, (T, move), (T, turn_left)]
+[14]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[15]: [0, PROG3, (T, move), (T, turn_left), (T, move)]
+[16]: [10, PROG2, (I, 1), (T, move)]
+[17]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[18]: [19, PROG3, (I, 0), (T, move), (T, move)]
+
+Program 59 -> Fitness: 0
+[1]: [4, LOOK, (I, 0), (I, 2)]
+[2]: [17, PROG3, (T, turn_left), (T, move), (T, turn_right)]
+[3]: [3, PROG2, (T, turn_right), (I, 2)]
+[4]: [19, PROG2, (I, 1), (I, 0)]
+[5]: [0, LOOK, (I, 0), (I, 1)]
+[6]: [4, PROG3, (I, 2), (I, 0), (I, 2)]
+[7]: [0, LOOK, (I, 2), (T, move)]
+
+Program 60 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [6, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [4, PROG2, (T, turn_right), (T, turn_right)]
+[8]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[9]: [13, PROG3, (I, 0), (I, 1), (T, turn_right)]
+[10]: [19, PROG2, (I, 1), (I, 0)]
+[11]: [2, LOOK, (I, 0), (I, 1)]
+[12]: [12, PROG2, (I, 0), (T, move)]
+[13]: [19, PROG3, (T, move), (I, 2), (I, 1)]
+[14]: [7, PROG2, (I, 1), (T, turn_right)]
+[15]: [11, PROG2, (T, turn_right), (I, 1)]
+[16]: [4, PROG3, (T, turn_left), (T, turn_left), (I, 0)]
+[17]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[18]: [3, PROG2, (T, move), (T, move)]
+
+Program 61 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [19, PROG2, (I, 1), (I, 0)]
+[7]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+[8]: [0, LOOK, (I, 2), (T, move)]
+
+Program 62 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [2, PROG2, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[5]: [3, LOOK, (T, turn_right), (I, 0)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [0, LOOK, (T, move), (T, turn_left)]
+[8]: [13, PROG3, (I, 0), (I, 1), (T, turn_right)]
+[9]: [19, PROG2, (I, 1), (I, 0)]
+[10]: [2, LOOK, (I, 0), (I, 1)]
+[11]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [11, LOOK, (T, turn_right), (I, 2)]
+[14]: [7, PROG2, (I, 0), (T, turn_right)]
+
+Program 63 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [6, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [8, LOOK, (I, 1), (T, turn_left)]
+[8]: [4, PROG2, (I, 2), (T, move)]
+[9]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[10]: [5, PROG3, (I, 2), (I, 2), (I, 1)]
+[11]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[12]: [0, LOOK, (T, move), (T, turn_left)]
+[13]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+
+Program 64 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [11, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [11, PROG2, (T, turn_right), (I, 1)]
+[8]: [3, PROG2, (T, move), (T, move)]
+[9]: [19, PROG2, (I, 1), (I, 0)]
+[10]: [0, LOOK, (I, 0), (I, 1)]
+[11]: [0, LOOK, (T, move), (T, turn_left)]
+[12]: [7, PROG2, (I, 0), (I, 1)]
+[13]: [10, LOOK, (T, move), (I, 0)]
+[14]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[15]: [10, PROG3, (T, turn_right), (T, turn_left), (I, 0)]
+[16]: [0, LOOK, (T, move), (T, turn_left)]
+[17]: [4, PROG2, (I, 1), (T, move)]
+[18]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[19]: [20, PROG2, (I, 0), (I, 0)]
+[20]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[21]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+
+Program 65 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [2, LOOK, (I, 0), (I, 1)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [0, PROG3, (T, turn_left), (I, 1), (T, turn_right)]
+[9]: [2, LOOK, (I, 0), (I, 1)]
+[10]: [13, PROG3, (T, turn_right), (I, 1), (T, move)]
+[11]: [0, PROG3, (I, 1), (I, 0), (I, 2)]
+[12]: [0, LOOK, (T, move), (T, turn_left)]
+[13]: [4, LOOK, (T, turn_left), (I, 2)]
+[14]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+[15]: [5, LOOK, (T, turn_right), (I, 2)]
+
+Program 66 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [13, PROG3, (I, 2), (I, 0), (I, 0)]
+[3]: [8, PROG3, (I, 1), (T, turn_left), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [0, LOOK, (T, move), (T, turn_left)]
+[8]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[9]: [4, PROG2, (T, turn_left), (T, turn_right)]
+[10]: [0, LOOK, (I, 2), (T, move)]
+
+Program 67 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [6, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [2, PROG2, (I, 1), (I, 2)]
+[8]: [4, PROG2, (T, turn_right), (T, turn_right)]
+[9]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[10]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[11]: [9, LOOK, (T, turn_right), (I, 0)]
+[12]: [0, LOOK, (T, move), (T, turn_left)]
+
+Program 68 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[7]: [10, LOOK, (T, move), (I, 0)]
+[8]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[9]: [10, PROG3, (T, turn_right), (T, turn_left), (I, 0)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+[11]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[12]: [0, LOOK, (T, move), (T, turn_left)]
+[13]: [19, PROG2, (I, 1), (I, 0)]
+[14]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+
+Program 69 -> Fitness: 10
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [11, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [1, PROG3, (I, 1), (I, 2), (T, turn_right)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [19, PROG2, (I, 1), (I, 0)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [7, PROG2, (I, 0), (T, turn_right)]
+
+Program 70 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, LOOK, (T, move), (T, turn_left)]
+[5]: [19, PROG2, (I, 1), (I, 0)]
+[6]: [0, PROG3, (I, 0), (I, 1), (T, move)]
+[7]: [0, LOOK, (I, 2), (T, move)]
+
+Program 71 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [6, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [19, PROG2, (I, 1), (I, 0)]
+[7]: [0, PROG3, (I, 0), (I, 1), (T, move)]
+[8]: [0, LOOK, (I, 2), (T, move)]
+
+Program 72 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [6, PROG2, (I, 0), (I, 1)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+[11]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[12]: [0, PROG3, (T, turn_left), (I, 1), (T, turn_right)]
+[13]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[14]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[15]: [0, LOOK, (T, move), (T, turn_left)]
+[16]: [0, LOOK, (T, move), (I, 1)]
+
+Program 73 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [6, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [0, LOOK, (T, move), (T, turn_left)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [4, PROG2, (T, turn_right), (T, turn_right)]
+[11]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[12]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[13]: [9, LOOK, (T, turn_right), (I, 0)]
+[14]: [0, LOOK, (T, move), (T, turn_left)]
+
+Program 74 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG2, (T, move), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[7]: [10, LOOK, (T, move), (I, 0)]
+[8]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[9]: [10, PROG3, (T, turn_right), (T, turn_left), (I, 0)]
+[10]: [12, PROG3, (I, 0), (I, 1), (T, turn_left)]
+[11]: [0, LOOK, (T, move), (T, turn_left)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [0, LOOK, (T, move), (T, turn_left)]
+[14]: [19, PROG2, (I, 1), (I, 0)]
+[15]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[16]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[17]: [7, PROG2, (I, 0), (T, turn_right)]
+
+Program 75 -> Fitness: 1
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [2, PROG2, (I, 0), (I, 2)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, LOOK, (T, turn_left), (I, 2)]
+[5]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+
+Program 76 -> Fitness: 8
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [6, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [4, PROG2, (T, turn_right), (T, turn_right)]
+[7]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[8]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[9]: [9, LOOK, (T, turn_right), (I, 0)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+
+Program 77 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [2, PROG2, (I, 0), (I, 2)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[5]: [3, LOOK, (T, turn_right), (I, 0)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [0, LOOK, (T, move), (T, turn_left)]
+[8]: [13, PROG3, (I, 0), (I, 1), (T, turn_right)]
+[9]: [19, PROG2, (I, 1), (I, 0)]
+[10]: [2, LOOK, (I, 0), (I, 1)]
+[11]: [12, PROG2, (I, 0), (T, move)]
+[12]: [19, PROG3, (T, move), (I, 2), (I, 1)]
+[13]: [7, PROG2, (I, 1), (T, turn_right)]
+[14]: [11, PROG2, (T, turn_right), (I, 1)]
+[15]: [4, PROG3, (T, turn_left), (T, turn_left), (I, 0)]
+[16]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[17]: [3, PROG2, (T, move), (T, move)]
+[18]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[19]: [0, LOOK, (T, move), (T, turn_left)]
+
+Program 78 -> Fitness: 3
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [11, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [11, PROG2, (T, turn_right), (I, 1)]
+[7]: [3, PROG2, (T, move), (T, move)]
+[8]: [19, PROG2, (I, 1), (I, 0)]
+[9]: [0, LOOK, (I, 0), (I, 1)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+[11]: [7, PROG2, (I, 0), (I, 1)]
+[12]: [10, LOOK, (T, move), (I, 0)]
+[13]: [10, PROG3, (T, turn_right), (T, turn_left), (I, 0)]
+[14]: [0, LOOK, (T, move), (T, turn_left)]
+[15]: [4, PROG3, (T, turn_left), (T, turn_left), (I, 0)]
+[16]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[17]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[18]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+
+Program 79 -> Fitness: 3
+[1]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [3, LOOK, (I, 0), (T, turn_right)]
+[4]: [0, PROG3, (I, 0), (I, 0), (T, move)]
+[5]: [16, PROG3, (I, 1), (I, 1), (I, 2)]
+[6]: [0, LOOK, (I, 2), (T, move)]
+
+Program 80 -> Fitness: 1
+[1]: [6, PROG3, (T, move), (T, turn_left), (T, turn_left)]
+[2]: [7, PROG2, (T, turn_right), (T, turn_left)]
+[3]: [0, LOOK, (T, move), (T, turn_left)]
+[4]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[5]: [0, PROG3, (T, move), (T, turn_left), (T, move)]
+
+Program 81 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, LOOK, (T, move), (T, turn_left)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [3, PROG2, (T, move), (T, move)]
+[7]: [19, PROG2, (I, 1), (I, 0)]
+[8]: [6, LOOK, (I, 0), (T, move)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[11]: [0, LOOK, (T, move), (T, turn_left)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [4, PROG2, (I, 2), (T, move)]
+[14]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[15]: [5, PROG3, (I, 0), (T, move), (I, 2)]
+[16]: [13, PROG2, (T, turn_left), (I, 2)]
+
+Program 82 -> Fitness: 10
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [6, LOOK, (I, 0), (T, move)]
+[3]: [10, LOOK, (T, move), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [10, PROG3, (T, turn_right), (T, turn_left), (I, 0)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [4, PROG3, (T, turn_left), (T, turn_left), (I, 0)]
+[8]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[9]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[10]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+
+Program 83 -> Fitness: 8
+[1]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [4, PROG3, (I, 1), (I, 2), (T, move)]
+[4]: [11, LOOK, (I, 0), (I, 1)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [4, PROG2, (I, 2), (T, move)]
+[7]: [15, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [11, LOOK, (T, turn_right), (T, turn_right)]
+[9]: [0, LOOK, (T, move), (T, turn_left)]
+[10]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[11]: [15, LOOK, (T, turn_left), (I, 1)]
+[12]: [1, PROG2, (T, turn_left), (I, 0)]
+[13]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[14]: [3, PROG2, (T, move), (T, move)]
+
+Program 84 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, LOOK, (T, move), (T, turn_left)]
+[5]: [6, LOOK, (I, 0), (T, move)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [0, LOOK, (T, move), (T, turn_left)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [4, PROG2, (I, 2), (T, move)]
+[11]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[12]: [5, PROG3, (I, 0), (T, move), (I, 2)]
+[13]: [13, PROG2, (T, turn_left), (I, 2)]
+
+Program 85 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG2, (T, move), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [8, LOOK, (T, turn_right), (I, 1)]
+[8]: [10, PROG2, (I, 0), (T, turn_right)]
+[9]: [4, PROG3, (I, 2), (T, move), (I, 0)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+[11]: [2, PROG2, (T, move), (I, 1)]
+[12]: [2, PROG2, (I, 0), (I, 0)]
+[13]: [0, LOOK, (T, move), (T, move)]
+[14]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+
+Program 86 -> Fitness: 12
+[1]: [0, LOOK, (T, move), (T, turn_left)]
+[2]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[3]: [0, PROG3, (I, 2), (I, 1), (I, 1)]
+[4]: [4, PROG3, (I, 1), (I, 2), (T, move)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+
+Program 87 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [6, LOOK, (I, 1), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[7]: [7, PROG2, (T, turn_right), (I, 0)]
+[8]: [0, PROG2, (I, 1), (I, 1)]
+
+Program 88 -> Fitness: 3
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, LOOK, (I, 0), (T, turn_right)]
+[4]: [0, LOOK, (T, move), (T, turn_left)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[7]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[8]: [0, LOOK, (T, move), (T, turn_left)]
+[9]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[10]: [6, PROG2, (T, turn_right), (T, move)]
+[11]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[12]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[13]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[14]: [0, LOOK, (T, move), (T, turn_left)]
+
+Program 89 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [6, PROG2, (I, 0), (I, 1)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [4, PROG2, (I, 2), (T, move)]
+[8]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[9]: [5, PROG3, (I, 0), (T, move), (I, 2)]
+[10]: [13, PROG2, (T, turn_left), (I, 2)]
+
+Program 90 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [6, PROG2, (I, 0), (I, 1)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [4, PROG2, (I, 2), (T, move)]
+[8]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[9]: [5, PROG3, (I, 0), (T, move), (I, 2)]
+[10]: [13, PROG2, (T, turn_left), (I, 2)]
+
+Program 91 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [13, PROG3, (I, 2), (I, 0), (I, 0)]
+[3]: [8, PROG3, (I, 1), (T, turn_left), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [0, LOOK, (T, move), (T, turn_left)]
+[8]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[9]: [4, PROG2, (T, turn_left), (T, turn_right)]
+[10]: [0, LOOK, (I, 2), (T, move)]
+
+Program 92 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, LOOK, (T, move), (T, turn_left)]
+[5]: [0, PROG3, (I, 1), (I, 1), (I, 1)]
+[6]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[7]: [5, PROG3, (I, 2), (I, 2), (I, 1)]
+[8]: [13, PROG2, (T, turn_left), (I, 2)]
+
+Program 93 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG2, (T, move), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[7]: [10, LOOK, (T, move), (I, 0)]
+[8]: [0, LOOK, (I, 1), (T, move)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+[11]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [10, PROG3, (T, turn_right), (T, turn_left), (I, 0)]
+[14]: [0, LOOK, (T, move), (T, turn_left)]
+[15]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[16]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+
+Program 94 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [6, LOOK, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [4, PROG2, (I, 2), (T, move)]
+[8]: [0, LOOK, (T, move), (T, turn_left)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [6, PROG3, (T, move), (T, turn_left), (T, turn_left)]
+[11]: [0, LOOK, (T, move), (T, turn_left)]
+[12]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[13]: [0, PROG3, (T, move), (T, turn_left), (T, move)]
+
+Program 95 -> Fitness: 18
+[1]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[2]: [5, PROG3, (T, move), (T, move), (I, 0)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [0, LOOK, (T, move), (T, turn_left)]
+[5]: [7, PROG3, (I, 1), (I, 2), (I, 0)]
+[6]: [2, LOOK, (I, 2), (T, turn_left)]
+[7]: [4, PROG3, (I, 1), (T, turn_right), (I, 1)]
+[8]: [7, PROG2, (T, turn_right), (I, 0)]
+[9]: [0, PROG2, (I, 1), (I, 1)]
+
+Program 96 -> Fitness: 0
+[1]: [12, LOOK, (I, 1), (I, 1)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [0, LOOK, (T, move), (T, turn_left)]
+[6]: [19, PROG2, (I, 1), (I, 0)]
+[7]: [19, LOOK, (I, 2), (T, turn_left)]
+[8]: [0, LOOK, (T, move), (I, 0)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [0, LOOK, (T, move), (T, turn_left)]
+[11]: [2, LOOK, (I, 0), (I, 1)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [11, PROG2, (I, 0), (I, 0)]
+[14]: [4, PROG3, (T, turn_left), (T, move), (I, 2)]
+
+Program 97 -> Fitness: 3
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, PROG2, (T, move), (I, 0)]
+[4]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[5]: [6, LOOK, (T, turn_left), (I, 0)]
+[6]: [4, PROG3, (I, 1), (I, 2), (T, move)]
+[7]: [0, PROG3, (I, 2), (T, move), (I, 0)]
+[8]: [2, PROG3, (I, 0), (I, 0), (T, turn_right)]
+[9]: [4, LOOK, (I, 2), (I, 2)]
+[10]: [19, PROG2, (I, 1), (I, 0)]
+[11]: [0, LOOK, (I, 0), (I, 1)]
+[12]: [0, LOOK, (I, 2), (T, move)]
+
+Program 98 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [5, PROG3, (I, 2), (T, turn_right), (T, turn_right)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [5, PROG3, (I, 1), (I, 1), (T, move)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [0, PROG2, (T, turn_right), (T, turn_left)]
+[8]: [0, PROG3, (I, 1), (I, 1), (I, 1)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [0, LOOK, (T, turn_left), (I, 1)]
+[11]: [7, PROG3, (I, 0), (T, turn_left), (I, 1)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [0, LOOK, (T, move), (T, turn_left)]
+[14]: [19, PROG2, (I, 1), (I, 0)]
+[15]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[16]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[17]: [7, PROG2, (I, 0), (T, turn_right)]
+
+Program 99 -> Fitness: 18
+[1]: [0, PROG2, (I, 0), (I, 2)]
+[2]: [12, PROG2, (I, 0), (T, move)]
+[3]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[4]: [5, PROG2, (I, 0), (I, 0)]
+[5]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[6]: [0, LOOK, (T, move), (T, turn_left)]
+[7]: [19, PROG2, (I, 1), (I, 0)]
+[8]: [0, PROG3, (I, 0), (T, move), (I, 2)]
+[9]: [0, LOOK, (I, 2), (T, move)]
+
+Program 100 -> Fitness: 19
+[1]: [12, PROG2, (I, 0), (T, move)]
+[2]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[3]: [5, LOOK, (T, turn_right), (I, 2)]
+[4]: [11, LOOK, (I, 0), (I, 0)]
+[5]: [11, LOOK, (T, turn_right), (T, turn_right)]
+[6]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[7]: [0, LOOK, (T, move), (T, turn_left)]
+[8]: [2, PROG3, (T, turn_right), (T, move), (T, move)]
+[9]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[10]: [15, LOOK, (T, turn_left), (I, 1)]
+[11]: [1, PROG2, (T, turn_left), (I, 0)]
+[12]: [0, PROG3, (T, move), (I, 0), (I, 0)]
+[13]: [3, PROG2, (T, move), (T, move)]
+[14]: [8, LOOK, (I, 0), (I, 0)]
+[15]: [0, PROG2, (T, turn_left), (T, move)]
+
+Population size: 100
+Best fitness:    19
+Best program:    0
+Avg fitness:     15.04
+Minimum length:  3
+Maximum length:  23
+Avg length:      12.5
