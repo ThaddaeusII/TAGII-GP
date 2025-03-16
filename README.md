@@ -102,7 +102,6 @@ The system was built for somewhat easy additions of operators, both control and 
 
 --- ***INCOMPLETE*** --- (Add registry feature for easy selection from parameters)
 
-
 ### TODO
 
 * Fixes:
