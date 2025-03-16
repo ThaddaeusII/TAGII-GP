@@ -121,7 +121,8 @@ The system was built for somewhat easy additions of operators, both control and 
     3. Optimize the performance.
     4. Add better user interface for inputting parameters.
     5. Improve visualization / display functions.
-    6. Add data saving feature
+    6. Add data saving feature.
+    7. Add parallelization / nvidia options.
 
 ## Citations
 
