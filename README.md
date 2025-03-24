@@ -1,4 +1,4 @@
-# Linear Genetic Programming System for Agent-Based
+# Linear Genetic Programming System for Agent-Based Problems
 
 Author: Thad Greiner
 
