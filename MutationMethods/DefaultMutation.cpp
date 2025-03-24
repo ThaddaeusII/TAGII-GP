@@ -1,6 +1,5 @@
 #include "DefaultMutation.h"
 
-#include "OperatorRegistry.h"
 #include "RandomGenerator.h"
 
 void DefaultMutation::mutate(std::unique_ptr<Program> &program)
@@ -23,7 +22,7 @@ void DefaultMutation::mutate(std::unique_ptr<Program> &program)
                     instr[i]->op->mutate(instr[i]->params);
                 else // 50% chance to swap operator (and randomize params)
                 {
-                    instr[i]->op = OperatorRegistry::getRandomControlOperator();
+                    instr[i]->op = getEnv(program)->getRandomControlOperator();
                     instr[i]->op->randomize(instr[i]->params);
                 }
             }

@@ -2,17 +2,18 @@
 
 #include <iostream>
 
+#include "SantaFeEnvironment.h"
 #include "TournamentSelection.h"
 #include "DefaultMutation.h"
 #include "DefaultCrossover.h"
-#include "RandomGenerator.h"
 
 void GPSystem::initializePopulation()
 {
     for (int i = 0; i < populationSize; ++i)
     {
         std::unique_ptr<Program> p = std::make_unique<Program>(environment);
-        p->initialize(numInstructions);
+        p->initialize(maxInstructions);
+        //p->initPerfect();
         population.push_back(std::move(p));
     }
 }
@@ -22,7 +23,7 @@ void GPSystem::evaluateFitness()
     for (auto &p : population)
     {
         environment->reset();
-        p->maxSteps(steps);
+        p->setSteps(maxSteps);
         while (p->getSteps() > 0)
         {
             p->executeControl(0);
@@ -44,12 +45,8 @@ void GPSystem::evolve()
         selector->select(population, children, mutator, crossover);
 
         // Set population to next generation and evaluate fitness
-        std::swap(population, children); // @TAG: Efficiency?
+        std::swap(population, children);
         evaluateFitness();
-
-        std::cout << "Generation " << gen << ":" << std::endl;
-        displayStats();
-        std::cout << std::endl;
     }
 }
 
@@ -57,27 +54,13 @@ GPSystem::GPSystem()
 {
 }
 
-void GPSystem::run(size_t populationSize,
-    size_t generations,
-    double crossoverRate,
-    double mutationRate,
-    int numInstructions,
-    int steps,
-    std::string envPath
-)
+void GPSystem::run()
 {
-    // Save parameters
-    this->populationSize = populationSize;
-    this->generations = generations;
-    this->mutationRate = mutationRate;
-    this->numInstructions = numInstructions;
-    this->steps = steps;
-
     // Setup environment
-    environment = std::make_shared<Environment>();
-    environment->load(envPath);
+    environment = std::make_shared<SantaFeEnvironment>();
+    environment->load("./Environments/santafe.env");
     displayEnvironment();
-    
+
     // Setup genetic operators
     selector = std::make_shared<TournamentSelection>();
     crossover = std::make_shared<DefaultCrossover>(crossoverRate);
@@ -85,16 +68,27 @@ void GPSystem::run(size_t populationSize,
 
     // Initialize the population
     initializePopulation();
-    std::cout << "---------- Initial Programs ----------" << std::endl << std::endl;
-    displayPrograms();
+    displayAllPrograms();
     
     // Evolve the population
-    std::cout << "---------- Generations ----------" << std::endl << std::endl;
     evolve();
-
-    std::cout << "---------- Final Programs ----------" << std::endl << std::endl;
-    displayPrograms();
+    displayAllPrograms();
     displayStats();
+}
+
+void GPSystem::displayProgram(int idx)
+{
+    std::cout << "Program " << idx+1 << " -> Fitness: " << population[idx]->getFitness() << std::endl;
+    population[idx]->display();
+    std::cout << std::endl;
+}
+
+void GPSystem::displayAllPrograms()
+{
+    for (size_t i = 0; i < population.size(); ++i)
+    {
+        displayProgram(i);
+    }
 }
 
 void GPSystem::displayStats()
@@ -133,6 +127,7 @@ void GPSystem::displayStats()
     std::cout << "Minimum length:  " << smallestProgramSize << std::endl;
     std::cout << "Maximum length:  " << largestProgramSize << std::endl;
     std::cout << "Avg length:      " << avgProgramSize << std::endl;
+
 }
 
 void GPSystem::displayEnvironment()
@@ -141,16 +136,4 @@ void GPSystem::displayEnvironment()
         return;
     std::cout << "Environment:" << std::endl;
     environment->display();
-}
-
-void GPSystem::displayPrograms()
-{
-    int num = 1;
-    for (auto &p : population)
-    {
-        std::cout << "Program " << num << " -> Fitness: " << p->getFitness() << std::endl;
-        p->display();
-        std::cout << std::endl;
-        num++;
-    }
 }

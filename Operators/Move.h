@@ -2,11 +2,15 @@
 
 #include "TerminalOperator.h"
 
+#include <functional>
+
 class Move : public TerminalOperator
 {
 private:
+    std::function<void()> moveFunction;
 
 public:
-    void execute(std::shared_ptr<Environment> &env, int &steps) override;
+    Move(Environment& env, std::function<void()> moveFunction) : TerminalOperator(env), moveFunction(moveFunction) {}
+    void execute(int &steps) override;
     void display() override;
 };

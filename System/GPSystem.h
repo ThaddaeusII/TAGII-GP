@@ -12,11 +12,12 @@
 class GPSystem
 {
 private:
-    int populationSize;
-    int generations;
-    double mutationRate;
-    int numInstructions;
-    int steps;
+    int populationSize = 100;
+    int generations = 200;
+    double mutationRate = 0.25;
+    double crossoverRate = 0.75;
+    int maxInstructions = 10;
+    int maxSteps = 400;
 
     std::vector<std::unique_ptr<Program>> population;
     std::shared_ptr<Selection> selector;
@@ -27,19 +28,13 @@ private:
     void initializePopulation();
     void evaluateFitness();
     void evolve();
-    void displayPrograms();
-    void displayEnvironment();
-    void displayStats();
 
 public:
     GPSystem();
-    void run(
-        size_t populationSize,
-        size_t generations,
-        double crossoverRate,
-        double mutationRate,
-        int numInstructions,
-        int steps,
-        std::string envPath
-    );
+    void run();
+
+    void displayProgram(int idx);
+    void displayAllPrograms();
+    void displayStats();
+    void displayEnvironment();
 };

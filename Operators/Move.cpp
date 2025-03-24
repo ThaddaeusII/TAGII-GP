@@ -2,9 +2,11 @@
 
 #include <iostream>
 
-void Move::execute(std::shared_ptr<Environment> &env, int &steps)
+#include "Environment.h"
+
+void Move::execute(int &steps)
 {
-    env->move();
+    moveFunction();
 }
 
 void Move::display()

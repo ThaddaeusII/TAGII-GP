@@ -1,15 +1,19 @@
 #pragma once
 
 #include <memory>
-#include "Environment.h"
 
 class Program;
+class Environment;
 
 class TerminalOperator
 {
 private:
 
+protected:
+    Environment& env;
+
 public:
-    virtual void execute(std::shared_ptr<Environment> &env, int &steps) = 0;
+    TerminalOperator(Environment& env) : env(env) {}
+    virtual void execute(int& steps) = 0;
     virtual void display() = 0;
 };

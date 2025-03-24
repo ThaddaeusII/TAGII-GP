@@ -21,10 +21,7 @@ TournamentSelection::TournamentSelection()
     tournamentSize = 7;
 }
 
-void TournamentSelection::select(std::vector<std::unique_ptr<Program>> &population,
-    std::vector<std::unique_ptr<Program>> &children,
-    std::shared_ptr<Mutation> &mutator,
-    std::shared_ptr<Crossover> &crossover)
+void TournamentSelection::select(std::vector<std::unique_ptr<Program>> &population, std::vector<std::unique_ptr<Program>> &children, std::shared_ptr<Mutation> &mutator, std::shared_ptr<Crossover> &crossover)
 {
     children.clear();
     while (children.size() < population.size())
@@ -38,4 +35,3 @@ void TournamentSelection::select(std::vector<std::unique_ptr<Program>> &populati
         children.push_back(std::move(child));
     }
 }
-

@@ -4,10 +4,9 @@
 
 #include "Program.h"
 #include "Environment.h"
-#include "OperatorRegistry.h"
 #include "RandomGenerator.h"
 
-void PROG::execute(Program &prg, std::shared_ptr<Environment> &env, int pos, std::vector<std::pair<int, int>> &params)
+void PROG::execute(Program &prg, int pos, std::vector<std::pair<int, int>> &params)
 {
     // Param -> (Param type, reference #)
     for (auto &p : params)
@@ -33,8 +32,8 @@ void PROG::display()
 
 void PROG::randomize(std::vector<std::pair<int, int>> &params)
 {
-    int cSize = OperatorRegistry::getControlOperators().size();
-    int tSize = OperatorRegistry::getTerminalOperators().size();
+    int cSize = env.getControlOperators().size();
+    int tSize = env.getTerminalOperators().size();
 
     auto &random = RandomGenerator::get();
 

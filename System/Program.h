@@ -3,8 +3,8 @@
 #include <vector>
 #include <memory>
 
-#include "ControlOperator.h"
 #include "Environment.h"
+#include "ControlOperator.h"
 
 class Crossover;
 class Mutation;
@@ -14,15 +14,15 @@ class Program
 private:
     struct Instruction
     {
-        int reference;
+        int reference = -1;
         std::shared_ptr<ControlOperator> op;
         std::vector<std::pair<int, int>> params;
 
-        Instruction(int count);
+        Instruction(std::shared_ptr<Environment> env, int count);
     };
 
-    int fitness;
-    int steps;
+    int fitness = -1;
+    int curSteps = -1;
     std::vector<std::unique_ptr<Instruction>> instructions;
     std::shared_ptr<Environment> env;
 
@@ -31,8 +31,8 @@ private:
 
 public:
     Program(std::shared_ptr<Environment> env);
+    void initPerfect();
     void initialize(int numInstructions);
-    void maxSteps(int steps);
     void executeControl(int pos, int ref = -1);
     void executeTerminal(int op);
     void evaluateFitness();
@@ -40,5 +40,6 @@ public:
 
     int getFitness();
     int getSteps();
+    void setSteps(int steps);
     int getSize();
 };

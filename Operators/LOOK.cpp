@@ -4,12 +4,11 @@
 
 #include "Program.h"
 #include "Environment.h"
-#include "OperatorRegistry.h"
 #include "RandomGenerator.h"
 
-void LOOK::execute(Program &prg, std::shared_ptr<Environment> &env, int pos, std::vector<std::pair<int, int>> &params)
+void LOOK::execute(Program &prg, int pos, std::vector<std::pair<int, int>> &params)
 {
-    if (env->look(1))
+    if (lookFunction())
     {
         auto p = params[0];
 
@@ -50,8 +49,8 @@ void LOOK::display()
 
 void LOOK::randomize(std::vector<std::pair<int, int>> &params)
 {
-    int cSize = OperatorRegistry::getControlOperators().size();
-    int tSize = OperatorRegistry::getTerminalOperators().size();
+    int cSize = env.getControlOperators().size();
+    int tSize = env.getTerminalOperators().size();
 
     auto &random = RandomGenerator::get();
 

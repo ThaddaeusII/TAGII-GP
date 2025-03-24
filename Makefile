@@ -2,16 +2,18 @@ CXX := g++
 CXXFLAGS := -std=c++20 -Wall
 SRC := main.cpp \
 	System/*.cpp \
-	Program/*.cpp \
 	Operators/*.cpp \
-	GeneticOperators/*.cpp \
+	SelectionMethods/*.cpp \
+	MutationMethods/*.cpp \
+	CrossoverMethods/*.cpp \
 	Environments/*.cpp
 INCLUDE := -ISystem \
-	-IProgram \
 	-IEnvironments \
-	-IGeneticOperators \
+	-ISelectionMethods \
+	-IMutationMethods \
+	-ICrossoverMethods \
 	-IOperators \
-	-isystem Third-Party/Empirical/include/
+	-isystem ./Third-Party/Empirical/include/
 OUT := evolve
 
 all: O3
@@ -19,7 +21,7 @@ all: O3
 slow: CXXFLAGS += -O0
 slow: build
 
-O3: CXXFLAGS += -O3
+O3: CXXFLAGS += -O3 -DNDEBUG
 O3: build
 
 debug: CXXFLAGS += -O0 -g
