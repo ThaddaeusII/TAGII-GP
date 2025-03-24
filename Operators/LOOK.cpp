@@ -66,4 +66,5 @@ void LOOK::randomize(std::vector<std::pair<int, int>> &params)
 
 void LOOK::mutate(std::vector<std::pair<int, int>> &params)
 {
+    randomize(params);
 }

@@ -49,4 +49,5 @@ void PROG::randomize(std::vector<std::pair<int, int>> &params)
 
 void PROG::mutate(std::vector<std::pair<int, int>> &params)
 {
+    randomize(params);
 }
