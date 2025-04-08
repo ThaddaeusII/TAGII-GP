@@ -12,8 +12,8 @@
 class GPSystem
 {
 private:
-    int populationSize = 100;
-    int generations = 200;
+    int populationSize = 1000;
+    int generations = 2000;
     double mutationRate = 0.25;
     double crossoverRate = 0.75;
     int maxInstructions = 10;
