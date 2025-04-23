@@ -1,11 +1,13 @@
 #pragma once
 
+#include <string>
 #include "Program.h"
 
 class Crossover
 {
 private:
     double crossoverRate;
+    std::string name;
 
 protected:
     static void copyInstruction(std::unique_ptr<Program>& program, const std::unique_ptr<Program::Instruction>& instr)
@@ -18,7 +20,8 @@ protected:
         { return program->env; }
 
 public:
-    Crossover(double crossoverRate) : crossoverRate(crossoverRate) {}
+    Crossover(double crossoverRate, std::string name) : crossoverRate(crossoverRate), name(name) {}
+    std::string getName() { return name; }
     double GetCrossoverRate() { return crossoverRate; }
     virtual std::unique_ptr<Program> cross(std::unique_ptr<Program>& program1, std::unique_ptr<Program>& program2) = 0;
 };

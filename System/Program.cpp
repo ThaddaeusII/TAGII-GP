@@ -2,47 +2,20 @@
 
 #include "RandomGenerator.h"
 
+void Program::getInput()
+{
+    if (waitForInput)
+    {
+        std::cout << "\nPress [ENTER] to begin, [x] to skip to the end..." << std::endl;
+        char x = std::cin.get();
+        if (x == 'x' || x == 'X')
+            waitForInput = false;
+    }
+}
+
 Program::Program(std::shared_ptr<Environment> env)
 {
     this->env = env;
-}
-
-void Program::initPerfect()
-{
-    std::vector<std::pair<int, int>> params;
-    instructions.clear();
-
-    instructions.push_back(std::make_unique<Instruction>(env, 0));
-    instructions[0]->reference = 0;
-    instructions[0]->op = env->getControlOperator(2);
-    params.clear();
-    params.push_back(std::make_pair<int, int>(0, 0));
-    params.push_back(std::make_pair<int, int>(1, 1));
-    instructions[0]->params = params;
-
-    instructions.push_back(std::make_unique<Instruction>(env, 0));
-    instructions[1]->reference = 1;
-    instructions[1]->op = env->getControlOperator(0);
-    params.clear();
-    params.push_back(std::make_pair<int, int>(1, 2));
-    params.push_back(std::make_pair<int, int>(0, 0));
-    instructions[1]->params = params;
-
-    instructions.push_back(std::make_unique<Instruction>(env, 0));
-    instructions[2]->reference = 2;
-    instructions[2]->op = env->getControlOperator(0);
-    params.clear();
-    params.push_back(std::make_pair<int, int>(1, 3));
-    params.push_back(std::make_pair<int, int>(1, 3));
-    instructions[2]->params = params;
-
-    instructions.push_back(std::make_unique<Instruction>(env, 0));
-    instructions[3]->reference = 3;
-    instructions[3]->op = env->getControlOperator(2);
-    params.clear();
-    params.push_back(std::make_pair<int, int>(1, 2));
-    params.push_back(std::make_pair<int, int>(0, 1));
-    instructions[3]->params = params;
 }
 
 void Program::initialize(int numInstructions)
@@ -55,13 +28,22 @@ void Program::initialize(int numInstructions)
     }
 }
 
+void Program::execute()
+{
+    env->reset();
+    while (env->getCurSteps() > 0)
+    {
+        executeControl(0);
+    }
+    evaluateFitness();
+}
+
 void Program::executeControl(int pos, int ref)
 {
-    if (curSteps <= 0 || instructions.empty())
-    {
-        curSteps = 0;
+    if (instructions.empty())
+        env->setCurSteps(0);
+    if (env->getCurSteps() <= 0)
         return;
-    }
 
     // If reference is specified, start looking for the referenced instruction after the current one
     if (ref != -1)
@@ -80,7 +62,7 @@ void Program::executeControl(int pos, int ref)
         // If the referenced instruction doesn't exist, do nothing
         if (!found)
         {
-            curSteps--;
+            env->setCurSteps(env->getCurSteps() - 1);
             return;
         }
     }
@@ -92,10 +74,118 @@ void Program::executeControl(int pos, int ref)
 
 void Program::executeTerminal(int op)
 {
-    if (curSteps <=0)
+    if (env->getCurSteps() <=0)
         return;
-    env->getTerminalOperator(op)->execute(curSteps);
-    curSteps--;
+    env->getTerminalOperator(op)->execute();
+}
+
+void Program::visualize()
+{
+    waitForInput = true;
+    std::cout << "\033[2J\033[H";
+    std::cout << "Starting program visualization...\n\n";
+
+    if (!env)
+    {
+        std::cerr << "No environment attached to program.\n\n";
+        return;
+    }
+
+    std::cout << "Program:\n";
+    display();
+    getInput();
+
+    env->reset();
+
+    while (env->getCurSteps() > 0)
+    {
+        visualizeControl(0);
+    }
+
+    evaluateFitness();
+
+    std::cout << "\033[2J\033[H";
+    std::cout << "Program finished.\n";
+    std::cout << "Steps remaining: " << env->getCurSteps() << " / " << env->getMaxSteps() << "\n";
+    std::cout << "Final environment:\n";
+    env->display();
+    std::cout << "\nFinal fitness: " << env->getFitness() << "\n";
+}
+
+void Program::visualizeControl(int pos, int ref)
+{
+    if (env->getCurSteps() <= 0 || instructions.empty())
+        return;
+
+    if (ref != -1)
+    {
+        bool found = false;
+        for (size_t i = pos + 1; i < instructions.size(); ++i)
+        {
+            if (instructions[i]->reference == ref)
+            {
+                pos = i;
+                found = true;
+                break;
+            }
+        }
+        if (!found)
+        {
+            std::cout << "\033[2J\033[H";
+            std::cout << "Steps remaining: " << env->getCurSteps() << " / " << env->getMaxSteps() << "\n";
+            std::cout << "Executing terminal [WAIT - unresolved reference]\n\n";
+            env->display();
+            std::cout << "\nProgram:\n";
+            display();
+            getInput();
+            env->setCurSteps(env->getCurSteps() - 1);
+            return;
+        }
+    }
+
+    auto &instr = instructions[pos];
+
+    std::cout << "\033[2J\033[H";
+    std::cout << "Steps remaining: " << env->getCurSteps() << " / " << env->getMaxSteps() << "\n";
+    std::cout << "Executing control #" << pos << ": ";
+    instr->op->display();
+    std::cout << " with params:";
+    for (auto &p : instr->params)
+    {
+        if (p.first)
+            std::cout << " I[" << p.second << "]";
+        else
+        {
+            std::cout << " T[";
+            env->getTerminalOperator(p.second)->display();
+            std::cout << "]";
+        }
+    }
+
+    std::cout << "\n\n";
+    env->display();
+    std::cout << "\nProgram:\n";
+    display();
+    getInput();
+
+    instr->op->visualize(*this, pos, instr->params);
+}
+
+void Program::visualizeTerminal(int op)
+{
+    if (env->getCurSteps() <= 0) return;
+
+    std::cout << "\033[2J\033[H";
+    std::cout << "Steps remaining: " << env->getCurSteps() << " / " << env->getMaxSteps() << "\n";
+    std::cout << "Executing terminal: ";
+    env->getTerminalOperator(op)->display();
+    std::cout << "\n\n";
+    env->display();
+    std::cout << "\nProgram:\n";
+    display();
+    getInput();
+
+    env->getTerminalOperator(op)->execute();
 }
 
 void Program::evaluateFitness()
@@ -129,16 +219,6 @@ void Program::display()
 int Program::getFitness()
 {
     return fitness;
-}
-
-int Program::getSteps()
-{
-    return curSteps;
-}
-
-void Program::setSteps(int steps)
-{
-    curSteps = steps;
 }
 
 int Program::getSize()

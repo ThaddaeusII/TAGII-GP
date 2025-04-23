@@ -12,7 +12,7 @@
 #include "Move.h"
 #include "Turn.h"
 
-SantaFeEnvironment::SantaFeEnvironment()
+SantaFeEnvironment::SantaFeEnvironment(std::string name) : Environment(name)
 {
     registerAllOperators();
 }

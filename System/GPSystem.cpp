@@ -3,6 +3,7 @@
 #include <iostream>
 
 #include "SantaFeEnvironment.h"
+#include "PacmanEnvironment.h"
 #include "TournamentSelection.h"
 #include "DefaultMutation.h"
 #include "DefaultCrossover.h"
@@ -13,7 +14,6 @@ void GPSystem::initializePopulation()
     {
         std::unique_ptr<Program> p = std::make_unique<Program>(environment);
         p->initialize(maxInstructions);
-        //p->initPerfect();
         population.push_back(std::move(p));
     }
 }
@@ -22,14 +22,31 @@ void GPSystem::evaluateFitness()
 {
     for (auto &p : population)
     {
-        environment->reset();
-        p->setSteps(maxSteps);
-        while (p->getSteps() > 0)
-        {
-            p->executeControl(0);
-        }
-        p->evaluateFitness();
+        p->execute();
     }
+}
+
+GPSystem::GPSystem()
+{
+    // Default general parameters
+    populationSize = 100;
+    generations = 1000;
+    mutationRate = 0.25;
+    crossoverRate = 0.75;
+    maxInstructions = 10;
+
+    // Defualt environment
+    environment = std::make_shared<PacmanEnvironment>("Pacman");
+    environment->load("./Environments/pacman.env");
+    environment->setMaxSteps(200);
+
+    // Default genetic operators
+    selector = std::make_shared<TournamentSelection>("Tournament Selection (size 7)");
+    crossover = std::make_shared<DefaultCrossover>(crossoverRate, "One-Point Crossover (max copy of 10)");
+    mutator = std::make_shared<DefaultMutation>(mutationRate, "Random Uniform Mutation");
+
+    // Initialize the population
+    initializePopulation();
 }
 
 void GPSystem::evolve()
@@ -50,30 +67,11 @@ void GPSystem::evolve()
     }
 }
 
-GPSystem::GPSystem()
+void GPSystem::reset()
 {
-}
-
-void GPSystem::run()
-{
-    // Setup environment
-    environment = std::make_shared<SantaFeEnvironment>();
-    environment->load("./Environments/santafe.env");
-    displayEnvironment();
-
-    // Setup genetic operators
-    selector = std::make_shared<TournamentSelection>();
-    crossover = std::make_shared<DefaultCrossover>(crossoverRate);
-    mutator = std::make_shared<DefaultMutation>(mutationRate);
-
-    // Initialize the population
+    // Clear population, then reinitialize randomly
+    population.clear();
     initializePopulation();
-    displayAllPrograms();
-    
-    // Evolve the population
-    evolve();
-    displayAllPrograms();
-    displayStats();
 }
 
 void GPSystem::displayProgram(int idx)
@@ -89,6 +87,25 @@ void GPSystem::displayAllPrograms()
     {
         displayProgram(i);
     }
+}
+
+void GPSystem::displayParameters()
+{
+    std::cout << std::endl << "==== System Parameters ====" << std::endl;
+    std::cout << "General Parameters:" << std::endl;
+    std::cout << "1. Population Size: " << populationSize << std::endl;
+    std::cout << "2. Generations: " <<  generations << std::endl;
+    std::cout << "3. Mutation Rate: " <<  mutationRate << std::endl;
+    std::cout << "4. Crossover Rate: " <<  crossoverRate << std::endl;
+    std::cout << "5. Max Initial Instructions: " <<  maxInstructions << std::endl;
+    std::cout << "6. Max Program Steps: " << environment->getMaxSteps() << std::endl;
+    std::cout << std::endl;
+    std::cout << "Genetic Operations:" << std::endl;
+    std::cout << "7. Selection Method: " <<  selector->getName() << std::endl;
+    std::cout << "8. Mutation Method: " <<  mutator->getName() << std::endl;
+    std::cout << "9. Crossover Method: " <<  crossover->getName() << std::endl;
+    std::cout << std::endl;
+    std::cout << "10. Environment: " << environment->getName() << std::endl;
 }
 
 void GPSystem::displayStats()
@@ -136,4 +153,9 @@ void GPSystem::displayEnvironment()
         return;
     std::cout << "Environment:" << std::endl;
     environment->display();
+}
+
+void GPSystem::visualizeProgram(int idx)
+{
+    population[idx]->visualize();
 }

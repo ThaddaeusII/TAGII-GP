@@ -20,7 +20,7 @@ private:
     bool look(int n);
 
 public:
-    SantaFeEnvironment();
+    SantaFeEnvironment(std::string name);
     void registerAllOperators() override;
     void reset() override;
     void load(std::string envPath) override;

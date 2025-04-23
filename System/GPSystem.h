@@ -12,12 +12,13 @@
 class GPSystem
 {
 private:
-    int populationSize = 100;
-    int generations = 200;
-    double mutationRate = 0.25;
-    double crossoverRate = 0.75;
-    int maxInstructions = 10;
-    int maxSteps = 400;
+    bool hasRun = false;
+
+    int populationSize;
+    int generations;
+    double mutationRate;
+    double crossoverRate;
+    int maxInstructions;
 
     std::vector<std::unique_ptr<Program>> population;
     std::shared_ptr<Selection> selector;
@@ -27,14 +28,32 @@ private:
 
     void initializePopulation();
     void evaluateFitness();
-    void evolve();
 
 public:
     GPSystem();
-    void run();
+    void evolve();
+    void reset();
 
     void displayProgram(int idx);
     void displayAllPrograms();
+    void displayParameters();
     void displayStats();
     void displayEnvironment();
+    void visualizeProgram(int idx);
+
+    void setPopulationSize(int size) { populationSize = size; }
+    void setGenerations(int gens) { generations = gens; }
+    void setMutationRate(double rate) { mutationRate = rate; }
+    void setCrossoverRate(double rate) { crossoverRate = rate; }
+    void setMaxInstructions(int max) { maxInstructions = max; }
+    void setMaxSteps(int steps) { environment->setMaxSteps(steps); }
+
+    double getMutationRate() { return mutationRate; }
+    double getCrossoverRate() { return crossoverRate; }
+
+    void setSelectionMethod(std::shared_ptr<Selection> s) { selector = s; }
+    void setMutationMethod(std::shared_ptr<Mutation> m) { mutator = m; }
+    void setCrossoverMethod(std::shared_ptr<Crossover> c) { crossover = c; }
+
+    void SetEnvironment(std::shared_ptr<Environment> e) { environment = e; }
 };

@@ -25,6 +25,25 @@ void PROG::execute(Program &prg, int pos, std::vector<std::pair<int, int>> &para
     }
 }
 
+void PROG::visualize(Program &prg, int pos, std::vector<std::pair<int, int>> &params)
+{
+    // Param -> (Param type, reference #)
+    for (auto &p : params)
+    {
+        // Execute ControlOperator
+        if (p.first)
+        {
+            prg.visualizeControl(pos, p.second);
+        }
+        
+        // Execute TerminalOperator
+        else
+        {
+            prg.visualizeTerminal(p.second);
+        }
+    }
+}
+
 void PROG::display()
 {
     std::cout << "PROG" << x;

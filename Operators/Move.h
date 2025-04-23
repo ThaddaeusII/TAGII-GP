@@ -11,6 +11,6 @@ private:
 
 public:
     Move(Environment& env, std::function<void()> moveFunction) : TerminalOperator(env), moveFunction(moveFunction) {}
-    void execute(int &steps) override;
+    void execute() override;
     void display() override;
 };

@@ -9,7 +9,7 @@ private:
     int selectParent(std::vector<std::unique_ptr<Program>> &population);
 
 public:
-    TournamentSelection();
+    TournamentSelection(std::string name);
     void select(std::vector<std::unique_ptr<Program>> &population,
         std::vector<std::unique_ptr<Program>> &children,
         std::shared_ptr<Mutation> &mutator,

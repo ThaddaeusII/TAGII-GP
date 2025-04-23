@@ -4,7 +4,7 @@
 
 #include "Environment.h"
 
-void Turn::execute(int &steps)
+void Turn::execute()
 {
     turnFunction();
 }

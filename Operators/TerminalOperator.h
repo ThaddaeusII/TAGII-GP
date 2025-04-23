@@ -14,6 +14,6 @@ protected:
 
 public:
     TerminalOperator(Environment& env) : env(env) {}
-    virtual void execute(int& steps) = 0;
+    virtual void execute() = 0;
     virtual void display() = 0;
 };

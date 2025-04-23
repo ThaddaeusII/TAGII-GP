@@ -1,11 +1,13 @@
 #pragma once
 
+#include <string>
 #include "Program.h"
 
 class Mutation
 {
 private:
     double mutationRate;
+    std::string name;
 
 protected:
     static std::vector<std::unique_ptr<Program::Instruction>>& getInstructions(std::unique_ptr<Program>& program)
@@ -21,7 +23,8 @@ protected:
         { program->instructions.erase(program->instructions.begin() + pos); }
 
 public:
-    Mutation(double mutationRate) : mutationRate(mutationRate) {}
+    Mutation(double mutationRate, std::string name) : mutationRate(mutationRate), name(name) {}
+    std::string getName() { return name; }
     double GetMutationRate() { return mutationRate; }
     virtual void mutate(std::unique_ptr<Program> &program) = 0;
 };

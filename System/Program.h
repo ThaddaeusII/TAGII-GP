@@ -22,24 +22,27 @@ private:
     };
 
     int fitness = -1;
-    int curSteps = -1;
+    bool waitForInput = true;
     std::vector<std::unique_ptr<Instruction>> instructions;
     std::shared_ptr<Environment> env;
+
+    void getInput();
 
     friend class Crossover;
     friend class Mutation;
 
 public:
     Program(std::shared_ptr<Environment> env);
-    void initPerfect();
     void initialize(int numInstructions);
+    void execute();
     void executeControl(int pos, int ref = -1);
     void executeTerminal(int op);
+    void visualize();
+    void visualizeControl(int pos, int ref = -1);
+    void visualizeTerminal(int op);
     void evaluateFitness();
     void display();
 
     int getFitness();
-    int getSteps();
-    void setSteps(int steps);
     int getSize();
 };

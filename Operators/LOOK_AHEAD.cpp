@@ -1,4 +1,4 @@
-#include "LOOK.h"
+#include "LOOK_AHEAD.h"
 
 #include <iostream>
 
@@ -6,7 +6,7 @@
 #include "Environment.h"
 #include "RandomGenerator.h"
 
-void LOOK::execute(Program &prg, int pos, std::vector<std::pair<int, int>> &params)
+void LOOK_AHEAD::execute(Program &prg, int pos, std::vector<std::pair<int, int>> &params)
 {
     if (lookFunction())
     {
@@ -42,7 +42,7 @@ void LOOK::execute(Program &prg, int pos, std::vector<std::pair<int, int>> &para
     }
 }
 
-void LOOK::visualize(Program &prg, int pos, std::vector<std::pair<int, int>> &params)
+void LOOK_AHEAD::visualize(Program &prg, int pos, std::vector<std::pair<int, int>> &params)
 {
     if (lookFunction())
     {
@@ -78,12 +78,12 @@ void LOOK::visualize(Program &prg, int pos, std::vector<std::pair<int, int>> &pa
     }
 }
 
-void LOOK::display()
+void LOOK_AHEAD::display()
 {
-    std::cout << "LOOK";
+    std::cout << name;
 }
 
-void LOOK::randomize(std::vector<std::pair<int, int>> &params)
+void LOOK_AHEAD::randomize(std::vector<std::pair<int, int>> &params)
 {
     int cSize = env.getControlOperators().size();
     int tSize = env.getTerminalOperators().size();
@@ -100,7 +100,7 @@ void LOOK::randomize(std::vector<std::pair<int, int>> &params)
     }
 }
 
-void LOOK::mutate(std::vector<std::pair<int, int>> &params)
+void LOOK_AHEAD::mutate(std::vector<std::pair<int, int>> &params)
 {
     randomize(params);
 }

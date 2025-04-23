@@ -4,7 +4,7 @@
 
 #include "Environment.h"
 
-void Move::execute(int &steps)
+void Move::execute()
 {
     moveFunction();
 }

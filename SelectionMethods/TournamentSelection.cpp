@@ -16,7 +16,7 @@ int TournamentSelection::selectParent(std::vector<std::unique_ptr<Program>> &pop
     return parent;
 }
 
-TournamentSelection::TournamentSelection()
+TournamentSelection::TournamentSelection(std::string name) : Selection(name)
 {
     tournamentSize = 7;
 }
