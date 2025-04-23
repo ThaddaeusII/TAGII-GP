@@ -1,15 +1,15 @@
-# Linear Genetic Programming System for Agent-Based Problems
+# TAGII-GP: Thad's Agent/Grid-based Interface for Instructional Genetic Programming
 
 Author: Thad Greiner
 
-This is my personal LGP system for evolving agents for the Ant Trail problem. It is built to be customizable and efficient, with the goal of expanding upon problems like the Santa Fe Ant Trail while keeping runtimes low.
+This is my personal LGP system for evolving agents for a variety of (mostly) grid-based problems. It is built to be customizable and efficient, with the goal of expanding upon problems like the Santa Fe Ant Trail, maze solving, and Pacman.
 
 ## Installation
 
-Note, you will need ```git```, ```g+++``` or ```clang```, ```c++20```, and ```make``` to easily setup and use this project!
+Note, you will need ```git```, ```g++``` or ```clang```, ```c++20```, and ```make``` to easily setup and use this project!
 
 ```
-git clone --recurse-submodules https://github.com/ThaddaeusII/LGPSystem.git
+git clone --recurse-submodules https://github.com/ThaddaeusII/TAGII-GP.git
 ```
 
 Navigate to ```Third-Party/Empirical/include/emp/base/_optional_throw.hpp```. On ```line 49```, change the function to ```inline```, which will make it as follows:
@@ -39,17 +39,15 @@ Each parameter has the following format:
 (Instruction, reference #) or (Terminal, Terminal Operator)
 ```
 
-### 2. Default Operators
-The operators are as follows:
-* PROG3: runs the three parameters sequentially.
-* PROG2: runs the two parameters sequentially, just like PROG3.
-* LOOK: Checks if there is food in front of the agent. If yes, runs parameter 1, else parameter 2.
+### 2. Existing Operators
+Here are the operators I currently have implemeneted:
+* PROG#: runs the next # of parameters sequentially. Note, this # is specified when registering operators to an environment (see below).
+* LOOK: Checks if there is food directly in front of the agent. If yes, runs parameter 1, else parameter 2. Deprecated, use LOOK_AHEAD going forward.
+* LOOK_AHEAD: Similar to LOOK, but has a customizable name to allow for reuse (such as LOOK_FOOD, LOOK_WALL,and LOOK_PREDATOR).
 * move: moves the agent one space forward.
 * turn_left: turns the agent left.
 * turn_right: turns the agent right.
-* special case: if a referenced instruction doesn't exist, treated as a do-nothing terminal.
-
-All terminal operators consume 1 time step.
+* WAIT: if a referenced instruction doesn't exist, it is treated as a wait terminal.
 
 ### 3. Execution
 
@@ -79,7 +77,7 @@ By default, crossover has a user defined chance, crossover chance. If no crossov
 * Parent 2 instructions from index 2 to end are copied to the child
 * To prevent program size expansion, maxSize is set to 10 for each parent's copy --- ***ADJUST THIS*** ---
 
-By default, selection uses tournament selection with tournament size 7 (set in the class). Selection will pick two best parents from a tournament (--- ***FIX*** ---, can select same paraent), the performs cross over using the two. After creating a new child via crossover or copying a parent, the child will be mutated, then added to the next generation.
+By default, selection uses tournament selection with tournament size 7 (set in the class). Selection will pick two best parents from a tournament (--- ***FIX*** ---, can select same parent, needs non-replacement), the performs cross over using the two. After creating a new child via crossover or copying a parent, the child will be mutated, then added to the next generation.
 
 ## Using the System
 
@@ -87,41 +85,62 @@ By default, selection uses tournament selection with tournament size 7 (set in t
 To run the system using the default build, simply run ```make``` and ```./evolve```. There are additional options such as ```make debug```, ```make clean```, and ```make slow``` (no optimization). If extra files are desired, add the relevant cpp files and include paths to the ```Makefile```.
 
 ### 2. Editing the Basic Parameters
-Edit the ```main.cpp``` to change the system parameters and/or add additional features, all parameters of the run are commented. You can change population size, generations, how large initial programs can be, how many steps can be run, and set the environment file.
+The user interface will bring up a simple terminal menu, where typing 1 will allow the user to see and modify the current parameters. This includes population size, muatation rate, generations, selection methods, enironments, etc. They can all be reconfigured in ```main.cpp```.
 
 ### 3. Editing the Environment
-See ```Environments/test.env```. The first line should have ```sizeX, sizeY, startX, startY, direction```. After that you should construct a 2D grid of size (sizeX, sizeY) where X is # of columns, Y is # of rows, '0's are empty space, and '1's are food. You can swap the filepath when calling the ```GPSystem::run()``` function.
+Environment files should follow the format of the specific environment class you are using. For Santa Fe Ant Trail, it should have ```sizeX, sizeY, startX, startY, direction``` on the first line. After that you should construct a 2D grid of size (sizeX, sizeY) where X is # of columns, Y is # of rows, '0's are empty space, and '1's are food. You can swap the filepath given, ```santafe.env```, or swap/add a new one in ```main.cpp```. Pacman, on the other hand, has a slighlty differnt format, which can be seen in ```pacman.env```.
 
-### 4. Adding New Operators
+### 4. Adding New Instruction Operators
 The system was built for somewhat easy additions of operators, both control and terminals. To do so, you need to follow two steps:
 
-1. Add a new operator class (.h and .cpp) to the ```Operators/``` folder. It should inherit from either ```TerminalOperator.h``` or ```ControlOperator.h```, and needs to initialize their pure virtual functions. In general, you need an ```execute()``` and ```display()``` function for both. ```ControlOperator``` also needs a ```randomize()``` function to initialize the parameters randomly. For example, if you need 2 parameters exactly, make sure initialize exactly 2. Or, if you want only terminals as parameters, you can enforce that. See the existing operators for examples.
-2. To make adding the new operators easy, there is a ```OperatorRegistry``` class in the ```System/``` folder. Once you have a new operator class made, navigate to ```OperatorRegistry.cpp``` and register it as either a ```ControlOperator``` or ```TerminalOperator``` in the ```registerAllOperators()``` function. You will also need to add the respective include: ```#include "YourOperator.h"```. Once you have done so, you are all set as it has been automatically added to the pool. By default, each group of operators has a uniform chance of being randomly chosen (Control and Terminal are seperate, and have a 50/50 when having to choose between them). You can modify these effects in the ```getRandomTerminalOperator()``` and ```getRandomControlOperator()``` functions, as well as your ```randomize()``` function.
+1. Add a new operator class (.h and .cpp) to the ```Operators/``` folder. It should inherit from either ```TerminalOperator.h``` or ```ControlOperator.h```, and needs to initialize their pure virtual functions. In general, you need an ```execute()``` and ```display()``` function for both. ```ControlOperator``` also needs a ```randomize()``` function to initialize the parameters randomly and in the cirrect format, a ```mutate()``` function for modifying parameters, and a ```visualize()``` function for visualizing how a program acts on an environment.
+2. To make adding the new operators easy, all you need to do is register them to an ```Environment``` class. Each ```Environment``` has a vector of control and terminal operators. By registering them in the ```RegisterAllOperators()``` function, they will added to the pool of randomly selectable operators to be randomized or mutated to. Registering them looks like this:
+
+```
+// Control Operators
+registerControlOperator(std::make_shared<PROG>(*this, 2));
+registerControlOperator(std::make_shared<PROG>(*this, 3));
+registerControlOperator(std::make_shared<LOOK_AHEAD>(*this, [this](){ return this->pelletAhead(); }, "LOOK_PELLET"));
+registerControlOperator(std::make_shared<LOOK_AHEAD>(*this, [this](){ return this->superPelletAhead(); }, "LOOK_SUPER_PELLET"));
+registerControlOperator(std::make_shared<LOOK_AHEAD>(*this, [this](){ return this->ghostAhead(); }, "LOOK_GHOST"));
+
+// Terminal Operators
+registerTerminalOperator(std::make_shared<Move>(*this, [this](){ this->move(); }));
+registerTerminalOperator(std::make_shared<Turn>(*this, [this](){ this->turnLeft(); }, true));
+registerTerminalOperator(std::make_shared<Turn>(*this, [this](){ this->turnRight(); }, false));
+```
+
+By default, all operators need a reference to the environment, hence the *this. Outside of that, your custom operators can take whatever parameters they need. Avbove, the PROG operator takes the # of sequential commands to run, while the others take a function of the environment to bind. This means that when the Program calls the Move operator's execute, it is bound to the environment's move() function and will call it. Thus, if you want an operator to affect the environment on execution, you can bind as many functions as needed.
 
 ### 4. Adding Genetic Operators
 
---- ***INCOMPLETE*** --- (Add registry feature for easy selection from parameters)
+Outside of new instructional operators, you can change also add new methods for selection, mutation, and crossover with ease. All three have a respetive base class (see the ```*Methods/``` folders), and each one has constructor that needs upcalled and a single virtual function to override. Mutation has ```mutate()``` to control how an individual program is changed, Crossover has ```cross()``` to determine how two parents create a child/children, and Selection takes both other methods and controls the whole process of how one generation creates the next via its ```select()``` function. Once a new method is created, it can be swapped in or added by adding them to ```main.cpp```.
+
+### 5. Adding ENvironments
+
+The the final and most complicated feature of the system is the ability to create and add environments with ease. Like before, there is a base class (see ```Environments/Envirnoment.h```), but it is more complicated than before. It also needs a constructor upcall to get the name, and also needs four functions: ```display()``` to show the environment, ```load()``` to load an environment form file, ```reset()``` to setup the environment for the next program, and ```registerAllOperators()``` to register all operators that can be used on the environment. It should also be added to ```main.cpp``` in order to use it.
+
+In order for programs to be evaluated, it has 3 protected variables: fitness, curSteps, and maxSteps. Your selector can utilize that fitness (maximize or minimize) for program evolution, while maxSteps is how many "steps" are allocated to your program, and curSteps are how many remain. WHen a program starts/resets, it will have maxSteps, and won't stop until curSteps is less than or equal to zero. "Steps" are in quotes because the only provided means of step reduction is the WAIT command (unreferenced instruction), consuming one step. Any other means of modifiying steps is up to you, which is flexible, but does allow for infinite loops if not careful.
+
+Outside of these requirements, the class is freely customizable. My examples and intent was for grid based worlds and simple navigation / collection games. However, you can get really creative with it, as it is possible to expand out of 2D, create complex world dynamics, or even create a register based "environment" with no actual grid. The possibilities are immense, which was my goal with the flexibility. 
 
 ### TODO
 
 * Fixes:
-    1. Add genetic operators to the operator registry.
-    2. Add error checking for improper parameters.
-    3. Add parameter modification to the control operator mutate function.
-    4. Improve the default crossover implementation.
+    1. Add error checking for improper parameters and files entered.
+    3. Add parameter modification to the given control operator ```mutate()``` functions instead of randomizing them.
+    4. Improve the default crossover and mutation implementation.
     5. Get random sampling without replacement working for tournament selection.
 * Enviroment Improvements
-    1. Modify environment to be a template class and inheritable.
-    2. Create environments with obstacles
-    3. Create 3D enironments
-    4. Improve environment file format.
+    1. Improve environment file format.
+    2. Add maze solving environment
+    3. Improve Pacman environment
 * System Improvements
     1. Add more genetic operators (mutation, selection, crossover)
     2. Add more control and terminal operators
     3. Optimize the performance.
-    4. Add better user interface for inputting parameters.
-    5. Improve visualization / display functions.
-    6. Add data saving feature.
+    4. Add GUI using wxWidgets for cross-platform support and better user experience.
+    6. Add saving/loading feature for parameters and populations.
     7. Add parallelization / nvidia options.
 
 ## Citations
