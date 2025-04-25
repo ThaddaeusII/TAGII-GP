@@ -1,17 +1,20 @@
 #pragma once
 
 #include <wx/panel.h>
+#include "mathplot.h"
 
 #include <memory>
+#include <vector>
+
 #include "GPSystem.h"
 
-class StatsPanel : public wxPanel
+class GraphPanel : public wxPanel
 {
 private:
     std::shared_ptr<GPSystem> gp;
-
+    
 public:
-    StatsPanel(std::shared_ptr<GPSystem> gp,
+    GraphPanel(std::shared_ptr<GPSystem> gp,
         wxWindow *parent, 
         wxWindowID id=wxID_ANY, 
         const wxPoint &pos=wxDefaultPosition, 

@@ -119,7 +119,7 @@ ProgramsPanel::ProgramsPanel(std::shared_ptr<GPSystem> gp,
     programList->Bind(wxEVT_DATAVIEW_SELECTION_CHANGED, &ProgramsPanel::OnProgramSelected, this);
 
     // Initial program list
-    SetProgramList(0, 100);
+    SetProgramList(0, gp->getPopulationSize());
 }
 
 void ProgramsPanel::SetProgramList(const int startIdx, const int endIdx)

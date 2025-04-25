@@ -1,4 +1,4 @@
 [submodule "Third-Party/Empirical"]
-	path = Third-Party/Empirical
+	path = src/Third-Party/Empirical
 	url = https://github.com/devosoft/Empirical.git
 	branch = MABE_devel

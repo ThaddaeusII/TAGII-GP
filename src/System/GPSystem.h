@@ -11,6 +11,17 @@
 
 class GPSystem
 {
+public:
+    struct GPStats
+    {
+        double avgFitness;
+        int bestFitness;
+        int bestProgram;
+        double avgProgramSize;
+        int smallestProgramSize;
+        int largestProgramSize;
+    };
+
 private:
     bool hasRun = false;
 
@@ -19,6 +30,8 @@ private:
     double mutationRate;
     double crossoverRate;
     int maxInstructions;
+
+    GPStats curStats;
 
     std::vector<std::unique_ptr<Program>> population;
     std::shared_ptr<Selection> selector;
@@ -33,6 +46,7 @@ public:
     GPSystem();
     void evolve();
     void reset();
+    void calcStats();
 
     void displayProgram(int idx);
     void displayAllPrograms();
@@ -44,6 +58,7 @@ public:
     std::vector<std::string> getProgramInststructions(int idx);
     int getProgramFitness(int idx) { return population[idx]->getFitness(); }
     int getProgramSize(int idx) { return population[idx]->getSize(); }
+    GPStats getStats() { return curStats; }
 
     void setPopulationSize(int size) { populationSize = size; }
     void setGenerations(int gens) { generations = gens; }

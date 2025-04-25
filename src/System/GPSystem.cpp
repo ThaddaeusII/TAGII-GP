@@ -37,7 +37,7 @@ GPSystem::GPSystem()
 
     // Defualt environment
     environment = std::make_shared<PacmanEnvironment>("Pacman");
-    environment->load("./Environments/pacman.env");
+    environment->load("src/Environments/pacman.env");
     environment->setMaxSteps(200);
 
     // Default genetic operators
@@ -72,6 +72,36 @@ void GPSystem::reset()
     // Clear population, then reinitialize randomly
     population.clear();
     initializePopulation();
+}
+
+void GPSystem::calcStats()
+{
+    curStats.avgFitness = 0.0;
+    curStats.avgProgramSize = 0;
+    curStats.bestFitness = INT_MIN;
+    curStats.bestProgram = -1;
+    curStats.largestProgramSize = INT_MIN;
+    curStats.smallestProgramSize = INT_MAX;
+
+    for (int i = 0; i < populationSize; ++i)
+    {
+        int f = population[i]->getFitness();
+        curStats.avgFitness += f;
+        if (f > curStats.bestFitness)
+        {
+            curStats.bestFitness = f;
+            curStats.bestProgram = i;
+        }
+
+        int s = population[i]->getSize();
+        curStats.avgProgramSize += s;
+        if (s < curStats.smallestProgramSize)
+            curStats.smallestProgramSize = s;
+        if (s > curStats.largestProgramSize)
+            curStats.largestProgramSize = s;
+    }
+    curStats.avgFitness /= populationSize;
+    curStats.avgProgramSize /= populationSize;
 }
 
 void GPSystem::displayProgram(int idx)
@@ -110,41 +140,15 @@ void GPSystem::displayParameters()
 
 void GPSystem::displayStats()
 {
-    double avgFitness = 0;
-    int bestFitness = -1;
-    int bestProgram = -1;
-    double avgProgramSize = 0;
-    int smallestProgramSize = INT_MAX;
-    int largestProgramSize = -1;
-
-    for (int i = 0; i < populationSize; ++i)
-    {
-        int f = population[i]->getFitness();
-        avgFitness += f;
-        if (f > bestFitness)
-        {
-            bestFitness = f;
-            bestProgram = i;
-        }
-
-        int s = population[i]->getSize();
-        avgProgramSize += s;
-        if (s < smallestProgramSize)
-            smallestProgramSize = s;
-        if (s > largestProgramSize)
-            largestProgramSize = s;
-    }
-    avgFitness /= populationSize;
-    avgProgramSize /= populationSize;
+    calcStats();
 
     std::cout << "Population size: " << population.size() << std::endl;
-    std::cout << "Best fitness:    " << bestFitness << std::endl;
-    std::cout << "Best program:    " << bestProgram << std::endl;
-    std::cout << "Avg fitness:     " << avgFitness << std::endl;
-    std::cout << "Minimum length:  " << smallestProgramSize << std::endl;
-    std::cout << "Maximum length:  " << largestProgramSize << std::endl;
-    std::cout << "Avg length:      " << avgProgramSize << std::endl;
-
+    std::cout << "Best fitness:    " << curStats.bestFitness << std::endl;
+    std::cout << "Best program:    " << curStats.bestProgram << std::endl;
+    std::cout << "Avg fitness:     " << curStats.avgFitness << std::endl;
+    std::cout << "Minimum length:  " << curStats.smallestProgramSize << std::endl;
+    std::cout << "Maximum length:  " << curStats.largestProgramSize << std::endl;
+    std::cout << "Avg length:      " << curStats.avgProgramSize << std::endl;
 }
 
 void GPSystem::displayEnvironment()

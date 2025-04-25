@@ -5,6 +5,7 @@ Mainframe::Mainframe(wxWindow *parent, wxWindowID id, const wxString &title, con
 {
     // Initialize GPSystem
     gp = std::make_shared<GPSystem>();
+    gp->calcStats();
 
     this->SetSizeHints( wxDefaultSize, wxDefaultSize );
     this->SetBackgroundColour(wxColour(40, 40, 40));
