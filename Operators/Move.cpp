@@ -9,7 +9,7 @@ void Move::execute()
     moveFunction();
 }
 
-void Move::display()
+void Move::display(std::ostream &out)
 {
-    std::cout << "move";
+    out << "move";
 }

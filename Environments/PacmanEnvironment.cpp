@@ -311,11 +311,11 @@ void PacmanEnvironment::load(std::string envPath)
     }
 }
 
-void PacmanEnvironment::display()
+void PacmanEnvironment::display(std::ostream &out)
 {
-    std::cout << "Score: " << fitness << " / " << maxFitness;
-    std::cout << " (Powered: " << powerTimer << ")";
-    std::cout << std::endl;
+    out << "Score: " << fitness << " / " << maxFitness;
+    out << " (Powered: " << powerTimer << ")";
+    out << std::endl;
 
     for (int j = 0; j < sizeY; ++j)
     {
@@ -325,10 +325,10 @@ void PacmanEnvironment::display()
             {
                 switch (agentDir)
                 {
-                    case 0: std::cout << "^"; break;
-                    case 1: std::cout << "<"; break;
-                    case 2: std::cout << "v"; break;
-                    case 3: std::cout << ">"; break;
+                    case 0: out << "^"; break;
+                    case 1: out << "<"; break;
+                    case 2: out << "v"; break;
+                    case 3: out << ">"; break;
                 }
             }
             else
@@ -344,11 +344,11 @@ void PacmanEnvironment::display()
                 }
 
                 if (ghostHere)
-                    std::cout << "G";
+                    out << "G";
                 else
-                    std::cout << grid[j][i];
+                    out << grid[j][i];
             }
         }
-        std::cout << std::endl;
+        out << std::endl;
     }
 }

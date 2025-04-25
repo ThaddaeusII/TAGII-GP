@@ -24,5 +24,5 @@ public:
     void registerAllOperators() override;
     void reset() override;
     void load(std::string envPath) override;
-    void display() override;
+    void display(std::ostream &out = std::cout) override;
 };

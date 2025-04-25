@@ -9,10 +9,10 @@ void Turn::execute()
     turnFunction();
 }
 
-void Turn::display()
+void Turn::display(std::ostream &out)
 {
     if (left)
-        std::cout << "turn_left";
+        out << "turn_left";
     else
-        std::cout << "turn_right";
+        out << "turn_right";
 }

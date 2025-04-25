@@ -78,9 +78,9 @@ void LOOK::visualize(Program &prg, int pos, std::vector<std::pair<int, int>> &pa
     }
 }
 
-void LOOK::display()
+void LOOK::display(std::ostream &out)
 {
-    std::cout << "LOOK";
+    out << "LOOK";
 }
 
 void LOOK::randomize(std::vector<std::pair<int, int>> &params)

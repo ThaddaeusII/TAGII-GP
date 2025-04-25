@@ -2,6 +2,7 @@
 
 #include <string>
 #include <memory>
+#include <iostream>
 
 #include "ControlOperator.h"
 #include "TerminalOperator.h"
@@ -46,5 +47,5 @@ public:
     virtual void registerAllOperators() = 0;
     virtual void reset() = 0;
     virtual void load(std::string envPath) = 0;
-    virtual void display() = 0;
+    virtual void display(std::ostream &out = std::cout) = 0;
 };

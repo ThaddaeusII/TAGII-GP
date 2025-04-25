@@ -41,8 +41,9 @@ public:
     void visualizeControl(int pos, int ref = -1);
     void visualizeTerminal(int op);
     void evaluateFitness();
-    void display();
+    void display(std::ostream &out = std::cout);
 
     int getFitness();
     int getSize();
+    std::vector<std::string> getInstructions();
 };

@@ -81,9 +81,9 @@ void SantaFeEnvironment::load(std::string envPath)
     }
 }
 
-void SantaFeEnvironment::display()
+void SantaFeEnvironment::display(std::ostream &out)
 {
-    std::cout << "Food: " << fitness << "/" << maxFood << std::endl;
+    out << "Food: " << fitness << "/" << maxFood << std::endl;
     for (int j = 0; j < sizeY; ++j)
     {
         for (int i = 0; i < sizeX; ++i)
@@ -92,22 +92,22 @@ void SantaFeEnvironment::display()
                 switch(agentDir)
                 {
                     case 0: // UP
-                        std::cout << "^";
+                        out << "^";
                         break;
                     case 1: // Left
-                        std::cout << "<";
+                        out << "<";
                         break;
                     case 2: // Down
-                        std::cout << "v";
+                        out << "v";
                         break;
                     case 3: // Right
-                        std::cout << ">";
+                        out << ">";
                         break;
                 }
             else
-                std::cout << grid[j][i];
+                out << grid[j][i];
         }
-        std::cout << std::endl;
+        out << std::endl;
     }
 }
 

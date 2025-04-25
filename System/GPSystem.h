@@ -41,6 +41,10 @@ public:
     void displayEnvironment();
     void visualizeProgram(int idx);
 
+    std::vector<std::string> getProgramInststructions(int idx);
+    int getProgramFitness(int idx) { return population[idx]->getFitness(); }
+    int getProgramSize(int idx) { return population[idx]->getSize(); }
+
     void setPopulationSize(int size) { populationSize = size; }
     void setGenerations(int gens) { generations = gens; }
     void setMutationRate(double rate) { mutationRate = rate; }
@@ -48,8 +52,13 @@ public:
     void setMaxInstructions(int max) { maxInstructions = max; }
     void setMaxSteps(int steps) { environment->setMaxSteps(steps); }
 
+    int getPopulationSize() { return populationSize; }
+    int getGenerations() { return generations; }
     double getMutationRate() { return mutationRate; }
     double getCrossoverRate() { return crossoverRate; }
+    int getMaxInstructions() { return maxInstructions; }
+    int getCurSteps() { return environment->getCurSteps(); }
+    int getMaxSteps() { return environment->getMaxSteps(); }
 
     void setSelectionMethod(std::shared_ptr<Selection> s) { selector = s; }
     void setMutationMethod(std::shared_ptr<Mutation> m) { mutator = m; }

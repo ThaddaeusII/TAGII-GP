@@ -44,9 +44,9 @@ void PROG::visualize(Program &prg, int pos, std::vector<std::pair<int, int>> &pa
     }
 }
 
-void PROG::display()
+void PROG::display(std::ostream &out)
 {
-    std::cout << "PROG" << x;
+    out << "PROG" << x;
 }
 
 void PROG::randomize(std::vector<std::pair<int, int>> &params)

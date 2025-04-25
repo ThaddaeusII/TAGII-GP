@@ -13,5 +13,5 @@ private:
 public:
     Turn(Environment& env, std::function<void()> turnFunction, bool left) : TerminalOperator(env), turnFunction(turnFunction), left(left) {}
     void execute() override;
-    void display() override;
+    void display(std::ostream &out = std::cout) override;
 };

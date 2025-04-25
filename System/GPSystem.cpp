@@ -47,14 +47,14 @@ GPSystem::GPSystem()
 
     // Initialize the population
     initializePopulation();
+
+    // Evaluate initial generation's fitness
+    evaluateFitness();
 }
 
 void GPSystem::evolve()
 {
     std::vector<std::unique_ptr<Program>> children;
-
-    // Evaluate initial generation's fitness
-    evaluateFitness();
 
     for (int gen = 0; gen < generations; ++gen)
     {
@@ -158,4 +158,9 @@ void GPSystem::displayEnvironment()
 void GPSystem::visualizeProgram(int idx)
 {
     population[idx]->visualize();
+}
+
+std::vector<std::string> GPSystem::getProgramInststructions(int idx)
+{
+    return population[idx]->getInstructions();
 }

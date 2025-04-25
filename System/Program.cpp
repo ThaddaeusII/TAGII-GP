@@ -193,25 +193,25 @@ void Program::evaluateFitness()
     fitness = env->getFitness();
 }
 
-void Program::display()
+void Program::display(std::ostream &out)
 {
     int line = 1;
     for (auto &i : instructions)
     {
-        std::cout << "[" << line << "]: [" << i->reference << ", ";
-        i->op->display();
+        out << "[" << line << "]: [" << i->reference << ", ";
+        i->op->display(out);
         for (auto &p : i->params)
         {
             if (p.first)
-                std::cout << ", " << "(I, " << p.second << ")";
+                out << ", " << "(I, " << p.second << ")";
             else
             {
-                std::cout << ", (T, ";
-                env->getTerminalOperator(p.second)->display();
-                std::cout << ")";
+                out << ", (T, ";
+                env->getTerminalOperator(p.second)->display(out);
+                out << ")";
             }
         }
-        std::cout << "]" << std::endl;
+        out << "]" << std::endl;
         line++;
     }
 }
@@ -224,6 +224,22 @@ int Program::getFitness()
 int Program::getSize()
 {
     return instructions.size();
+}
+
+std::vector<std::string> Program::getInstructions()
+{
+    // Get instructions as a string
+    std::ostringstream oss;
+    display(oss);
+    
+    // Split into lines
+    std::vector<std::string> lines;
+    std::istringstream stream(oss.str());
+    std::string line;
+    while (std::getline(stream, line)) {
+        lines.push_back(line);
+    }
+    return lines;
 }
 
 Program::Instruction::Instruction(std::shared_ptr<Environment> env, int count)

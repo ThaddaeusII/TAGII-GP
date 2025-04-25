@@ -6,7 +6,7 @@ This is my personal LGP system for evolving agents for a variety of (mostly) gri
 
 ## Installation
 
-Note, you will need ```git```, ```g++``` or ```clang```, ```c++20```, and ```make``` to easily setup and use this project!
+Note, you will need ```git```, ```g++```, ```c++20```, and ```make``` to easily setup and use this project! If you wish to use the GUI version, you will need ```wxWidgets 3.2.4```.
 
 ```
 git clone --recurse-submodules https://github.com/ThaddaeusII/TAGII-GP.git
@@ -142,6 +142,7 @@ Outside of these requirements, the class is freely customizable. My examples and
     4. Add GUI using wxWidgets for cross-platform support and better user experience.
     6. Add saving/loading feature for parameters and populations.
     7. Add parallelization / nvidia options.
+    8. Add operator swapping to user interface.
 
 ## Citations
 
