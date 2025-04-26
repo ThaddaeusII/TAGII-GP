@@ -67,11 +67,25 @@ void GPSystem::evolve()
     }
 }
 
+// Does a single generation
+void GPSystem::step()
+{
+    std::vector<std::unique_ptr<Program>> children;
+    
+    // Select next generation using provided selector, mutator, and crossover objects
+    selector->select(population, children, mutator, crossover);
+
+    // Set population to next generation and evaluate fitness
+    std::swap(population, children);
+    evaluateFitness();
+}
+
 void GPSystem::reset()
 {
     // Clear population, then reinitialize randomly
     population.clear();
     initializePopulation();
+    evaluateFitness();
 }
 
 void GPSystem::calcStats()

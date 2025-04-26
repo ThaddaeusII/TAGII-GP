@@ -19,6 +19,9 @@ private:
     ControlPanel* controlPanel;
     MainPanel* mainPanel;
 
+    void OnRun(wxCommandEvent& event);
+    void OnReset(wxCommandEvent& event);
+
 public:
     Mainframe(wxWindow* parent,
         wxWindowID id = wxID_ANY,
@@ -29,5 +32,4 @@ public:
 	~Mainframe();
 
     void mainSplitterOnIdle(wxIdleEvent&);
-    void SetTheme();
 };

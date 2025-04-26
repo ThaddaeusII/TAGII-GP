@@ -10,6 +10,11 @@ class EnvironmentPanel : public wxPanel
 private:
     std::shared_ptr<GPSystem> gp;
 
+    void start(wxCommandEvent& event);
+    void step(wxCommandEvent& event);
+    void end(wxCommandEvent& event);
+    void reset(wxCommandEvent& event);
+    
 public:
     EnvironmentPanel(std::shared_ptr<GPSystem> gp,
         wxWindow *parent, 

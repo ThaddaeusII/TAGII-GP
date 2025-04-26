@@ -29,4 +29,7 @@ public:
         const wxSize &size=wxDefaultSize, 
         long style=wxTAB_TRAVERSAL, 
         const wxString &name=wxPanelNameStr);
+    StatsPanel* GetStatsPanel() { return statsTab; }
+    ProgramsPanel* GetProgramsPanel() { return programsTab; }
+    EnvironmentPanel* GetEnvironmentPanel() { return environmentTab; }
 };

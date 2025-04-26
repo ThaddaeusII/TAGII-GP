@@ -1,5 +1,46 @@
 #include "Mainframe.h"
 
+#include "CustomEvents.h"
+
+void Mainframe::OnRun(wxCommandEvent& event)
+{
+    // Run start event
+    wxCommandEvent start_evt(EVT_RUN_STARTED);
+    wxPostEvent(mainPanel->GetStatsPanel(), start_evt);
+    wxPostEvent(mainPanel->GetProgramsPanel(), start_evt);
+    wxPostEvent(mainPanel->GetEnvironmentPanel(), start_evt);
+
+    // Evolve one gen at a time, save each gen stats
+    for (int i = 0; i < gp->getGenerations(); ++i)
+    {
+        gp->step();
+        gp->calcStats();
+        
+        // Single step event
+        wxCommandEvent step_evt(EVT_RUN_STEP);
+        wxPostEvent(mainPanel->GetStatsPanel(), step_evt);
+        wxPostEvent(mainPanel->GetProgramsPanel(), step_evt);
+        wxPostEvent(mainPanel->GetEnvironmentPanel(), step_evt);
+    }
+
+    // Run completed event
+    wxCommandEvent end_evt(EVT_RUN_ENDED);
+    wxPostEvent(mainPanel->GetStatsPanel(), end_evt);
+    wxPostEvent(mainPanel->GetProgramsPanel(), end_evt);
+    wxPostEvent(mainPanel->GetEnvironmentPanel(), end_evt);
+}
+
+void Mainframe::OnReset(wxCommandEvent &event)
+{
+    gp->reset();
+
+    // Run reset event
+    wxCommandEvent reset_evt(EVT_RUN_RESET);
+    wxPostEvent(mainPanel->GetStatsPanel(), reset_evt);
+    wxPostEvent(mainPanel->GetProgramsPanel(), reset_evt);
+    wxPostEvent(mainPanel->GetEnvironmentPanel(), reset_evt);
+}
+
 Mainframe::Mainframe(wxWindow *parent, wxWindowID id, const wxString &title, const wxPoint &pos, const wxSize &size, long style)
     : wxFrame(parent, id, title, pos, size, style)
 {
@@ -28,7 +69,10 @@ Mainframe::Mainframe(wxWindow *parent, wxWindowID id, const wxString &title, con
 
 	this->SetSizer(mainSizer);
 	this->Layout();
-	this->Centre( wxBOTH );
+	this->Centre(wxBOTH);
+
+    Bind(EVT_RUN_STARTED, &Mainframe::OnRun, this);
+    Bind(EVT_RUN_RESET, &Mainframe::OnReset, this);
 }
 
 Mainframe::~Mainframe()

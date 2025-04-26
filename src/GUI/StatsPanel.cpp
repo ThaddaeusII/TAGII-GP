@@ -1,10 +1,24 @@
 #include "StatsPanel.h"
 
+#include "CustomEvents.h"
+
+void StatsPanel::ClearStatsDisplay()
+{
+    popText->SetLabel(wxString::Format("Population size: "));
+    genText->SetLabel(wxString::Format("Generations: %d", totalGenerations));
+    bestFitnessText->SetLabel(wxString::Format("Best fitness: "));
+    avgFitnessText->SetLabel(wxString::Format("Average fitness: "));
+    bestProgramText->SetLabel(wxString::Format("Best program index: "));
+    largestProgramSizeText->SetLabel(wxString::Format("Largest program size: "));
+    smallestProgramSizeText->SetLabel(wxString::Format("Smallest program size: "));
+    averageProgramSizeText->SetLabel(wxString::Format("Average program size: "));
+}
+
 void StatsPanel::UpdateStatsDisplay()
 {
     GPSystem::GPStats stats = gp->getStats();
     popText->SetLabel(wxString::Format("Population size: %d", gp->getPopulationSize()));
-    genText->SetLabel(wxString::Format("Generations: %d", gp->getGenerations()));
+    genText->SetLabel(wxString::Format("Generations: %d", totalGenerations));
     bestFitnessText->SetLabel(wxString::Format("Best fitness: %d", stats.bestFitness));
     avgFitnessText->SetLabel(wxString::Format("Average fitness: %0.3f", stats.avgFitness));
     bestProgramText->SetLabel(wxString::Format("Best program index: %d", stats.bestProgram));
@@ -15,6 +29,35 @@ void StatsPanel::UpdateStatsDisplay()
 
 void StatsPanel::UpdateGraph()
 {
+}
+
+void StatsPanel::start(wxCommandEvent &event)
+{
+    ClearStatsDisplay();
+}
+
+void StatsPanel::step(wxCommandEvent &event)
+{
+    totalGenerations += 1;
+    AddGenerationStats();
+    
+    genText->SetLabel(wxString::Format("Generations: %d", totalGenerations));
+    genText->Refresh();
+    genText->Update();
+}
+
+void StatsPanel::end(wxCommandEvent &event)
+{
+    UpdateStatsDisplay();
+    UpdateGraph();
+}
+
+void StatsPanel::reset(wxCommandEvent &event)
+{
+    ClearStats();
+    AddGenerationStats();
+    UpdateStatsDisplay();
+    UpdateGraph();
 }
 
 StatsPanel::StatsPanel(std::shared_ptr<GPSystem> gp,
@@ -37,6 +80,7 @@ StatsPanel::StatsPanel(std::shared_ptr<GPSystem> gp,
     largestProgramSizeText = new wxStaticText(this, wxID_ANY, "");
     smallestProgramSizeText = new wxStaticText(this, wxID_ANY, "");
     averageProgramSizeText = new wxStaticText(this, wxID_ANY, "");
+    ClearStatsDisplay();
 
     wxBoxSizer* statsSizer = new wxBoxSizer(wxVERTICAL);
     statsSizer->Add(popText, 0, wxALL, 5);
@@ -48,17 +92,24 @@ StatsPanel::StatsPanel(std::shared_ptr<GPSystem> gp,
     statsSizer->Add(smallestProgramSizeText, 0, wxALL, 5);
     statsSizer->Add(averageProgramSizeText, 0, wxALL, 5);
 
-    graphPanel = new GraphPanel(gp, this, wxID_ANY,  wxDefaultPosition, wxDefaultSize);
-    graphPanel->SetMinSize(wxSize(400, 300));
+    // Add GRAPHS !!!
 
     mainSizer = new wxBoxSizer(wxVERTICAL);
     mainSizer->Add(statsSizer, 0, wxEXPAND | wxALL, 5);
-    mainSizer->Add(graphPanel, 1, wxEXPAND | wxALL, 5);
 
     SetSizer(mainSizer);
 
     // Add initial generation's stats
+    totalGenerations = 0;
     AddGenerationStats();
+    UpdateStatsDisplay();
+    UpdateGraph();
+
+    // Bind GPSystem events
+    Bind(EVT_RUN_STARTED, &StatsPanel::start, this);
+    Bind(EVT_RUN_STEP, &StatsPanel::step, this);
+    Bind(EVT_RUN_ENDED, &StatsPanel::end, this);
+    Bind(EVT_RUN_RESET, &StatsPanel::reset, this);
 }
 
 void StatsPanel::AddGenerationStats()
@@ -71,13 +122,11 @@ void StatsPanel::AddGenerationStats()
     largestProgramSizeHistory.push_back(stats.largestProgramSize);
     smallestProgramSizeHistory.push_back(stats.smallestProgramSize);
     averageProgramSizeHistory.push_back(stats.avgProgramSize);
-
-    UpdateStatsDisplay();
-    UpdateGraph();
 }
 
 void StatsPanel::ClearStats()
 {
+    totalGenerations = 0;
     bestFitnessHistory.clear();
     avgFitnessHistory.clear();
     bestProgramHistory.clear();

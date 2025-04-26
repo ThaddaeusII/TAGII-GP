@@ -7,13 +7,14 @@
 #include <memory>
 #include <vector>
 
-#include "GraphPanel.h"
 #include "GPSystem.h"
 
 class StatsPanel : public wxPanel
 {
 private:
     std::shared_ptr<GPSystem> gp;
+
+    int totalGenerations = 0;
 
     wxStaticText* popText;
     wxStaticText* genText;
@@ -25,7 +26,6 @@ private:
     wxStaticText* averageProgramSizeText;
     
     wxBoxSizer* mainSizer;
-    GraphPanel* graphPanel;
 
     std::vector<int> bestFitnessHistory;
     std::vector<double> avgFitnessHistory;
@@ -34,8 +34,14 @@ private:
     std::vector<int> smallestProgramSizeHistory;
     std::vector<double> averageProgramSizeHistory;
 
+    void ClearStatsDisplay();
     void UpdateStatsDisplay();
     void UpdateGraph();
+
+    void start(wxCommandEvent& event);
+    void step(wxCommandEvent& event);
+    void end(wxCommandEvent& event);
+    void reset(wxCommandEvent& event);
 
 public:
     StatsPanel(std::shared_ptr<GPSystem> gp,

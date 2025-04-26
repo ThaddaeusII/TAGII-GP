@@ -33,6 +33,11 @@ private:
     int endProgramIdx = 0;
 
     const int MAX_PROGRAMS_LISTED = 200;
+    
+    void start(wxCommandEvent& event);
+    void step(wxCommandEvent& event);
+    void end(wxCommandEvent& event);
+    void reset(wxCommandEvent& event);
 
 public:
     ProgramsPanel(std::shared_ptr<GPSystem> gp,

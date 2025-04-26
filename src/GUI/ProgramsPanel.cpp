@@ -6,6 +6,8 @@
 #include <iostream>
 #include <iomanip>
 
+#include "CustomEvents.h"
+
 void ProgramsPanel::OnSearch(wxCommandEvent &evt)
 {
     // Check if searched index is correct
@@ -47,13 +49,32 @@ void ProgramsPanel::OnProgramSelected(wxCommandEvent &evt)
     DisplayProgram(idx);
 }
 
+void ProgramsPanel::start(wxCommandEvent &event)
+{
+}
+
+void ProgramsPanel::step(wxCommandEvent &event)
+{
+}
+
+void ProgramsPanel::end(wxCommandEvent &event)
+{
+    SetProgramList(startProgramIdx, endProgramIdx);
+}
+
+void ProgramsPanel::reset(wxCommandEvent &event)
+{
+    // Reset program list
+    SetProgramList(0, gp->getPopulationSize());
+}
+
 ProgramsPanel::ProgramsPanel(std::shared_ptr<GPSystem> gp,
-    wxWindow *parent,
-    wxWindowID id,
-    const wxPoint &pos,
-    const wxSize &size,
-    long style,
-    const wxString &name)
+                             wxWindow *parent,
+                             wxWindowID id,
+                             const wxPoint &pos,
+                             const wxSize &size,
+                             long style,
+                             const wxString &name)
     : wxPanel(parent, id, pos, size, style, name), gp(gp)
 {
     this->SetBackgroundColour(wxColour(40, 40, 40));
@@ -120,6 +141,12 @@ ProgramsPanel::ProgramsPanel(std::shared_ptr<GPSystem> gp,
 
     // Initial program list
     SetProgramList(0, gp->getPopulationSize());
+
+    // Bind GPSystem events
+    Bind(EVT_RUN_STARTED, &ProgramsPanel::start, this);
+    Bind(EVT_RUN_STEP, &ProgramsPanel::step, this);
+    Bind(EVT_RUN_ENDED, &ProgramsPanel::end, this);
+    Bind(EVT_RUN_RESET, &ProgramsPanel::reset, this);
 }
 
 void ProgramsPanel::SetProgramList(const int startIdx, const int endIdx)

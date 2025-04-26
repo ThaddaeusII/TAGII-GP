@@ -23,8 +23,6 @@ public:
     };
 
 private:
-    bool hasRun = false;
-
     int populationSize;
     int generations;
     double mutationRate;
@@ -45,6 +43,7 @@ private:
 public:
     GPSystem();
     void evolve();
+    void step();
     void reset();
     void calcStats();
 
