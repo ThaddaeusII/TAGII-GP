@@ -10,6 +10,16 @@ class Selection
 {
 private:
     std::string name;
+    
+protected:
+    static void copyInstruction(std::unique_ptr<Program>& program, const std::unique_ptr<Program::Instruction>& instr)
+        { program->instructions.push_back(std::make_unique<Program::Instruction>(*instr)); }
+        
+    static std::vector<std::unique_ptr<Program::Instruction>>& getInstructions(std::unique_ptr<Program>& program)
+        { return program->instructions; }
+
+    static std::shared_ptr<Environment>& getEnv(std::unique_ptr<Program>& program)
+        { return program->env; }
 
 public:
     Selection(std::string name) : name(name) {}

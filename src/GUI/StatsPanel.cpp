@@ -1,5 +1,7 @@
 #include "StatsPanel.h"
 
+#include <fstream>
+
 #include "CustomEvents.h"
 
 void StatsPanel::ClearStatsDisplay()
@@ -40,10 +42,7 @@ void StatsPanel::step(wxCommandEvent &event)
 {
     totalGenerations += 1;
     AddGenerationStats();
-    
     genText->SetLabel(wxString::Format("Generations: %d", totalGenerations));
-    genText->Refresh();
-    genText->Update();
 }
 
 void StatsPanel::end(wxCommandEvent &event)
@@ -115,22 +114,27 @@ StatsPanel::StatsPanel(std::shared_ptr<GPSystem> gp,
 void StatsPanel::AddGenerationStats()
 {
     // Update stat tracking with current generation's stats
-    GPSystem::GPStats stats = gp->getStats();
-    bestFitnessHistory.push_back(stats.bestFitness);
-    avgFitnessHistory.push_back(stats.avgFitness);
-    bestProgramHistory.push_back(stats.bestProgram);
-    largestProgramSizeHistory.push_back(stats.largestProgramSize);
-    smallestProgramSizeHistory.push_back(stats.smallestProgramSize);
-    averageProgramSizeHistory.push_back(stats.avgProgramSize);
+    savedStats.push_back(gp->getStats());
 }
 
 void StatsPanel::ClearStats()
 {
     totalGenerations = 0;
-    bestFitnessHistory.clear();
-    avgFitnessHistory.clear();
-    bestProgramHistory.clear();
-    largestProgramSizeHistory.clear();
-    smallestProgramSizeHistory.clear();
-    averageProgramSizeHistory.clear();
+    savedStats.clear();
+}
+
+void StatsPanel::SaveStats(std::string filepath)
+{
+    std::ofstream file;
+    file.open(filepath, std::ios::trunc);
+    if (file.is_open())
+    {
+        for (size_t i = 0; i < savedStats.size(); ++i)
+        {
+            file << i << " ";
+            savedStats[i].display(file);
+            file << "\n";
+        }
+    }
+    file.close();
 }

@@ -5,6 +5,7 @@
 #include "SantaFeEnvironment.h"
 #include "PacmanEnvironment.h"
 #include "TournamentSelection.h"
+#include "TournamentSelectionElitism.h"
 #include "DefaultMutation.h"
 #include "DefaultCrossover.h"
 
@@ -41,7 +42,7 @@ GPSystem::GPSystem()
     environment->setMaxSteps(200);
 
     // Default genetic operators
-    selector = std::make_shared<TournamentSelection>("Tournament Selection (size 7)");
+    selector = std::make_shared<TournamentSelectionElitism>("Tournament Selection (size 7), ELitism (size 1)");
     crossover = std::make_shared<DefaultCrossover>(crossoverRate, "One-Point Crossover (max copy of 10)");
     mutator = std::make_shared<DefaultMutation>(mutationRate, "Random Uniform Mutation");
 
@@ -86,6 +87,7 @@ void GPSystem::reset()
     population.clear();
     initializePopulation();
     evaluateFitness();
+    calcStats();
 }
 
 void GPSystem::calcStats()
@@ -181,4 +183,14 @@ void GPSystem::visualizeProgram(int idx)
 std::vector<std::string> GPSystem::getProgramInststructions(int idx)
 {
     return population[idx]->getInstructions();
+}
+
+void GPSystem::GPStats::display(std::ostream &out)
+{
+    out << avgFitness << " "
+        << bestFitness << " "
+        << bestProgram << " "
+        << avgProgramSize << " "
+        << smallestProgramSize << " "
+        << largestProgramSize;
 }

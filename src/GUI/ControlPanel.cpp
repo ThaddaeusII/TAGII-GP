@@ -40,6 +40,10 @@ ControlPanel::ControlPanel(std::shared_ptr<GPSystem> gp,
     // Create Configurable Parameters
     popSizeCtrl = new wxSpinCtrl(this, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS, 1, 10000, gp->getPopulationSize());
     generationsCtrl = new wxSpinCtrl(this, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS, 1, 100000, gp->getGenerations());
+    mutationRateCtrl = new wxTextCtrl(this, wxID_ANY, wxString::Format("%.2f", gp->getMutationRate()));
+    crossoverRateCtrl = new wxTextCtrl(this, wxID_ANY, wxString::Format("%.2f", gp->getCrossoverRate()));
+    maxInstructionsCtrl = new wxSpinCtrl(this, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS, 1, 1000, gp->getMaxInstructions());
+    maxStepsCtrl = new wxSpinCtrl(this, wxID_ANY, wxEmptyString, wxDefaultPosition, wxDefaultSize, wxSP_ARROW_KEYS, 1, 10000, gp->getMaxSteps());
 
     // Add to layout
     wxBoxSizer* runResetSizer = new wxBoxSizer(wxHORIZONTAL);
@@ -54,6 +58,14 @@ ControlPanel::ControlPanel(std::shared_ptr<GPSystem> gp,
     mainSizer->Add(popSizeCtrl, 0, wxEXPAND|wxLEFT|wxRIGHT, 10);
     mainSizer->Add(new wxStaticText(this, wxID_ANY, "Generations:"), 0, wxTOP|wxLEFT, 10);
     mainSizer->Add(generationsCtrl, 0, wxEXPAND|wxLEFT|wxRIGHT, 10);
+    mainSizer->Add(new wxStaticText(this, wxID_ANY, "Mutation Rate:"), 0, wxTOP|wxLEFT, 10);
+    mainSizer->Add(mutationRateCtrl, 0, wxEXPAND|wxLEFT|wxRIGHT, 10);
+    mainSizer->Add(new wxStaticText(this, wxID_ANY, "Crossover Rate:"), 0, wxTOP|wxLEFT, 10);
+    mainSizer->Add(crossoverRateCtrl, 0, wxEXPAND|wxLEFT|wxRIGHT, 10);
+    mainSizer->Add(new wxStaticText(this, wxID_ANY, "Max Instructions:"), 0, wxTOP|wxLEFT, 10);
+    mainSizer->Add(maxInstructionsCtrl, 0, wxEXPAND|wxLEFT|wxRIGHT, 10);
+    mainSizer->Add(new wxStaticText(this, wxID_ANY, "Max Steps:"), 0, wxTOP|wxLEFT, 10);
+    mainSizer->Add(maxStepsCtrl, 0, wxEXPAND|wxLEFT|wxRIGHT, 10);
 
     wxBoxSizer* setResetSizer = new wxBoxSizer(wxHORIZONTAL);
     setResetSizer->Add(setParamsButton, 0, wxEXPAND|wxALL, 10);
@@ -87,6 +99,8 @@ void ControlPanel::OnReset(wxCommandEvent &event)
 
 void ControlPanel::OnSaveRun(wxCommandEvent& event)
 {
+    wxCommandEvent evt(EVT_RUN_SAVE);
+    wxPostEvent(GetParent(), evt);
 }
 
 void ControlPanel::OnLoadParams(wxCommandEvent& event)
@@ -95,6 +109,7 @@ void ControlPanel::OnLoadParams(wxCommandEvent& event)
 
 void ControlPanel::OnSaveParams(wxCommandEvent& event)
 {
+    
 }
 
 void ControlPanel::OnLoadEnv(wxCommandEvent& event)
@@ -107,8 +122,30 @@ void ControlPanel::OnSaveEnv(wxCommandEvent& event)
 
 void ControlPanel::OnSetParams(wxCommandEvent &event)
 {
+    gp->setPopulationSize(popSizeCtrl->GetValue());
+    gp->setGenerations(generationsCtrl->GetValue());
+
+    double mutationRate;
+    if (mutationRateCtrl->GetValue().ToDouble(&mutationRate))
+        gp->setMutationRate(mutationRate);
+
+    double crossoverRate;
+    if (crossoverRateCtrl->GetValue().ToDouble(&crossoverRate))
+        gp->setCrossoverRate(crossoverRate);
+
+    gp->setMaxInstructions(maxInstructionsCtrl->GetValue());
+    gp->setMaxSteps(maxStepsCtrl->GetValue());
+
+    wxCommandEvent evt(EVT_RUN_RESET);
+    wxPostEvent(GetParent(), evt);
 }
 
 void ControlPanel::OnResetParams(wxCommandEvent &event)
 {
+    popSizeCtrl->SetValue(gp->getPopulationSize());
+    generationsCtrl->SetValue(gp->getGenerations());
+    mutationRateCtrl->SetValue(wxString::Format("%.2f", gp->getMutationRate()));
+    crossoverRateCtrl->SetValue(wxString::Format("%.2f", gp->getCrossoverRate()));
+    maxInstructionsCtrl->SetValue(gp->getMaxInstructions());
+    maxStepsCtrl->SetValue(gp->getMaxSteps());
 }

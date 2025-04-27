@@ -8,6 +8,7 @@
 
 class Crossover;
 class Mutation;
+class Selection;
 
 class Program
 {
@@ -30,6 +31,7 @@ private:
 
     friend class Crossover;
     friend class Mutation;
+    friend class Selection;
 
 public:
     Program(std::shared_ptr<Environment> env);

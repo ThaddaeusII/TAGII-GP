@@ -52,9 +52,6 @@ void PacmanEnvironment::move()
     agentX = newX;
     agentY = newY;
 
-    // Check if ghosts hit
-    checkHit();
-
     // Pellet collection
     if (grid[agentY][agentX] == '.')
     {
@@ -69,7 +66,10 @@ void PacmanEnvironment::move()
         grid[agentY][agentX] = ' ';
     }
 
-    // Game step has passed, update ghosts and powerup timer
+    // Check if ghosts hit (before they move)
+    checkHit();
+
+    // Game step has passed, update ghosts and powerup timer, checks if ghosts hit (after they move)
     step();
 }
 
@@ -144,7 +144,7 @@ bool PacmanEnvironment::superPelletAhead()
 
 void PacmanEnvironment::updateGhosts()
 {
-    // Simple ghost AI: each ghost moves randomly or in a fixed pattern
+    // Simple ghost AI: each ghost moves in a fixed pattern
     for (auto& ghost : ghosts)
     {
         int dx[] = {0, -1, 0, 1};
@@ -185,7 +185,7 @@ void PacmanEnvironment::checkHit()
             else
             {
                 // Death
-                fitness = -100;
+                fitness = -1;
                 curSteps = 0;
                 return;
             }
@@ -230,6 +230,7 @@ void PacmanEnvironment::reset()
     {
         ghost.x = ghost.startX;
         ghost.y = ghost.startY;
+        ghost.dir = ghost.startDir;
     }
 
     // Check if pacman starts on pellet
@@ -281,7 +282,7 @@ void PacmanEnvironment::load(std::string envPath)
             std::stringstream ssGhost(line);
             int gx, gy;
             ssGhost >> label >> gx >> label >> gy;
-            ghosts.push_back({gx, gy, gx, gy, 0});
+            ghosts.push_back({gx, gy, gx, gy, 0, 0});
         }
 
         // Skip "Grid:"

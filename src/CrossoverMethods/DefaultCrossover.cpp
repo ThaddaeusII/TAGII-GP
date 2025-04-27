@@ -27,7 +27,7 @@ std::unique_ptr<Program> DefaultCrossover::cross(std::unique_ptr<Program> &progr
     {
         // No crossover, copy parent
         auto child = std::make_unique<Program>(getEnv(program1));
-        auto &instr = (random.P(0.5) == 0) ? getInstructions(program1) : getInstructions(program2);
+        auto &instr = (random.P(0.5)) ? getInstructions(program1) : getInstructions(program2);
         for (size_t i = 0; i < instr.size(); ++i)
             copyInstruction(child, instr[i]);
         return child;

@@ -5,3 +5,4 @@ wxDEFINE_EVENT(EVT_RUN_STARTED, wxCommandEvent);
 wxDEFINE_EVENT(EVT_RUN_STEP, wxCommandEvent);
 wxDEFINE_EVENT(EVT_RUN_ENDED, wxCommandEvent);
 wxDEFINE_EVENT(EVT_RUN_RESET, wxCommandEvent);
+wxDEFINE_EVENT(EVT_RUN_SAVE, wxCommandEvent);

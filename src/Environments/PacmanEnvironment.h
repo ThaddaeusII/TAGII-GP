@@ -12,6 +12,7 @@ private:
         int x, y;
         int startX, startY;
         int dir;
+        int startDir;
     };
 
     std::vector<std::vector<char>> initialGrid;

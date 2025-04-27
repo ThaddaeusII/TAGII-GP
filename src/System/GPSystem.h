@@ -1,7 +1,8 @@
 #pragma once
 
-#include<vector>
+#include <vector>
 #include <memory>
+#include <iostream>
 
 #include "Program.h"
 #include "Environment.h"
@@ -20,6 +21,8 @@ public:
         double avgProgramSize;
         int smallestProgramSize;
         int largestProgramSize;
+
+        void display(std::ostream& out);
     };
 
 private:
@@ -38,7 +41,6 @@ private:
     std::shared_ptr<Environment> environment;
 
     void initializePopulation();
-    void evaluateFitness();
 
 public:
     GPSystem();
@@ -46,6 +48,7 @@ public:
     void step();
     void reset();
     void calcStats();
+    void evaluateFitness();
 
     void displayProgram(int idx);
     void displayAllPrograms();

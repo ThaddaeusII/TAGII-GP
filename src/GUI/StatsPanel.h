@@ -27,12 +27,7 @@ private:
     
     wxBoxSizer* mainSizer;
 
-    std::vector<int> bestFitnessHistory;
-    std::vector<double> avgFitnessHistory;
-    std::vector<int> bestProgramHistory;
-    std::vector<int> largestProgramSizeHistory;
-    std::vector<int> smallestProgramSizeHistory;
-    std::vector<double> averageProgramSizeHistory;
+    std::vector<GPSystem::GPStats> savedStats;
 
     void ClearStatsDisplay();
     void UpdateStatsDisplay();
@@ -54,4 +49,5 @@ public:
 
     void AddGenerationStats();
     void ClearStats();
+    void SaveStats(std::string filepath);
 };

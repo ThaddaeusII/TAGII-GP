@@ -5,6 +5,7 @@
 #include <wx/sizer.h>
 #include <wx/button.h>
 #include <wx/stattext.h>
+#include <wx/textctrl.h>
 
 #include <memory>
 #include "GPSystem.h"
@@ -28,6 +29,10 @@ private:
     // Configurable Parameters
     wxSpinCtrl* popSizeCtrl;
     wxSpinCtrl* generationsCtrl;
+    wxTextCtrl* mutationRateCtrl;
+    wxTextCtrl* crossoverRateCtrl;
+    wxSpinCtrl* maxInstructionsCtrl;
+    wxSpinCtrl* maxStepsCtrl;
 
     // Event handlers
     void OnRun(wxCommandEvent& event);
