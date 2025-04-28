@@ -8,74 +8,8 @@
 
 void LOOK_AHEAD::execute(Program &prg, int pos, std::vector<std::pair<int, int>> &params)
 {
-    if (lookFunction())
-    {
-        auto p = params[0];
-
-        // Execute ControlOperator
-        if (p.first)
-        {
-            prg.executeControl(pos, p.second);
-        }
-        
-        // Execute TerminalOperator
-        else
-        {
-            prg.executeTerminal(p.second);
-        }
-    }
-    else
-    {
-        auto p = params[1];
-
-        // Execute ControlOperator
-        if (p.first)
-        {
-            prg.executeControl(pos, p.second);
-        }
-        
-        // Execute TerminalOperator
-        else
-        {
-            prg.executeTerminal(p.second);
-        }
-    }
-}
-
-void LOOK_AHEAD::visualize(Program &prg, int pos, std::vector<std::pair<int, int>> &params)
-{
-    if (lookFunction())
-    {
-        auto p = params[0];
-
-        // Execute ControlOperator
-        if (p.first)
-        {
-            prg.visualizeControl(pos, p.second);
-        }
-        
-        // Execute TerminalOperator
-        else
-        {
-            prg.visualizeTerminal(p.second);
-        }
-    }
-    else
-    {
-        auto p = params[1];
-
-        // Execute ControlOperator
-        if (p.first)
-        {
-            prg.visualizeControl(pos, p.second);
-        }
-        
-        // Execute TerminalOperator
-        else
-        {
-            prg.visualizeTerminal(p.second);
-        }
-    }
+    auto p = params[!lookFunction()];
+    prg.scheduleInstructionFront(pos, p);
 }
 
 void LOOK_AHEAD::display(std::ostream &out)

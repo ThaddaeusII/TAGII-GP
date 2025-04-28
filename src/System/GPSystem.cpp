@@ -167,17 +167,12 @@ void GPSystem::displayStats()
     std::cout << "Avg length:      " << curStats.avgProgramSize << std::endl;
 }
 
-void GPSystem::displayEnvironment()
+void GPSystem::displayEnvironment(std::ostream &out)
 {
+    out << "Environment:" << std::endl;
     if (environment == nullptr)
         return;
-    std::cout << "Environment:" << std::endl;
-    environment->display();
-}
-
-void GPSystem::visualizeProgram(int idx)
-{
-    population[idx]->visualize();
+    environment->display(out);
 }
 
 std::vector<std::string> GPSystem::getProgramInststructions(int idx)

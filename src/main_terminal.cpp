@@ -275,7 +275,6 @@ int main(int argc, char*argv[])
                 int idx;
                 std::cout << "Visualize which program (index)? ";
                 std::cin >> idx;
-                gp.visualizeProgram(idx);
                 break;
             }
 

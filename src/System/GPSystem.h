@@ -54,12 +54,13 @@ public:
     void displayAllPrograms();
     void displayParameters();
     void displayStats();
-    void displayEnvironment();
-    void visualizeProgram(int idx);
+    void displayEnvironment(std::ostream &out = std::cout);
 
     std::vector<std::string> getProgramInststructions(int idx);
     int getProgramFitness(int idx) { return population[idx]->getFitness(); }
     int getProgramSize(int idx) { return population[idx]->getSize(); }
+    Program* getProgram(int idx) { return population[idx].get(); }
+
     GPStats getStats() { return curStats; }
 
     void setPopulationSize(int size) { populationSize = size; }

@@ -294,10 +294,9 @@ void PacmanEnvironment::load(std::string envPath)
         for (int row = 0; row < sizeY; ++row)
         {
             std::getline(file, line);
-            std::stringstream ssGrid(line);
             for (int col = 0; col < sizeX; ++col)
             {
-                ssGrid >> grid[row][col];
+                grid[row][col] = line[col];
                 if (grid[row][col] == '.') maxFitness++;
                 if (grid[row][col] == 'O') maxFitness += 5;
             }
@@ -314,6 +313,7 @@ void PacmanEnvironment::load(std::string envPath)
 
 void PacmanEnvironment::display(std::ostream &out)
 {
+    out << "Step: " << curSteps << " / " << maxSteps << std::endl;
     out << "Score: " << fitness << " / " << maxFitness;
     out << " (Powered: " << powerTimer << ")";
     out << std::endl;
@@ -349,6 +349,7 @@ void PacmanEnvironment::display(std::ostream &out)
                 else
                     out << grid[j][i];
             }
+            out << " ";
         }
         out << std::endl;
     }

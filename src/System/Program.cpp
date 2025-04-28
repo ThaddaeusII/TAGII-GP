@@ -1,16 +1,15 @@
 #include "Program.h"
 
+#include <iomanip>
+
 #include "RandomGenerator.h"
 
-void Program::getInput()
+int Program::findReference(int pos, int ref)
 {
-    if (waitForInput)
-    {
-        std::cout << "\nPress [ENTER] to begin, [x] to skip to the end..." << std::endl;
-        char x = std::cin.get();
-        if (x == 'x' || x == 'X')
-            waitForInput = false;
-    }
+    for (size_t i = pos + 1; i < instructions.size(); ++i)
+        if (instructions[i]->reference == ref)
+            return i;
+    return -1;
 }
 
 Program::Program(std::shared_ptr<Environment> env)
@@ -30,167 +29,106 @@ void Program::initialize(int numInstructions)
 
 void Program::execute()
 {
-    env->reset();
-    while (env->getCurSteps() > 0)
+    // Resets environment and executionQueue
+    reset();
+
+    while (!complete())
     {
-        executeControl(0);
+        // Start program if queue is empty (allows repeat runs if max steps not used up)
+        if (!running())
+            start();
+
+        step();
     }
-    evaluateFitness();
+    evaluateFitness(); // Update program fitness
 }
 
-void Program::executeControl(int pos, int ref)
+void Program::start()
 {
-    if (instructions.empty())
-        env->setCurSteps(0);
-    if (env->getCurSteps() <= 0)
+    // Schedule start: function, type (0 = control, 1 = terminal), ref # (line # or terminal #)
+    executionQueue.push_front(std::make_tuple([this](){ stepControl(0); }, 0, 0));
+}
+
+void Program::step()
+{
+    // If program is done, exit
+    if (complete())
         return;
 
-    // If reference is specified, start looking for the referenced instruction after the current one
-    if (ref != -1)
-    {
-        bool found = false;
-        for (size_t i = pos + 1; i < instructions.size(); ++i)
-        {
-            if (instructions[i]->reference == ref)
-            {
-                pos = i;
-                found = true;
-                break;
-            }
-        }
+    // Get instruction out of queue, then run
+    auto current = std::get<0>(executionQueue.front());
+    executionQueue.pop_front();
+    current();
+}
 
-        // If the referenced instruction doesn't exist, do nothing
-        if (!found)
-        {
-            env->setCurSteps(env->getCurSteps() - 1);
-            return;
-        }
-    }
-
-    // Execute the instruction
+void Program::stepControl(int pos)
+{
+    // Execute the control operator
     auto &instr = instructions[pos];
     instr->op->execute(*this, pos, instr->params);
 }
 
-void Program::executeTerminal(int op)
+void Program::stepTerminal(int op)
 {
-    if (env->getCurSteps() <=0)
-        return;
     env->getTerminalOperator(op)->execute();
 }
 
-void Program::visualize()
+bool Program::complete()
 {
-    waitForInput = true;
-    std::cout << "\033[2J\033[H";
-    std::cout << "Starting program visualization...\n\n";
+    return env->getCurSteps() <= 0 || instructions.empty();
+}
 
-    if (!env)
-    {
-        std::cerr << "No environment attached to program.\n\n";
-        return;
-    }
+bool Program::running()
+{
+    return !executionQueue.empty();
+}
 
-    std::cout << "Program:\n";
-    display();
-    getInput();
-
+void Program::reset()
+{
     env->reset();
-
-    while (env->getCurSteps() > 0)
-    {
-        visualizeControl(0);
-    }
-
-    evaluateFitness();
-
-    std::cout << "\033[2J\033[H";
-    std::cout << "Program finished.\n";
-    std::cout << "Steps remaining: " << env->getCurSteps() << " / " << env->getMaxSteps() << "\n";
-    std::cout << "Final environment:\n";
-    env->display();
-    std::cout << "\nFinal fitness: " << env->getFitness() << "\n";
+    executionQueue.clear();
 }
 
-void Program::visualizeControl(int pos, int ref)
+void Program::wait()
 {
-    if (env->getCurSteps() <= 0 || instructions.empty())
-        return;
-
-    if (ref != -1)
-    {
-        bool found = false;
-        for (size_t i = pos + 1; i < instructions.size(); ++i)
-        {
-            if (instructions[i]->reference == ref)
-            {
-                pos = i;
-                found = true;
-                break;
-            }
-        }
-        if (!found)
-        {
-            std::cout << "\033[2J\033[H";
-            std::cout << "Steps remaining: " << env->getCurSteps() << " / " << env->getMaxSteps() << "\n";
-            std::cout << "Executing terminal [WAIT - unresolved reference]\n\n";
-            env->display();
-            std::cout << "\nProgram:\n";
-            display();
-            getInput();
-            env->setCurSteps(env->getCurSteps() - 1);
-            return;
-        }
-    }
-
-    auto &instr = instructions[pos];
-
-    std::cout << "\033[2J\033[H";
-    std::cout << "Steps remaining: " << env->getCurSteps() << " / " << env->getMaxSteps() << "\n";
-    std::cout << "Executing control #" << pos << ": ";
-    instr->op->display();
-    std::cout << " with params:";
-    for (auto &p : instr->params)
-    {
-        if (p.first)
-            std::cout << " I[" << p.second << "]";
-        else
-        {
-            std::cout << " T[";
-            env->getTerminalOperator(p.second)->display();
-            std::cout << "]";
-        }
-    }
-
-    std::cout << "\n\n";
-    env->display();
-    std::cout << "\nProgram:\n";
-    display();
-    getInput();
-
-    instr->op->visualize(*this, pos, instr->params);
-}
-
-void Program::visualizeTerminal(int op)
-{
-    if (env->getCurSteps() <= 0) return;
-
-    std::cout << "\033[2J\033[H";
-    std::cout << "Steps remaining: " << env->getCurSteps() << " / " << env->getMaxSteps() << "\n";
-    std::cout << "Executing terminal: ";
-    env->getTerminalOperator(op)->display();
-    std::cout << "\n\n";
-    env->display();
-    std::cout << "\nProgram:\n";
-    display();
-    getInput();
-
-    env->getTerminalOperator(op)->execute();
+    env->setCurSteps(env->getCurSteps() - 1);
 }
 
 void Program::evaluateFitness()
 {
     fitness = env->getFitness();
+}
+
+void Program::scheduleInstructionFront(int pos, std::pair<int, int> &param)
+{
+    if (param.first == 0) // Terminal
+    {
+        executionQueue.push_front(std::make_tuple([this, param](){ stepTerminal(param.second); }, param.first, param.second));
+        return;
+    }
+    int refPos = findReference(pos, param.second);
+    if (refPos == -1) // No refernece, wait
+    {
+        executionQueue.push_front(std::make_tuple([this](){ wait(); }, -1, -1));
+        return;
+    }
+    executionQueue.push_front(std::make_tuple([this, refPos](){ stepControl(refPos); }, param.first, refPos));
+}
+
+void Program::scheduleInstructionBack(int pos, std::pair<int, int> &param)
+{
+    if (param.first == 0) // Terminal
+    {
+        executionQueue.push_back(std::make_tuple([this, &param](){ stepTerminal(param.second); }, param.first, param.second));
+        return;
+    }
+    int refPos = findReference(pos, param.second);
+    if (refPos == -1) // No refernece, wait
+    {
+        executionQueue.push_back(std::make_tuple([this](){ wait(); }, -1, -1));
+        return;
+    }
+    executionQueue.push_front(std::make_tuple([this, &refPos](){ stepControl(refPos); }, param.first, refPos));
 }
 
 void Program::display(std::ostream &out)
@@ -214,6 +152,37 @@ void Program::display(std::ostream &out)
         out << "]" << std::endl;
         line++;
     }
+}
+
+void Program::displayNextInstruction(std::ostream &out)
+{
+    if (executionQueue.empty())
+    {
+        out << "Instruction: [RESTART]" << std::endl;
+        return;
+    }
+
+    int type = std::get<1>(executionQueue.front());
+    int idx = std::get<2>(executionQueue.front());
+
+    if (type == -1) // Wait
+    {
+        out << "Instruction: [WAIT]" << std::endl;
+        return;
+    }
+
+    if (type == 0) // Terminal
+    {
+        out << "Instruction: [";
+        env->getTerminalOperator(idx)->display(out);
+        out << "]" << std::endl;
+        return;
+    }
+    
+    // Control
+    out << "Instruction: [";
+    instructions[idx]->op->display(out);
+    out << "]" << std::endl;
 }
 
 int Program::getFitness()

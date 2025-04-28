@@ -2,6 +2,7 @@
 
 #include "CustomStaticLine.h"
 #include "CustomEvents.h"
+#include "PacmanEnvironment.h"
 
 wxBEGIN_EVENT_TABLE(ControlPanel, wxPanel)
     EVT_BUTTON(1001, ControlPanel::OnRun)
@@ -114,6 +115,29 @@ void ControlPanel::OnSaveParams(wxCommandEvent& event)
 
 void ControlPanel::OnLoadEnv(wxCommandEvent& event)
 {
+    wxFileDialog openFileDialog(this, _("Open Environment file"), "", "",
+                                "Environment files (*.env)|*.env|All files (*.*)|*.*",
+                                wxFD_OPEN | wxFD_FILE_MUST_EXIST);
+
+    if (openFileDialog.ShowModal() == wxID_CANCEL)
+        return;
+
+    wxString path = openFileDialog.GetPath();
+
+    try {
+        std::shared_ptr<PacmanEnvironment> env = std::make_shared<PacmanEnvironment>("Pacman");
+        env->load(path.ToStdString());
+        env->setMaxSteps(gp->getMaxSteps());
+        gp->SetEnvironment(env);
+        
+        wxMessageBox("Environment loaded successfully!", "Success", wxOK | wxICON_INFORMATION);
+
+        wxCommandEvent evt(EVT_RUN_RESET);
+        wxPostEvent(GetParent(), evt);
+    } catch (const std::exception& e) {
+        wxMessageBox(wxString::Format("Failed to load environment: %s", e.what()), 
+                        "Error", wxOK | wxICON_ERROR);
+    }
 }
 
 void ControlPanel::OnSaveEnv(wxCommandEvent& event)

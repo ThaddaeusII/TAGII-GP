@@ -13,7 +13,6 @@ private:
 public:
     LOOK_AHEAD(Environment& env, std::function<bool()> lookFunction, std::string name = "LOOK_AHEAD") : ControlOperator(env), lookFunction(lookFunction), name(name) {}
     void execute(Program &prg, int pos, std::vector<std::pair<int, int>> &params) override;
-    void visualize(Program &prg, int pos, std::vector<std::pair<int, int>> &params) override;
     void display(std::ostream &out = std::cout) override;
     void randomize(std::vector<std::pair<int, int>> &params) override;
     void mutate(std::vector<std::pair<int, int>> &params) override;

@@ -24,6 +24,7 @@ void Mainframe::OnTimer(wxTimerEvent &event)
     wxPostEvent(mainPanel->GetEnvironmentPanel(), step_evt);
 
     currentGeneration++;
+    wxYield();
 }
 
 void Mainframe::OnRun(wxCommandEvent &event)
@@ -71,7 +72,7 @@ Mainframe::Mainframe(wxWindow *parent, wxWindowID id, const wxString &title, con
 
     // Control Panel | Main Panel
     mainSplitter = new wxSplitterWindow( this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxSP_3D );
-	mainSplitter->Connect( wxEVT_IDLE, wxIdleEventHandler(Mainframe::mainSplitterOnIdle), NULL, this );
+	mainSplitter->Connect(wxEVT_IDLE, wxIdleEventHandler(Mainframe::mainSplitterOnIdle), NULL, this);
 
     controlPanel = new ControlPanel(gp, mainSplitter, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL);
     mainPanel = new MainPanel(gp, mainSplitter, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL);

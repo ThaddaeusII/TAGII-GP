@@ -8,39 +8,9 @@
 
 void PROG::execute(Program &prg, int pos, std::vector<std::pair<int, int>> &params)
 {
-    // Param -> (Param type, reference #)
-    for (auto &p : params)
+    for (auto it = params.rbegin(); it != params.rend(); ++it)
     {
-        // Execute ControlOperator
-        if (p.first)
-        {
-            prg.executeControl(pos, p.second);
-        }
-        
-        // Execute TerminalOperator
-        else
-        {
-            prg.executeTerminal(p.second);
-        }
-    }
-}
-
-void PROG::visualize(Program &prg, int pos, std::vector<std::pair<int, int>> &params)
-{
-    // Param -> (Param type, reference #)
-    for (auto &p : params)
-    {
-        // Execute ControlOperator
-        if (p.first)
-        {
-            prg.visualizeControl(pos, p.second);
-        }
-        
-        // Execute TerminalOperator
-        else
-        {
-            prg.visualizeTerminal(p.second);
-        }
+        prg.scheduleInstructionFront(pos, *it);
     }
 }
 

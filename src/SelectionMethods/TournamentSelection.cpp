@@ -12,6 +12,8 @@ int TournamentSelection::selectParent(std::vector<std::unique_ptr<Program>> &pop
         int nextParent = random.GetInt(0, population.size());
         if (population[nextParent]->getFitness() > population[parent]->getFitness())
             parent = nextParent;
+        else if (population[nextParent]->getFitness() == population[parent]->getFitness() && population[nextParent]->getSize() < population[parent]->getSize())
+            parent = nextParent;
     }
     return parent;
 }

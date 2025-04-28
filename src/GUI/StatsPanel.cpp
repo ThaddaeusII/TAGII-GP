@@ -43,6 +43,7 @@ void StatsPanel::step(wxCommandEvent &event)
     totalGenerations += 1;
     AddGenerationStats();
     genText->SetLabel(wxString::Format("Generations: %d", totalGenerations));
+    genText->Update();
 }
 
 void StatsPanel::end(wxCommandEvent &event)
