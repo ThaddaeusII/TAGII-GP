@@ -45,8 +45,8 @@ void Program::execute()
 
 void Program::start()
 {
-    // Schedule start: function, type (0 = control, 1 = terminal), ref # (line # or terminal #)
-    executionQueue.push_front(std::make_tuple([this](){ stepControl(0); }, 0, 0));
+    // Schedule start: function, type (1 = control, 0 = terminal), ref # (line # or terminal #)
+    executionQueue.push_front(std::make_tuple([this](){ stepControl(0); }, 1, 0));
 }
 
 void Program::step()
