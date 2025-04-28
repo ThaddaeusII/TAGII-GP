@@ -22,12 +22,12 @@ void SantaFeEnvironment::registerAllOperators()
     // Control Operators
     registerControlOperator(std::make_shared<PROG>(*this, 2));
     registerControlOperator(std::make_shared<PROG>(*this, 3));
-    registerControlOperator(std::make_shared<LOOK>(*this, std::bind(&SantaFeEnvironment::look, this, 1)));
+    registerControlOperator(std::make_shared<LOOK>(*this, [this](){ return this->look(1); }));
 
     // Terminal Operators
-    registerTerminalOperator(std::make_shared<Move>(*this, std::bind(&SantaFeEnvironment::move, this)));
-    registerTerminalOperator(std::make_shared<Turn>(*this, std::bind(&SantaFeEnvironment::turnLeft, this), true));
-    registerTerminalOperator(std::make_shared<Turn>(*this, std::bind(&SantaFeEnvironment::turnRight, this), false));
+    registerTerminalOperator(std::make_shared<Move>(*this, [this](){ this->move(); }));
+    registerTerminalOperator(std::make_shared<Turn>(*this, [this](){ this->turnLeft(); }, true));
+    registerTerminalOperator(std::make_shared<Turn>(*this, [this](){ this->turnRight(); }, false));
 }
 
 void SantaFeEnvironment::reset()
@@ -36,6 +36,7 @@ void SantaFeEnvironment::reset()
     agentY = startY;
     agentDir = startDir;
     fitness = 0;
+    curSteps = maxSteps;
     for (int j = 0; j < sizeY; ++j)
         for (int i = 0; i < sizeX; ++i)
             if (grid[j][i] == '-')
@@ -113,24 +114,26 @@ void SantaFeEnvironment::display(std::ostream &out)
 
 void SantaFeEnvironment::move()
 {
-
     if (forward(agentX, agentY))
     {
         fitness++;
         grid[agentY][agentX] = '-';
     }
+    curSteps--;
 }
 
 void SantaFeEnvironment::turnLeft()
 {
     agentDir += 1;
     agentDir %= 4;
+    curSteps--;
 }
 
 void SantaFeEnvironment::turnRight()
 {
     agentDir -= 1;
     agentDir %= 4;
+    curSteps--;
 }
 
 bool SantaFeEnvironment::forward(int &x, int &y)

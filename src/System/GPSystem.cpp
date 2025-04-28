@@ -37,8 +37,8 @@ GPSystem::GPSystem()
     maxInstructions = 10;
 
     // Defualt environment
-    environment = std::make_shared<PacmanEnvironment>("Pacman");
-    environment->load("src/Environments/pacman.env");
+    environment = std::make_shared<SantaFeEnvironment>("Pacman");
+    environment->load("src/Environments/santafe.env");
     environment->setMaxSteps(200);
 
     // Default genetic operators
