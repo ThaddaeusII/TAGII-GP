@@ -2,11 +2,11 @@
 
 Author: Thad Greiner
 
-This is my personal LGP system for evolving agents for a variety of (mostly) grid-based problems. It is built to be customizable and efficient, with the goal of expanding upon problems like the Santa Fe Ant Trail, maze solving, and Pacman.
+This is my personal LGP system for evolving agents for a variety of (mostly) grid-based problems. It is built to be customizable and efficient, with the goal of expanding upon problems like the Santa Fe Ant Trail, maze solving, and Pacman. In addition to efficency, it has the goal of promoting education by having a GUI interface meant for helping users swap between existing methods, changing parameters, and testing on different environments with ease. It also supports visualization of populations as a whole and step-by-step iteration to see how evolution and program execution works from an intuitive standpoint.
 
 ## Installation
 
-Note, you will need ```git```, ```g++```, ```c++20```, and ```make``` to easily setup and use this project! If you wish to use the GUI version, you will need ```wxWidgets 3.2.4```.
+Note, you will need ```git```, ```g++```, ```c++20```, and ```make``` to easily setup and use this project! If you wish to use the updated GUI version, you will need ```wxWidgets 3.2.4```. Otehrwise, there is a basic terminal GUI in-place.
 
 ```
 git clone --recurse-submodules https://github.com/ThaddaeusII/TAGII-GP.git
@@ -15,6 +15,8 @@ git clone --recurse-submodules https://github.com/ThaddaeusII/TAGII-GP.git
 Navigate to ```Third-Party/Empirical/include/emp/base/_optional_throw.hpp```. On ```line 49```, change the function to ```inline```, which will make it as follows:
 
 ```inline void assert_print_first_opt(std::stringstream & ss, int placeholder) {;}```
+
+IMPORTANT: Not all features are in-place, so some options in the GUI systems don't do anything while others have limited behavior. These are currently in progress, but be be aware in case you encounter unintended behavior. In addition, corss-system testing hasn't occured yet, so you may experience issues with the app GUI in terms of building or formatting.
 
 ## The Default LGP System
 
@@ -66,7 +68,7 @@ By default, mutation is set to have a set of probablities to do certain things:
 * User defines chance of a each instruction mutating: mutationRate.
 * If an instruction mutates, it has the following probablity set
     * 50% chance to modify the current instruction
-        * 50% chance to modidify parameters --- ***INCOMPLETE*** ---
+        * 50% chance to modidify parameters (randomizes them as of now)
         * 50% chance to randomize the operator (and parameters to match operator change)
     * 25% chance to add a random instruction at the current position
     * 25% chance to delete the current instruction
@@ -75,20 +77,22 @@ By default, crossover has a user defined chance, crossover chance. If no crossov
 * An index is selected in each parent
 * Parent 1 instructions from 0 to index 1 are copied to the child
 * Parent 2 instructions from index 2 to end are copied to the child
-* To prevent program size expansion, maxSize is set to 10 for each parent's copy --- ***ADJUST THIS*** ---
+* To prevent program size expansion, maxSize is set to 10 for each parent's copy
 
-By default, selection uses tournament selection with tournament size 7 (set in the class). Selection will pick two best parents from a tournament (--- ***FIX*** ---, can select same parent, needs non-replacement), the performs cross over using the two. After creating a new child via crossover or copying a parent, the child will be mutated, then added to the next generation.
+By default, selection uses tournament selection with tournament size 7 (set in the class). Selection will pick two best parents from a tournament, the performs cross over using the two. After creating a new child via crossover or copying a parent, the child will be mutated, then added to the next generation.
 
 ## Using the System
 
 ### 1. Editing the Build
-To run the system using the default build, simply run ```make``` and ```./evolve```. There are additional options such as ```make debug```, ```make clean```, and ```make slow``` (no optimization). If extra files are desired, add the relevant cpp files and include paths to the ```Makefile```.
+To run the system using the default build, simply run ```make``` and ```./evolve_gui``` or ```./evolve_terminal```. There are additional options such as ```make debug``` and ```make clean```, and the debug version will compile ```./evolve_gui_debug``` and ```./evolve_terminal_debug```. If extra files are desired, add the relevant cpp files and include paths to the ```Makefile```.
 
 ### 2. Editing the Basic Parameters
-The user interface will bring up a simple terminal menu, where typing 1 will allow the user to see and modify the current parameters. This includes population size, muatation rate, generations, selection methods, enironments, etc. They can all be reconfigured in ```main.cpp```.
+The terminal user interface will bring up a simple terminal menu, where typing 1 will allow the user to see and modify the current parameters. This includes population size, muatation rate, generations, selection methods, enironments, etc. They can all be reconfigured in ```main_terminal.cpp```.
+
+The app GUI works similarly, but default values are pulled from the GPSystem class. You can modify parameters in the side panel, then press the "Set" button to apply them.
 
 ### 3. Editing the Environment
-Environment files should follow the format of the specific environment class you are using. For Santa Fe Ant Trail, it should have ```sizeX, sizeY, startX, startY, direction``` on the first line. After that you should construct a 2D grid of size (sizeX, sizeY) where X is # of columns, Y is # of rows, '0's are empty space, and '1's are food. You can swap the filepath given, ```santafe.env```, or swap/add a new one in ```main.cpp```. Pacman, on the other hand, has a slighlty differnt format, which can be seen in ```pacman.env```.
+Environment files should follow the format of the specific environment class you are using. For Santa Fe Ant Trail, it should have ```sizeX, sizeY, startX, startY, direction``` on the first line. After that you should construct a 2D grid of size (sizeX, sizeY) where X is # of columns, Y is # of rows, '0's are empty space, and '1's are food. You can swap the filepath given, ```santafe.env```, or swap/add a new one in ```main_terminal.cpp```. Pacman, on the other hand, has a slighlty differnt format, which can be seen in ```pacman.env```. Note, the app GUI currently only supports loading Pacman environments by default (you can set default to something else in the GPSyste class to get around it for now).
 
 ### 4. Adding New Instruction Operators
 The system was built for somewhat easy additions of operators, both control and terminals. To do so, you need to follow two steps:
@@ -114,9 +118,9 @@ By default, all operators need a reference to the environment, hence the *this. 
 
 ### 4. Adding Genetic Operators
 
-Outside of new instructional operators, you can change also add new methods for selection, mutation, and crossover with ease. All three have a respetive base class (see the ```*Methods/``` folders), and each one has constructor that needs upcalled and a single virtual function to override. Mutation has ```mutate()``` to control how an individual program is changed, Crossover has ```cross()``` to determine how two parents create a child/children, and Selection takes both other methods and controls the whole process of how one generation creates the next via its ```select()``` function. Once a new method is created, it can be swapped in or added by adding them to ```main.cpp```.
+Outside of new instructional operators, you can change also add new methods for selection, mutation, and crossover with ease. All three have a respetive base class (see the ```*Methods/``` folders), and each one has constructor that needs upcalled and a single virtual function to override. Mutation has ```mutate()``` to control how an individual program is changed, Crossover has ```cross()``` to determine how two parents create a child/children, and Selection takes both other methods and controls the whole process of how one generation creates the next via its ```select()``` function. Once a new method is created, it can be swapped in or added by placing them in ```main_terminal.cpp``` or the GPSystem class.
 
-### 5. Adding ENvironments
+### 5. Adding Environments
 
 The the final and most complicated feature of the system is the ability to create and add environments with ease. Like before, there is a base class (see ```Environments/Envirnoment.h```), but it is more complicated than before. It also needs a constructor upcall to get the name, and also needs four functions: ```display()``` to show the environment, ```load()``` to load an environment form file, ```reset()``` to setup the environment for the next program, and ```registerAllOperators()``` to register all operators that can be used on the environment. It should also be added to ```main.cpp``` in order to use it.
 
@@ -152,3 +156,4 @@ Márcio Porto Basgalupp.
 
 Third-Party software used:
 * Empirical: https://github.com/devosoft/Empirical.git
+* wsWidgets: https://wxwidgets.org/
